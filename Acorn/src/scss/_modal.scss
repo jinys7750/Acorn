@@ -1,0 +1,150 @@
+// Modal Offcanvas Menu
+.modal-menu {
+  align-items: stretch;
+  .modal-dialog {
+    max-width: 250px;
+    margin: 0;
+  }
+  .modal-dialog,
+  .modal-content {
+    height: 100%;
+  }
+  .modal-content {
+    border: 0;
+    border-radius: 0;
+  }
+  .modal-header {
+    flex-shrink: 0;
+    @include border-top-radius(0);
+  }
+  .modal-body {
+    padding: 0;
+  }
+  .list-group-item {
+    font-size: .9375rem;
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+  }
+  .list-group-collapse .list-group > .list-group-item {
+    font-size: .875rem;
+  }
+  &.fade .modal-dialog {
+    transform: translate3d(-20px, 0, 0);
+    transition: transform .25s;
+  }
+  &.show .modal-dialog {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+// Modal Shopping Cart
+.modal-cart {
+  padding-right: 0 !important;
+  .modal-dialog {
+    max-width: 400px;
+    margin: 0;
+    margin-left: auto;
+  }
+  .modal-dialog,
+  .modal-content {
+    height: 100%;
+  }
+  .modal-content {
+    border: 0;
+    border-radius: 0;
+  }
+  .modal-header {
+    @include border-top-radius(0);
+  }
+  .modal-body {
+    padding: .5rem;
+  }
+  .modal-header,
+  .modal-footer {
+    flex-shrink: 0;
+  }
+  .modal-body,
+  .modal-footer {
+    background-color: $modal-content-bg;
+  }
+  .media {
+    border-bottom: 1px solid $border-color;
+    padding: .25rem 0;
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+  .media-body {
+    position: relative;
+    padding-right: 1rem;
+    > div:first-child {
+      overflow: hidden;
+      max-height: 42px; // limit 2 lines for title
+      margin-bottom: 5px;
+      font-size: 0.9375rem;
+      > a {
+        display: block;
+      }
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 0;
+    }
+  }
+  &.fade .modal-dialog {
+    transform: translate3d(20px, 0, 0);
+    transition: transform .25s;
+  }
+  &.show .modal-dialog {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+// Modal Login & quickview animation
+.modal-login, .modal-quickview {
+  &.fade .modal-dialog {
+    transform: translate3d(0, -20px, 0);
+    transition: transform .25s;
+  }
+  &.show .modal-dialog {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+// List detail on quickview form
+.list-detail {
+  font-size: 0;
+  border-bottom: $table-border-width solid $table-border-color;
+  > div {
+    font-size: 1rem;
+    padding: $table-cell-padding;
+    vertical-align: middle;
+    display: inline-block;
+    &:first-child {
+      width: 40%;
+    }
+    &:last-child {
+      width: 60%;
+    }
+  }
+  &:last-child {
+    border-bottom: 0;
+  }
+  .btn-group {
+    font-size: 0;
+  }
+}
+@include media-breakpoint-only(md) {
+  .modal-quickview .modal-dialog {
+    max-width: 600px;
+  }
+  .list-detail > div {
+    font-size: .875rem;
+    padding: ($table-cell-padding / 2) $table-cell-padding;
+    line-height: 1.8;
+  }
+}

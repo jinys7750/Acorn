@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{> _include/favicon}}
+    <title>Shopping Cart - {{name}}</title>
+
+    <!-- Required css -->
+    {{#required-css}}
+    <link rel="stylesheet" href="{{{css}}}">
+    {{/required-css}}
+
+    <!-- Plugins css -->
+    {{#cart-css}}
+    <link rel="stylesheet" href="{{{css}}}">
+    {{/cart-css}}
+
+    <!-- Template css -->
+    <link rel="stylesheet" href="{{{template-css}}}">
+  </head>
+  <body>
+
+    {{> _include/header}}
+
+    <div class="breadcrumb-container">
+      <div class="container-fluid limited">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container-fluid limited">
+      <div class="row">
+        <div class="col text-center">
+          <div><i class="material-icons md-5">shopping_cart</i></div>
+          <h1 class="font-weight-normal">Your shopping cart is currently empty</h1>
+          <p>Add products to it. Check out our wide range of products!</p>
+          <a href="index.html" role="button" class="btn btn-outline-theme">SHOP NOW</a>
+        </div>
+      </div>
+      <div class="row my-5">
+        <div class="col-12"><div class="title"><span>Recently viewed items</span></div></div>
+        <div class="col-12">
+          {{> _include/product_slider}}
+        </div>
+      </div>
+    </div>
+
+    {{> _include/modal}}
+    {{> _include/modal_quickview}}
+
+    {{> _include/footer}}
+
+    <!-- Required js -->
+    {{#required-js}}
+    <script src="{{{js}}}"></script>
+    {{/required-js}}
+
+    <!-- Plugins js -->
+    {{#cart-js}}
+    <script src="{{{js}}}"></script>
+    {{/cart-js}}
+
+    <!-- Template JS -->
+    <script src="{{{template-js}}}"></script>
+
+  </body>
+</html>

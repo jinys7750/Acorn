@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{> _include/favicon}}
+    <title>Home - {{name}}</title>
+
+    <!-- Required css -->
+    {{#required-css}}
+    <link rel="stylesheet" href="{{{css}}}">
+    {{/required-css}}
+
+    <!-- Plugins css -->
+    {{#index-css}}
+    <link rel="stylesheet" href="{{{css}}}">
+    {{/index-css}}
+
+    <!-- Template css -->
+    <link rel="stylesheet" href="{{{template-css}}}">
+  </head>
+  <body>
+
+    {{> _include/header}}
+
+    <!-- Home Slider -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="swiper-container home-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" data-cover="{{img}}/slider/1.jpg" data-xs-height="220px" data-sm-height="350px" data-md-height="400px" data-lg-height="430px" data-xl-height="460px">
+              <div class="swiper-overlay">
+                <div class="text-center ml-3 ml-sm-5">
+                  <div class="d-inline-block h1 bg-theme text-white px-2 animate" data-animate="fadeRight">TOP BRANDS</div>
+                  <div class="display-4 text-white font-weight-bold text-shadow animate duration-2" data-animate="fadeUp">MINIMUM<br/>30% - 70% OFF</div>
+                  <a href="shop.html" class="btn btn-theme btn-sm mt-3 animate delay-1" data-animate="fadeDown">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-cover="{{img}}/slider/2.jpg" data-xs-height="220px" data-sm-height="350px" data-md-height="400px" data-lg-height="430px" data-xl-height="460px">
+              <div class="swiper-overlay justify-content-end">
+                <div class="text-center mr-3 mr-sm-5">
+                  <div class="d-inline-block display-4 bg-dark text-white px-2 animate mb-3" data-animate="fadeLeft">T-LOVE</div>
+                  <div class="h3 text-white font-weight-bold text-shadow animate duration-2" data-animate="fadeUp">A COMPLETE SHOPPING GUIDE ON WHAT AND<br/>HOW TO WEAR THE BEST T-SHIRTS</div>
+                  <a href="shop.html" class="btn btn-warning btn-sm mt-3 animate delay-1" data-animate="fadeDown">SHOP NOW</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-cover="{{img}}/slider/3.jpg" data-xs-height="220px" data-sm-height="350px" data-md-height="400px" data-lg-height="430px" data-xl-height="460px">
+              <div class="swiper-overlay justify-content-center">
+                <div class="text-center">
+                  <div class="d-inline-block h1 bg-warning font-weight-normal text-secondary px-2 animate duration-2" data-animate="fadeDown">YOUR PRAYERS ANSWERED!</div>
+                  <div class="display-4 text-white font-weight-bold text-shadow animate duration-2" data-animate="fadeLeft">UPTO 70% OFF</div>
+                  <div class="d-inline-block h1 bg-dark text-white px-2 animate mb-3 duration-2" data-animate="fadeRight">+ EXTRA 10% OFF</div>
+                  <div><a href="shop.html" class="btn btn-theme btn-sm mt-3 animate delay-1" data-animate="fadeDown">SHOP NOW</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-cover="{{img}}/slider/4.jpg" data-xs-height="220px" data-sm-height="350px" data-md-height="400px" data-lg-height="430px" data-xl-height="460px">
+              <div class="swiper-overlay justify-content-between">
+                <div class="text-center w-100">
+                  <div class="text-danger animate duration-2" data-animate="fadeLeft"><i class="material-icons md-5">local_shipping</i></div>
+                  <div class="h3 bg-white px-2 animate d-inline-block text-secondary font-weight-normal delay-1" data-animate="fadeUp">FREE SHIPPING</div>
+                  <div><div class="h1 bg-dark px-2 animate d-inline-block text-white font-weight-normal delay-1" data-animate="fadeRight">ON ALL ORDERS !</div></div>
+                </div>
+                <div class="text-center w-100">
+                  <div class="text-info animate duration-2 delay-1" data-animate="fadeRight"><i class="material-icons md-5">phone</i></div>
+                  <div class="h3 bg-white px-2 animate d-inline-block text-secondary font-weight-normal delay-2" data-animate="fadeDown">24 HOURS</div>
+                  <div><div class="h1 bg-dark px-2 animate d-inline-block text-white font-weight-normal delay-2" data-animate="fadeUp">ONLINE SUPPORT</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev d-none d-sm-flex" id="home-slider-prev"><i class="material-icons md-3">keyboard_arrow_left</i></div>
+          <div class="swiper-button-next d-none d-sm-flex" id="home-slider-next"><i class="material-icons md-3">keyboard_arrow_right</i></div>
+        </div>
+      </div>
+    </div>
+    <!-- /Home Slider -->
+
+    <div class="container-fluid limited mt-5">
+
+      <!-- Service Block -->
+      <div class="row no-gutters mb-3">
+        <div class="col-sm-6 col-lg-3">
+          <div class="media service-block">
+            <div class="service-block-icon">
+              <i class="material-icons">local_shipping</i>
+            </div>
+            <div class="media-body">
+              <h6>FREE SHIPPING &AMP; RETURN</h6>
+              <div class="service-block-desc">Get free shipping for all orders $99 or more</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="media service-block">
+            <div class="service-block-icon">
+              <i class="material-icons">refresh</i>
+            </div>
+            <div class="media-body">
+              <h6>MONEY BACK GUARANTEE</h6>
+              <div class="service-block-desc">Get the item you ordered, or your money back</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="media service-block">
+            <div class="service-block-icon">
+              <i class="material-icons">security</i>
+            </div>
+            <div class="media-body">
+              <h6>100% SECURE PAYMENT</h6>
+              <div class="service-block-desc">Your transaction are secure with SSL Encryption</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="media service-block">
+            <div class="service-block-icon">
+              <i class="material-icons">phone</i>
+            </div>
+            <div class="media-body">
+              <h6>ONLINE SUPPORT 24/7</h6>
+              <div class="service-block-desc">Chat with experts or have us call you right away</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Service Block -->
+
+      <!-- Top Categories -->
+      <div class="row mb-5 compact">
+        <div class="col-12">
+          <div class="title text-center"><span>Top Categories</span></div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-2 mb-md-0">
+          <div class="card hover-style2 border-white text-white">
+            <img class="card-img" src="{{img}}/product/type-polo.jpg" alt="Card image">
+            <a href="shop.html">
+              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                <h4 class="card-title text-white font-weight-normal text-center become-h6">Polo T-Shirts</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-2 mb-md-0">
+          <div class="card hover-style2 border-white text-white">
+            <img class="card-img" src="{{img}}/product/type-round.jpg" alt="Card image">
+            <a href="shop.html">
+              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                <h4 class="card-title text-white font-weight-normal text-center become-h6">Round Neck T-Shirts</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-2 mb-md-0">
+          <div class="card hover-style2 border-white text-white">
+            <img class="card-img" src="{{img}}/product/type-vneck.jpg" alt="Card image">
+            <a href="shop.html">
+              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                <h4 class="card-title text-white font-weight-normal text-center become-h6">V Neck T-Shirts</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 mb-2 mb-md-0 d-block d-md-none d-lg-block">
+          <div class="card hover-style2 border-white text-white">
+            <img class="card-img" src="{{img}}/product/type-hooded.jpg" alt="Card image">
+            <a href="shop.html">
+              <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                <h4 class="card-title text-white font-weight-normal text-center become-h6">Hooded T-Shirts</h4>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- /Top Categories -->
+
+      <!-- Flash Sale -->
+      <div class="row mb-3 compact">
+        <div class="col-12">
+          <div class="title text-center"><span><i class="material-icons align-text-bottom text-warning">flash_on</i>FLASH SALE<span id="flash-sale-countdown" class="bg-theme text-white px-2 rounded ml-3 small"></span></span></div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg col-xl-2">
+          <div class="card card-product">
+            <a href="detail.html"><img class="card-img-top" src="{{img}}/product/polo1.jpg" alt="Card image cap"></a>
+            <div class="card-body">
+              <div class="card-title"><a href="detail.html" title="Burberry The Plymouth Duffle Coat">Burberry The Plymouth Duffle Coat</a></div>
+              <ul class="card-text list-inline pr-2">
+                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+              </ul>
+              <div class="attribute rating">
+                <i class="material-icons d-block">star_border</i>
+                <i class="material-icons d-block">star_half</i>
+                <i class="material-icons d-block">star</i>
+                <i class="material-icons d-block">star</i>
+                <i class="material-icons d-block">star</i>
+              </div>
+              <div class="action">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Action">
+                  <button class="btn btn-outline-theme show-quickview"><i class="material-icons">zoom_in</i></button>
+                  <button class="btn btn-theme">ADD TO CART</button>
+                  <button class="btn btn-outline-theme"><i class="material-icons">favorite_border</i></button>
+                </div>
+              </div>
+              <div class="small-action d-block d-md-none">
+                <div class="btn-group dropup">
+                  <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#10247;</span>
+                  <div class="dropdown-menu dropdown-menu-right fadeIn">
+                    <a class="dropdown-item" href="#"><i class="material-icons">add_shopping_cart</i> BUY</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">favorite_border</i> Wishlist</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">compare_arrows</i> Compare</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg col-xl-2">
+          <div class="card card-product">
+            <a href="detail.html"><img class="card-img-top" src="{{img}}/product/polo2.jpg" alt="Card image cap"></a>
+            <div class="card-body">
+              <div class="card-title"><a href="detail.html" title="Fendi Bugs Sweater">Fendi Bugs Sweater</a></div>
+              <ul class="card-text list-inline">
+                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+                <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-theme">-10%</span></li>
+              </ul>
+              <div class="action">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Action">
+                  <button class="btn btn-outline-theme show-quickview"><i class="material-icons">zoom_in</i></button>
+                  <button class="btn btn-theme">ADD TO CART</button>
+                  <button class="btn btn-outline-theme"><i class="material-icons">favorite_border</i></button>
+                </div>
+              </div>
+              <div class="small-action d-block d-md-none">
+                <div class="btn-group dropup">
+                  <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#10247;</span>
+                  <div class="dropdown-menu dropdown-menu-right fadeIn">
+                    <a class="dropdown-item" href="#"><i class="material-icons">add_shopping_cart</i> BUY</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">favorite_border</i> Wishlist</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">compare_arrows</i> Compare</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg col-xl-2">
+          <div class="card card-product">
+            <a href="detail.html"><img class="card-img-top" src="{{img}}/product/polo3.jpg" alt="Card image cap"></a>
+            <div class="card-body">
+              <div class="card-title"><a href="detail.html" title="Alexander McQueen Classic Piqué Polo Shirt">Alexander McQueen Classic Piqué Polo Shirt</a></div>
+              <ul class="card-text list-inline">
+                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+              </ul>
+              <div class="attribute attribute-right">
+                <span class="badge badge-theme font-weight-normal">10% OFF</span>
+              </div>
+              <div class="action">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Action">
+                  <button class="btn btn-outline-theme show-quickview"><i class="material-icons">zoom_in</i></button>
+                  <button class="btn btn-theme">ADD TO CART</button>
+                  <button class="btn btn-outline-theme"><i class="material-icons">favorite_border</i></button>
+                </div>
+              </div>
+              <div class="small-action d-block d-md-none">
+                <div class="btn-group dropup">
+                  <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#10247;</span>
+                  <div class="dropdown-menu dropdown-menu-right fadeIn">
+                    <a class="dropdown-item" href="#"><i class="material-icons">add_shopping_cart</i> BUY</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">favorite_border</i> Wishlist</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">compare_arrows</i> Compare</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg col-xl-2">
+          <div class="card card-product">
+            <a href="detail.html"><img class="card-img-top" src="{{img}}/product/polo4.jpg" alt="Card image cap"></a>
+            <div class="card-body">
+              <div class="card-title"><a href="detail.html" title="MCQ Alexander McQueen Swallow Badge Polo Shirt">MCQ Alexander McQueen Swallow Badge Polo Shirt</a></div>
+              <ul class="card-text list-inline">
+                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+                <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-secondary">-10%</span></li>
+              </ul>
+              <div class="attribute attribute-right rating">
+                <i class="material-icons">star_border</i>
+                <i class="material-icons">star_half</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+              </div>
+              <div class="action">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Action">
+                  <button class="btn btn-outline-theme show-quickview"><i class="material-icons">zoom_in</i></button>
+                  <button class="btn btn-theme">ADD TO CART</button>
+                  <button class="btn btn-outline-theme"><i class="material-icons">favorite_border</i></button>
+                </div>
+              </div>
+              <div class="small-action d-block d-md-none">
+                <div class="btn-group dropup">
+                  <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#10247;</span>
+                  <div class="dropdown-menu dropdown-menu-right fadeIn">
+                    <a class="dropdown-item" href="#"><i class="material-icons">add_shopping_cart</i> BUY</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">favorite_border</i> Wishlist</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">compare_arrows</i> Compare</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg col-xl-2 d-block d-md-none d-lg-block">
+          <div class="card card-product">
+            <a href="detail.html"><img class="card-img-top" src="{{img}}/product/polo5.jpg" alt="Card image cap"></a>
+            <div class="card-body">
+              <div class="card-title"><a href="detail.html" title="MCQ Alexander McQueen Mini Swallow Sweatshirt">MCQ Alexander McQueen Mini Swallow Sweatshirt</a></div>
+              <ul class="card-text list-inline">
+                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+                <li class="list-inline-item d-none d-sm-inline-block"><span class="badge badge-secondary">-10%</span></li>
+              </ul>
+              <div class="attribute attribute-right rating">
+                <i class="material-icons d-block">star</i>
+                <i class="material-icons d-block">star</i>
+                <i class="material-icons d-block">star</i>
+                <i class="material-icons d-block">star</i>
+                <i class="material-icons d-block">star</i>
+              </div>
+              <div class="action">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Action">
+                  <button class="btn btn-outline-theme show-quickview"><i class="material-icons">zoom_in</i></button>
+                  <button class="btn btn-theme">ADD TO CART</button>
+                  <button class="btn btn-outline-theme"><i class="material-icons">favorite_border</i></button>
+                </div>
+              </div>
+              <div class="small-action d-block d-md-none">
+                <div class="btn-group dropup">
+                  <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#10247;</span>
+                  <div class="dropdown-menu dropdown-menu-right fadeIn">
+                    <a class="dropdown-item" href="#"><i class="material-icons">add_shopping_cart</i> BUY</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">favorite_border</i> Wishlist</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">compare_arrows</i> Compare</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-sm-4 col-md-3 col-lg col-xl-2 d-block d-md-none d-xl-block">
+          <div class="card card-product">
+            <a href="detail.html"><img class="card-img-top" src="{{img}}/product/vneck1.jpg" alt="Card image cap"></a>
+            <div class="card-body">
+              <div class="card-title"><a href="detail.html" title="Burberry Button Down Collar Check Stretch Cotton Blend Shirt">Burberry Button Down Collar Check Stretch Cotton Blend Shirt</a></div>
+              <ul class="card-text list-inline">
+                <li class="list-inline-item"><span class="price">$13.50</span></li>
+                <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+              </ul>
+              <div class="attribute">
+                <span class="badge badge-secondary font-weight-normal">10% OFF</span>
+              </div>
+              <div class="action">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Action">
+                  <button class="btn btn-outline-theme show-quickview"><i class="material-icons">zoom_in</i></button>
+                  <button class="btn btn-theme">ADD TO CART</button>
+                  <button class="btn btn-outline-theme"><i class="material-icons">favorite_border</i></button>
+                </div>
+              </div>
+              <div class="small-action d-block d-md-none">
+                <div class="btn-group dropup">
+                  <span role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#10247;</span>
+                  <div class="dropdown-menu dropdown-menu-right fadeIn">
+                    <a class="dropdown-item" href="#"><i class="material-icons">add_shopping_cart</i> BUY</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">favorite_border</i> Wishlist</a>
+                    <a class="dropdown-item" href="#"><i class="material-icons">compare_arrows</i> Compare</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Flash Sale -->
+
+      <!-- Top Brands -->
+      <div class="row mb-5">
+        <div class="col-12"><div class="title text-center"><span>Top Brands You'll Love</span></div></div>
+        <div class="col-12">
+          <div class="swiper-nav">
+            <div class="swiper-nav-prev" id="brand-slider-prev"><i class="material-icons">keyboard_arrow_left</i></div>
+            <div class="swiper-nav-next" id="brand-slider-next"><i class="material-icons">keyboard_arrow_right</i></div>
+          </div>
+          <div class="swiper-container swiper-container-have-hover" id="brand-slider">
+            <div class="swiper-wrapper">
+              {{#brands}}
+              <div class="card card-brand hover-style swiper-slide">
+                <div class="card-body">
+                  <a href="shop.html"><img class="card-img-top" src="{{img}}/brand/{{brand-img}}" alt="Example Brand"></a>
+                </div>
+              </div>
+              {{/brands}}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Top Brands -->
+
+      <!-- New In -->
+      <div class="row mb-4">
+        <div class="col-12"><div class="title text-center"><span><i class="material-icons align-text-bottom text-theme">new_releases</i> NEW IN</span></div></div>
+        <div class="col-12">
+          {{> _include/product_slider}}
+        </div>
+      </div>
+      <!-- /New In -->
+
+      <div class="row mb-3 compact">
+
+        <!-- Recent Reviews -->
+        <div class="col-md-5 col-lg-3">
+          <div class="title"><span>Recent Reviews</span></div>
+          <div class="media media-comment">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2264%22%20height%3D%2264%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161085b5e1e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161085b5e1e%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2213%22%20y%3D%2236.8%22%3E64x64%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Generic placeholder image">
+            <div class="media-body">
+              <div>Good model, good material quality</div>
+              <div class="small text-right">in <a href="detail.html">Fendi Bugs Sweater</a></div>
+              <div class="small text-right">from <a href="#">John Mblo</a></div>
+            </div>
+          </div>
+          <div class="media media-comment">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2264%22%20height%3D%2264%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161085b5e1e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161085b5e1e%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2213%22%20y%3D%2236.8%22%3E64x64%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Generic placeholder image">
+            <div class="media-body">
+              <div>Nice Shirt, I Love it</div>
+              <div class="small text-right">in <a href="detail.html">MCQ Alexander McQueen Swallow</a></div>
+              <div class="small text-right">from <a href="#">John Thor</a></div>
+            </div>
+          </div>
+          <div class="media media-comment">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2264%22%20height%3D%2264%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161085b5e1e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161085b5e1e%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2213%22%20y%3D%2236.8%22%3E64x64%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Generic placeholder image">
+            <div class="media-body">
+              <div>Good product, comfortable to wear</div>
+              <div class="small text-right">in <a href="detail.html">Burberry The Plymouth Duffle Coat</a></div>
+              <div class="small text-right">from <a href="#">John Nes</a></div>
+            </div>
+          </div>
+          <div class="media media-comment d-flex d-md-none d-lg-flex">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2264%22%20height%3D%2264%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161085b5e1e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161085b5e1e%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2213%22%20y%3D%2236.8%22%3E64x64%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Generic placeholder image">
+            <div class="media-body">
+              <div>Great sweatshirt, Recommended !</div>
+              <div class="small text-right">in <a href="detail.html">MCQ Alexander McQueen Mini Swallow</a></div>
+              <div class="small text-right">from <a href="#">May John</a></div>
+            </div>
+          </div>
+          <div class="media media-comment d-flex d-md-none d-xl-flex">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2264%22%20height%3D%2264%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_161085b5e1e%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_161085b5e1e%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2213%22%20y%3D%2236.8%22%3E64x64%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Generic placeholder image">
+            <div class="media-body">
+              <div>Great sweatshirt, Recommended !</div>
+              <div class="small text-right">in <a href="detail.html">MCQ Alexander McQueen Mini Swallow</a></div>
+              <div class="small text-right">from <a href="#">May John</a></div>
+            </div>
+          </div>
+        </div>
+        <!-- /Recent Reviews -->
+
+        <!-- Explore Store -->
+        <div class="col-md-7 col-lg-9">
+          <div class="title"><span>Explore Store</span></div>
+          <div class="row compact">
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-3">
+              <div class="card">
+                <img class="card-img-top" src="img/product/men1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title mb-0">MEN</h5>
+                </div>
+                <div class="list-group list-group-flush list-group-collapse list-group-sm" id="list-group-men" data-children=".sub-men">
+                  <div class="list-group-collapse sub-men">
+                    <a class="list-group-item list-group-item-action" href="#sub-men1" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men1">Clothing</a>
+                    <div class="collapse" id="sub-men1" data-parent="#list-group-men">
+                      <div class="list-group">
+                        <a href="shop.html" class="list-group-item list-group-item-action">Polos &amp; Tees</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">Casual Shirts</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">Formal Shirts</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">More &raquo;</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-collapse sub-men">
+                    <a class="list-group-item list-group-item-action" href="#sub-men2" data-toggle="collapse" aria-expanded="false" aria-controls="sub-men2">Footwear</a>
+                    <div class="collapse" id="sub-men2" data-parent="#list-group-men">
+                      <div class="list-group">
+                        <a href="shop.html" class="list-group-item list-group-item-action">Sports Shoes</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">Sneakers</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">Formal Shoes</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">More &raquo;</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="shop.html" class="list-group-item list-group-item-action">Accessories</a>
+                  <a href="shop.html" class="list-group-item list-group-item-action">Bags</a>
+                </div>
+                <div class="card-body text-center p-1">
+                  <a href="#" class="btn btn-block btn-theme btn-sm">SHOP ALL</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-3">
+              <div class="card">
+                <img class="card-img-top" src="img/product/women1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title mb-0">WOMEN</h5>
+                </div>
+                <div class="list-group list-group-flush list-group-collapse list-group-sm" id="list-group-women" data-children=".sub-women">
+                  <div class="list-group-collapse sub-women">
+                    <a class="list-group-item list-group-item-action" href="#sub-women1" data-toggle="collapse" aria-expanded="false" aria-controls="sub-women1">Clothing</a>
+                    <div class="collapse" id="sub-women1" data-parent="#list-group-women">
+                      <div class="list-group">
+                        <a href="shop.html" class="list-group-item list-group-item-action">Tops, Tees &amp; Shirts</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">Dresses &amp; Jumpsuits</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">Leggings &amp; Jeggings</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">More &raquo;</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="list-group-collapse sub-women">
+                    <a class="list-group-item list-group-item-action" href="#sub-women2" data-toggle="collapse" aria-expanded="false" aria-controls="sub-women2">Footwear</a>
+                    <div class="collapse" id="sub-women2" data-parent="#list-group-women">
+                      <div class="list-group">
+                        <a href="shop.html" class="list-group-item list-group-item-action">Handbags</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">Sling Bags</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">Wallets</a>
+                        <a href="shop.html" class="list-group-item list-group-item-action">More &raquo;</a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="shop.html" class="list-group-item list-group-item-action">Accessories</a>
+                  <a href="shop.html" class="list-group-item list-group-item-action">Jewellery</a>
+                </div>
+                <div class="card-body text-center p-1">
+                  <a href="#" class="btn btn-block btn-theme btn-sm">SHOP ALL</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 mb-3 d-none d-lg-block">
+              <div class="card">
+                <img class="card-img-top" src="img/product/kids1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title mb-0">KIDS</h5>
+                </div>
+                <div class="list-group list-group-flush list-group-sm">
+                  <a href="shop.html" class="list-group-item list-group-item-action">Boys Clothing</a>
+                  <a href="shop.html" class="list-group-item list-group-item-action">Girls Clothing</a>
+                  <a href="shop.html" class="list-group-item list-group-item-action">Accessories</a>
+                  <a href="shop.html" class="list-group-item list-group-item-action">Toys</a>
+                </div>
+                <div class="card-body text-center p-1">
+                  <a href="#" class="btn btn-block btn-theme btn-sm">SHOP ALL</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ./Explore Store -->
+
+      </div>
+
+    </div>
+
+    {{> _include/modal}}
+    {{> _include/modal_quickview}}
+
+    {{> _include/footer}}
+
+    <!-- Required js -->
+    {{#required-js}}
+    <script src="{{{js}}}"></script>
+    {{/required-js}}
+
+    <!-- Plugins js -->
+    {{#index-js}}
+    <script src="{{{js}}}"></script>
+    {{/index-js}}
+
+    <!-- Template JS -->
+    <script src="{{{template-js}}}"></script>
+
+  </body>
+</html>

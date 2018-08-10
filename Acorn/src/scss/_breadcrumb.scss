@@ -1,0 +1,16 @@
+.breadcrumb-container {
+  background-color: #e9ecef;
+}
+.breadcrumb {
+  padding-right: .7rem;
+  padding-left: .7rem;
+}
+.breadcrumb-item > a {
+  color: $color-500;
+}
+@include media-breakpoint-down(md) {
+  .breadcrumb {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+  }
+}

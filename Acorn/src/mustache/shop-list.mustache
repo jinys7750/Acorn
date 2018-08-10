@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{> _include/favicon}}
+    <title>Shop List - {{name}}</title>
+
+    <!-- Required css -->
+    {{#required-css}}
+    <link rel="stylesheet" href="{{{css}}}">
+    {{/required-css}}
+
+    <!-- Plugins css -->
+    {{#shop-css}}
+    <link rel="stylesheet" href="{{{css}}}">
+    {{/shop-css}}
+
+    <!-- Template css -->
+    <link rel="stylesheet" href="{{{template-css}}}">
+  </head>
+  <body>
+
+    {{> _include/header}}
+
+    <div class="breadcrumb-container">
+      <div class="container-fluid limited">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Shop List</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container-fluid limited">
+      <div class="row">
+
+        <!-- Filter Widget -->
+        <div class="col-lg-3 col-md-4 mb-3">
+          <button class="btn btn-light btn-block dropdown-toggle d-md-none" type="button" data-toggle="collapse" data-target="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
+            Filter Data
+          </button>
+          <div class="collapse d-md-block" id="collapseFilter">
+            {{> _include/filter_sidebar}}
+          </div>
+        </div>
+        <!-- /Filter Widget -->
+
+        <div class="col-lg-9 col-md-8">
+          <div class="title"><span>T-Shirts</span></div>
+
+          <!-- Sorting Bar -->
+          <div class="row mb-3 border pt-2 px-3 rounded no-gutters">
+            <div class="mb-2 col-12 col-sm-8 text-center text-sm-left">
+              <span>Sort by</span>
+              <select name="sortby" class="custom-select ml-2 w-auto custom-select-sm">
+                <option value="popularity">Popularity</option>
+                <option value="best-selling">Best Selling</option>
+                <option value="low">Low Price &rarr; High Price</option>
+                <option value="hight">High Price &rarr; High Price</option>
+              </select>
+            </div>
+            <div class="mb-2 col-12 col-sm-4 text-center text-sm-right">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <a class="btn btn-outline-theme btn-sm" href="shop.html" role="button"><i class="material-icons">apps</i></a>
+                <a class="btn btn-theme btn-sm" href="shop-list.html" role="button"><i class="material-icons">list</i></a>
+              </div>
+            </div>
+          </div>
+          <!-- /Sorting Bar -->
+
+          <div class="row">
+            <div class="col-12">
+              <div class="media hover-style media-list">
+                <a href="detail.html">
+                  <div data-cover="{{img}}/product/polo1.jpg" data-xs-height="250px" data-sm-height="200px" data-md-height="200px" data-lg-height="200px" data-xl-height="200px"></div>
+                </a>
+                <div class="media-body">
+                  <a href="detail.html" class="h5">Burberry The Plymouth Duffle Coat</a>
+                  <div class="d-flex rating">
+                    <i class="material-icons md-1">star</i>
+                    <i class="material-icons md-1">star</i>
+                    <i class="material-icons md-1">star</i>
+                    <i class="material-icons md-1">star_half</i>
+                    <i class="material-icons md-1">star_border</i>
+                  </div>
+                  <ul class="card-text list-inline">
+                    <li class="list-inline-item"><span class="price">$13.50</span></li>
+                    <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eos esse rerum iusto, ut maxime!</p>
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Action">
+                    <button class="btn btn-theme">ADD TO CART</button>
+                    <button class="btn btn-outline-theme show-quickview d-none d-md-inline-block" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="material-icons">zoom_in</i></button>
+                    <button class="btn btn-outline-theme" data-toggle="tooltip" data-placement="top" title="Add to Compare"><i class="material-icons">compare_arrows</i></button>
+                    <button class="btn btn-outline-theme" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="material-icons">favorite_border</i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="media hover-style media-list">
+                <a href="detail.html">
+                  <div data-cover="{{img}}/product/polo2.jpg" data-xs-height="250px" data-sm-height="200px" data-md-height="200px" data-lg-height="200px" data-xl-height="200px"></div>
+                </a>
+                <div class="media-body">
+                  <a href="detail.html" class="h5">Fendi Bugs Sweater</a>
+                  <ul class="card-text list-inline">
+                    <li class="list-inline-item"><span class="price">$13.50</span></li>
+                    <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+                    <li class="list-inline-item"><span class="badge badge-secondary font-weight-normal">10% OFF</span></li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eos esse rerum iusto, ut maxime!</p>
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Action">
+                    <button class="btn btn-theme">ADD TO CART</button>
+                    <button class="btn btn-outline-theme show-quickview d-none d-md-inline-block" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="material-icons">zoom_in</i></button>
+                    <button class="btn btn-outline-theme" data-toggle="tooltip" data-placement="top" title="Add to Compare"><i class="material-icons">compare_arrows</i></button>
+                    <button class="btn btn-outline-theme" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="material-icons">favorite_border</i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="media hover-style media-list">
+                <a href="detail.html">
+                  <div data-cover="{{img}}/product/polo3.jpg" data-xs-height="250px" data-sm-height="200px" data-md-height="200px" data-lg-height="200px" data-xl-height="200px"></div>
+                </a>
+                <div class="media-body">
+                  <a href="detail.html" class="h5">Alexander McQueen Classic Piqué Polo Shirt</a>
+                  <div class="d-flex rating">
+                    <i class="material-icons md-1">star</i>
+                    <i class="material-icons md-1">star</i>
+                    <i class="material-icons md-1">star</i>
+                    <i class="material-icons md-1">star_half</i>
+                    <i class="material-icons md-1">star_border</i>
+                  </div>
+                  <ul class="card-text list-inline">
+                    <li class="list-inline-item"><span class="price">$13.50</span></li>
+                    <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+                    <li class="list-inline-item"><span class="badge badge-secondary font-weight-normal">10% OFF</span></li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eos esse rerum iusto, ut maxime!</p>
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Action">
+                    <button class="btn btn-theme">ADD TO CART</button>
+                    <button class="btn btn-outline-theme show-quickview d-none d-md-inline-block" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="material-icons">zoom_in</i></button>
+                    <button class="btn btn-outline-theme" data-toggle="tooltip" data-placement="top" title="Add to Compare"><i class="material-icons">compare_arrows</i></button>
+                    <button class="btn btn-outline-theme" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="material-icons">favorite_border</i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="media hover-style media-list">
+                <a href="detail.html">
+                  <div data-cover="{{img}}/product/polo4.jpg" data-xs-height="250px" data-sm-height="200px" data-md-height="200px" data-lg-height="200px" data-xl-height="200px"></div>
+                </a>
+                <div class="media-body">
+                  <a href="detail.html" class="h5">MCQ Alexander McQueen Swallow Badge Polo Shirt</a>
+                  <div class="d-flex rating">
+                    <i class="material-icons md-1">star</i>
+                    <i class="material-icons md-1">star</i>
+                    <i class="material-icons md-1">star</i>
+                    <i class="material-icons md-1">star_half</i>
+                    <i class="material-icons md-1">star_border</i>
+                  </div>
+                  <ul class="card-text list-inline">
+                    <li class="list-inline-item"><span class="price">$13.50</span></li>
+                    <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+                    <li class="list-inline-item"><span class="badge badge-secondary font-weight-normal">-10%</span></li>
+                  </ul>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil eos esse rerum iusto, ut maxime!</p>
+                  <div class="btn-group btn-group-sm" role="group" aria-label="Action">
+                    <button class="btn btn-theme">ADD TO CART</button>
+                    <button class="btn btn-outline-theme show-quickview d-none d-md-inline-block" data-toggle="tooltip" data-placement="top" title="Quick View"><i class="material-icons">zoom_in</i></button>
+                    <button class="btn btn-outline-theme" data-toggle="tooltip" data-placement="top" title="Add to Compare"><i class="material-icons">compare_arrows</i></button>
+                    <button class="btn btn-outline-theme" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="material-icons">favorite_border</i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <nav aria-label="Product Listing Page" class="d-flex justify-content-center mt-3">
+                <ul class="pagination">
+                  <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">&laquo;</a></li>
+                  <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">&lsaquo;</a></li>
+                  <li class="page-item active"><span class="page-link">1</span></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&rsaquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{> _include/modal}}
+    {{> _include/modal_quickview}}
+
+    {{> _include/footer}}
+
+    <!-- Required js -->
+    {{#required-js}}
+    <script src="{{{js}}}"></script>
+    {{/required-js}}
+
+    <!-- Plugins js -->
+    {{#shop-js}}
+    <script src="{{{js}}}"></script>
+    {{/shop-js}}
+
+    <!-- Template JS -->
+    <script src="{{{template-js}}}"></script>
+
+  </body>
+</html>

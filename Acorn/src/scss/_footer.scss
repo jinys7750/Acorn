@@ -1,0 +1,134 @@
+.footer {
+  background-color: $footer-bg;
+  color: $footer-link-color;
+  font-size: .875rem;
+  .col,
+  [class*="col-"] {
+    padding-top: ($grid-gutter-width / 2);
+    padding-bottom: ($grid-gutter-width / 2);
+    &:last-child {
+      background-color: $footer-bg2;
+    }
+  }
+  .list-group-item {
+    padding: 8px 0;
+    color: $footer-link-color;
+    border: 0;
+    background-color: transparent;
+    transition: color .1s;
+    @include hover-focus {
+      color: $footer-link-hover-color;
+      outline: 0;
+    }
+  }
+  h6 {
+    color: color-yiq($footer-bg);
+  }
+  .media {
+    display: -webkit-inline-box;
+    display:     -ms-inline-flexbox;
+    display:         inline-flex;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    color: #fff;
+    border: 1px solid $footer-link-color;
+    border-radius: $btn-border-radius;
+    line-height: 1.2;
+    -webkit-transition: background-color .1s;
+            transition: background-color .1s;
+    img {
+      margin-right: 15px;
+    }
+    .media-body {
+      margin-top: -4px;
+    }
+    small {
+      color: $footer-link-color;
+    }
+    &:hover {
+      background-color: $footer-bg2;
+    }
+  }
+  .input-group {
+    margin-bottom: 10px;
+    .form-control {
+      background-color: #efefef;
+      border-color: #fff;
+      -webkit-transition: background-color .2s;
+              transition: background-color .2s;
+      &:focus {
+        background-color: #fff;
+        border-color: #fff;
+        box-shadow: none;
+      }
+    }
+    .btn {
+      border-color: #fff;
+    }
+  }
+  .social-link {
+    font-size: 0; //css-tricks.com/fighting-the-space-between-inline-block-elements/
+    li {
+      display: inline-block;
+      a {
+        color: $footer-link-color;
+        font-size: 20px;
+        line-height: 1.9;
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px 10px 0 0;
+        -webkit-transition: all .1s;
+                transition: all .1s;
+        text-align: center;
+        border: 1px solid $footer-link-color;
+        border-radius: 100%;
+        &:hover {
+          color: #fff;
+          border-color: #fff;
+          background-color: $color-500;
+          > svg {
+            fill: #fff;
+          }
+        }
+        > svg {
+          width: 24px;
+          height: 24px;
+          fill: $footer-link-color;
+          vertical-align: text-bottom;
+        }
+      }
+    }
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+.copyright {
+  font-size: .875rem;
+  padding: 5px 0;
+  color: $footer-link-color;
+  background-color: $footer-bg2;
+  text-align: center;
+}
+
+.back-top {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  bottom: 0;
+  display: none;
+  width: 30px;
+  height: 25px;
+  color: #fff;
+  background-color: $footer-bg2;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+  }
+  &:hover {
+    background-color: $footer-bg;
+    transition: all 100ms ease-in-out 0s;
+  }
+}

@@ -1,0 +1,45 @@
+.media-comment {
+  font-size: .875rem;
+  margin-bottom: 1rem;
+  > img {
+    width: 45px;
+    border-radius: $card-inner-border-radius;
+    margin-right: 10px;
+  }
+  .media-body {
+    border-radius: $card-inner-border-radius;
+    position: relative;
+    border: 1px solid $card-border-color;
+    padding: 10px;
+    transition: border-color .1s;
+    a {
+      color: rgba($body-color, .7);
+      transition: background-color .1s;
+      &:hover {
+        background-color: $gray-200;
+        text-decoration: none;
+      }
+    }
+    &:before {
+      position: absolute;
+      top: 10px;
+      left: -5px;
+      display: block;
+      box-sizing: content-box;
+      width: 8px;
+      height: 8px;
+      content: '';
+      transform: rotate(-45deg);
+      border: 1px solid $card-border-color;
+      border-width: 1px 0 0 1px;
+      background-color: $white;
+      transition: border-color .1s;
+    }
+    &:hover {
+      border-color: $color-500;
+      &:before {
+        border-color: $color-500;
+      }
+    }
+  }
+}

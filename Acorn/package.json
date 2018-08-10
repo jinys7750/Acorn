@@ -1,0 +1,46 @@
+{
+  "name": "mimity",
+  "version": "4.3.0",
+  "description": "Online Shop Template",
+  "keywords": [
+    "bootstrap",
+    "html",
+    "clean",
+    "ecommerce",
+    "flat",
+    "modern",
+    "responsive",
+    "retail",
+    "shirt",
+    "shop",
+    "nodejs",
+    "npm",
+    "gulp",
+    "sass",
+    "mustache",
+    "jquery"
+  ],
+  "author": "Erwin Heldy",
+  "license": "SEE LICENSE IN <LICENSE>",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-include": "^2.3.1",
+    "gulp-mustache": "^3.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "node-sass": "^4.9.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "jquery-countdown": "^2.2.0",
+    "nouislider": "^11.1.0",
+    "photoswipe": "^4.1.2",
+    "raty-js": "^2.8.0",
+    "swiper": "^4.2.6",
+    "typeahead.js": "^0.11.1"
+  }
+}

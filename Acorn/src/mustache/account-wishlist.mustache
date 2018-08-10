@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{> _include/favicon}}
+    <title>My Wishlist - {{name}}</title>
+
+    <!-- Required css -->
+    {{#required-css}}
+    <link rel="stylesheet" href="{{{css}}}">
+    {{/required-css}}
+
+    <!-- Plugins css -->
+    {{#account-wishlist-css}}
+    <link rel="stylesheet" href="{{{css}}}">
+    {{/account-wishlist-css}}
+
+    <!-- Template css -->
+    <link rel="stylesheet" href="{{{template-css}}}">
+  </head>
+  <body>
+
+    {{> _include/header}}
+
+    <div class="breadcrumb-container">
+      <div class="container-fluid limited">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="account-profile.html">My Account</a></li>
+            <li class="breadcrumb-item active" aria-current="page">My Wishlist</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container-fluid limited mb-5">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+          <div class="card user-card">
+            <div class="card-body p-2 mb-3 mb-md-0 mb-xl-3">
+              <div class="media">
+                <img class="rounded-circle" src="{{img}}/user.png" alt="John Thor">
+                <div class="media-body">
+                  <h5 class="user-name">John Thor</h5>
+                  <small class="card-text text-muted">Joined Dec 31, 2017</small>
+                  <div class="card-text small text-muted">Points: 100</div>
+                </div>
+              </div>
+            </div>
+            <div class="list-group list-group-flush">
+              <a href="account-profile.html" class="list-group-item list-group-item-action"><i class="material-icons">person</i> Profile</a>
+              <a href="account-order.html" class="list-group-item list-group-item-action"><i class="material-icons">shopping_cart</i> Orders</a>
+              <a href="account-address.html" class="list-group-item list-group-item-action"><i class="material-icons">location_on</i> Addresses</a>
+              <a href="account-wishlist.html" class="list-group-item list-group-item-action active"><i class="material-icons">favorite</i> Wishlist<span class="badge badge-light badge-pill float-right mt-1">3</span></a>
+              <a href="account-password.html" class="list-group-item list-group-item-action"><i class="material-icons">vpn_key</i> Change Password</a>
+              <a href="ind" class="list-group-item list-group-item-action d-none d-md-block"><i class="material-icons">exit_to_app</i> Logout</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-8">
+          <div class="title"><span>My Wishlist</span></div>
+          <div class="row mb-3 border pt-2 px-3 rounded no-gutters">
+            <div class="mb-2 col-12 col-sm-6 text-center text-sm-left">
+              <span>Date</span>
+              <select name="sortbydate" class="custom-select ml-2 w-auto custom-select-sm">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+              </select>
+            </div>
+            <div class="mb-2 col-12 col-sm-6 text-center text-sm-right">
+              <span>Availability</span>
+              <select name="availability" class="custom-select ml-2 w-auto custom-select-sm">
+                <option value="all">All</option>
+                <option value="in-stock">In Stock</option>
+                <option value="out-stock">Out of Stock</option>
+              </select>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-cart table-wishlist">
+              <thead>
+                <tr>
+                  <th scope="col" class="w-50">Item</th>
+                  <th scope="col" class="d-none d-sm-table-cell">Added</th>
+                  <th scope="col" class="d-none d-sm-table-cell">Price</th>
+                  <th scope="col" class="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="media">
+                      <a href="detail.html" class="mr-3 d-none d-md-block"><img src="{{img}}/product/polo1-small.jpg" class="img-fluid" alt="product"></a>
+                      <div class="media-body">
+                        <a href="detail.html" class="h6">U.S. Polo Assn. Green Solid Slim Fit</a>
+                        <div class="mb-1">
+                          <span class="d-inline d-sm-none small">Price: <span class="text-theme">$13.50</span></span>
+                          <div class="small mt-2 d-none d-sm-block">Availability:</div>
+                          <span class="badge badge-success custom-badge arrowed-right">In stock</span>
+                        </div>
+                        <div class="small d-block d-sm-none">Added: March 18, 2018</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="d-none d-sm-table-cell">March 18, 2018</td>
+                  <td class="d-none d-sm-table-cell">
+                    <ul class="card-text list-inline">
+                      <li class="list-inline-item"><span class="text-theme">$13.50</span></li>
+                      <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+                    </ul>
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group" role="group" aria-label="Compare action">
+                      <button type="button" class="btn btn-sm btn-theme">BUY NOW</button>
+                      <button type="button" class="btn btn-sm btn-outline-theme"><i class="material-icons">close</i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="media">
+                      <a href="detail.html" class="mr-3 d-none d-md-block"><img src="{{img}}/product/polo2-small.jpg" class="img-fluid" alt="product"></a>
+                      <div class="media-body">
+                        <a href="detail.html" class="h6">U.S. Polo Assn. Red Solid Slim Fit</a>
+                        <div class="mb-1">
+                          <span class="d-inline d-sm-none small">Price: <span class="text-theme">$13.50</span></span>
+                          <div class="small mt-2 d-none d-sm-block">Availability:</div>
+                          <span class="badge badge-danger custom-badge arrowed-right">Out of stock</span>
+                        </div>
+                        <div class="small d-block d-sm-none">Added: March 18, 2018</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="d-none d-sm-table-cell">March 18, 2018</td>
+                  <td class="d-none d-sm-table-cell">
+                    <ul class="card-text list-inline">
+                      <li class="list-inline-item"><span class="text-theme">$13.50</span></li>
+                      <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+                    </ul>
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group" role="group" aria-label="Compare action">
+                      <button type="button" class="btn btn-sm btn-theme" disabled="disabled">BUY NOW</button>
+                      <button type="button" class="btn btn-sm btn-outline-theme"><i class="material-icons">close</i></button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="media">
+                      <a href="detail.html" class="mr-3 d-none d-md-block"><img src="{{img}}/product/polo3-small.jpg" class="img-fluid" alt="product"></a>
+                      <div class="media-body">
+                        <a href="detail.html" class="h6">U.S. Polo Assn. Yellow Solid</a>
+                        <div class="mb-1">
+                          <span class="d-inline d-sm-none small">Price: <span class="text-theme">$13.50</span></span>
+                          <div class="small mt-2 d-none d-sm-block">Availability:</div>
+                          <span class="badge badge-success custom-badge arrowed-right">In stock</span>
+                        </div>
+                        <div class="small d-block d-sm-none">Added: March 18, 2018</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="d-none d-sm-table-cell">March 18, 2018</td>
+                  <td class="d-none d-sm-table-cell">
+                    <ul class="card-text list-inline">
+                      <li class="list-inline-item"><span class="text-theme">$13.50</span></li>
+                      <li class="list-inline-item"><del class="text-muted small">$15.00</del></li>
+                    </ul>
+                  </td>
+                  <td class="text-center">
+                    <div class="btn-group" role="group" aria-label="Compare action">
+                      <button type="button" class="btn btn-sm btn-theme">BUY NOW</button>
+                      <button type="button" class="btn btn-sm btn-outline-theme"><i class="material-icons">close</i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-outline-theme"><i class="material-icons">shopping_cart</i> Add All to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{> _include/modal}}
+
+    {{> _include/footer}}
+
+    <!-- Required js -->
+    {{#required-js}}
+    <script src="{{{js}}}"></script>
+    {{/required-js}}
+
+    <!-- Plugins js -->
+    {{#account-wishlist-js}}
+    <script src="{{{js}}}"></script>
+    {{/account-wishlist-js}}
+
+    <!-- Template JS -->
+    <script src="{{{template-js}}}"></script>
+
+  </body>
+</html>

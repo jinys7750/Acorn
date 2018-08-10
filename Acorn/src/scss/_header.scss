@@ -1,0 +1,143 @@
+
+
+// Top Header
+.top-header {
+  background-color: $top-header-bg;
+  .nav-link {
+    padding: $nav-link-padding-y ($nav-link-padding-x / 2);
+    transition: background-color .1s, color .1s;
+    color: $top-header-nav-link-color;
+    @include hover-focus {
+      color: $top-header-nav-link-hover-color;
+      outline: 0;
+      background-color: $top-header-nav-link-hover-bg;
+    }
+  }
+  .dropdown-lang img {
+    height: 12px;
+    margin-right: 2px;
+    vertical-align: baseline;
+  }
+  // keep dropdown-toggle style as focused style when shown
+  .show > .dropdown-toggle {
+    color: $top-header-nav-link-hover-color;
+    outline: 0;
+    background-color: $top-header-nav-link-hover-bg;
+  }
+}
+
+
+/* Middle Header*/
+.middle-header {
+  position: relative;
+  z-index: 3;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: $middle-header-bg;
+  box-shadow: $middle-header-box-shadow;
+  .logo {
+    height: 40px;
+    > img {
+      height: 100%;
+    }
+  }
+  .nav-link {
+    padding-top: 0.6rem;
+    padding-bottom: 0.4rem;
+    transition: color .1s;
+    color: $middle-header-nav-link-color;
+    @include hover-focus {
+      color: $middle-header-nav-link-hover-color;
+      outline: 0;
+    }
+  }
+  .nav-item.dropdown {
+    > .dropdown-menu {
+      margin-top: 0; // remove the gap so it doesn't close
+    }
+  }
+  .nav-counter {
+    .nav-link {
+      margin-right: ($nav-link-padding-x / 2);
+      margin-left: ($nav-link-padding-x / 2);
+      padding: 0;
+      > img {
+        height: 30px;
+      }
+    }
+    .counter {
+      position: relative;
+       > span {
+        font-size: .8125rem;
+        position: absolute;
+        top: 0;
+        right: -5px;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        color: $middle-header-counter-color;
+        border-radius: 100%;
+        background: $middle-header-counter-bg;
+      }
+    }
+  }
+  .input-search-wrapper {
+    position: absolute;
+    right: 15px;
+    z-index: 1;
+    width: 40%;
+    transition: width .2s;
+    .form-control {
+      height: 40px;
+    }
+    .toggle-search {
+      cursor: pointer;
+      position: absolute;
+      right: 8px;
+      top: 9px;
+      height: 20px;
+      > i {
+        font-size: 20px;
+        vertical-align: baseline;
+      }
+    }
+  }
+  .input-search-wrapper.invisible {
+    width: 150px;
+  }
+}
+.dropdown-menu-mega {
+  padding: 15px;
+  left: 15px !important;
+  right: 15px !important;
+}
+
+
+// Animate fixed top header
+.fixed-top {
+  position: fixed !important;
+  animation-name: slideDown;
+  animation-duration: .5s;
+  animation-fill-mode: both;
+}
+@include media-breakpoint-down(md) {
+  .middle-header {
+    .nav-link {
+      padding-right: .75rem;
+      padding-left: .75rem;
+    }
+    .nav-counter .nav-link {
+      margin-left: 0;
+    }
+  }
+}
+@include media-breakpoint-down(lg) {
+  .middle-header .input-search-wrapper {
+    width: calc(100% - 160px);
+  }
+}
+@include media-breakpoint-down(sm) {
+  .middle-header .input-search-wrapper {
+    width: calc(100% - 30px);
+  }
+}

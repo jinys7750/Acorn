@@ -1,0 +1,179 @@
+
+
+// Product Card
+.card-product {
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-color: transparent;
+  @extend .hover-style;
+  .card-body {
+    padding: 10px;
+  }
+  .card-title {
+    line-height: 1.2;
+    overflow: hidden;
+    height: 39px;
+    a {
+      transition: color .1s;
+      color: rgba(0,0,0,.6);
+      @include hover-focus {
+        text-decoration: none;
+        color: $body-color;
+      }
+    }
+  }
+  .card-text.list-inline {
+    margin-bottom: 0;
+  }
+  .action {
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    display: none;
+    width: 100%;
+    text-align: center;
+    .btn-outline-theme {
+      background-color: $white;
+      &:hover {
+        background-color: darken($white, 10%);
+        color: darken($color-500, 10%);
+      }
+    }
+    .btn-group .btn:nth-child(2) {
+      font-size: 12px;
+    }
+  }
+  .attribute {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 0;
+    > i {
+      vertical-align: top;
+    }
+    .badge {
+      font-size: .75rem;
+    }
+    &.attribute-right {
+      left: auto;
+      right: 5px;
+    }
+  }
+  .small-action {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    span[data-toggle="dropdown"] {
+      font-size: 1.5rem;
+      line-height: 0;
+      width: 8px;
+      cursor: pointer;
+    }
+    .dropdown-menu {
+      min-width: 6rem;
+      padding-top: .25rem;
+      padding-bottom: .25rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      .dropdown-item {
+        font-size: .875rem;
+        padding-left: .5rem;
+        padding-right: .5rem;
+        > i {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .card-product:hover {
+    .action {
+      display: block;
+      button {
+        animation-name: fadeDown;
+        animation-duration: .2s;
+        animation-fill-mode: both;
+        &:nth-child(2) {
+          animation-name: fadeUp;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .card-product {
+    .card-body {
+      padding: 5px;
+    }
+    .card-title {
+      margin-bottom: 0.3rem;
+    }
+  }
+}
+
+
+// Brand Card
+.card-brand {
+  .card-body {
+    padding: 1rem 0;
+  }
+  img {
+    display: block;
+    max-width: 160px;
+    margin: 0 auto;
+  }
+}
+.media-list {
+  border: 1px solid $border-color;
+  padding: 1rem;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
+  [data-cover] {
+    width: 200px;
+    min-height: 200px;
+    margin-right: 1rem;
+  }
+}
+@include media-breakpoint-only(xs) {
+  .media-list {
+    flex-wrap: wrap;
+    > a,
+    [data-cover] {
+      width: 100%;
+      margin-bottom: .5rem;
+    }
+    .media-body {
+      flex: unset;
+    }
+  }
+}
+
+
+// User Card
+.user-card {
+  border-bottom: 2px solid #d6d8d9;
+  img {
+    width: 100px;
+    margin-right: .5rem;
+  }
+  .user-name {
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+  }
+}
+@include media-breakpoint-up(md) {
+  .user-card .img-thumbnail {
+    width: 70px;
+  }
+  .user-name {
+    font-size: 1rem;
+  }
+}
+@include media-breakpoint-only(xl) {
+  .user-card .img-thumbnail {
+    width: 100px;
+  }
+  .user-name {
+    font-size: 1.25rem;
+  }
+}

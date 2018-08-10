@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {{> _include/favicon}}
+    <title>Contact Us - {{name}}</title>
+
+    <!-- Required css -->
+    {{#required-css}}
+    <link rel="stylesheet" href="{{{css}}}">
+    {{/required-css}}
+
+    <!-- Plugins css -->
+    {{#contact-css}}
+    <link rel="stylesheet" href="{{{css}}}">
+    {{/contact-css}}
+
+    <!-- Template css -->
+    <link rel="stylesheet" href="{{{template-css}}}">
+  </head>
+  <body>
+
+    {{> _include/header}}
+
+    <div class="breadcrumb-container">
+      <div class="container-fluid limited">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container-fluid limited mb-5">
+      <div class="row">
+        <div class="col-md-8 mb-3">
+          <div class="title"><span>Contact Us</span></div>
+          <form>
+            <div class="form-group">
+              <label for="InputName">Your Name (*)</label>
+              <input type="text" class="form-control" id="InputName" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="InputEmail1">Email address (*)</label>
+              <input type="email" class="form-control" id="InputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="InputSubject">Subject</label>
+              <input type="text" class="form-control" id="InputSubject" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="InputMessage">Message (*)</label>
+              <textarea class="form-control" id="InputMessage" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-theme btn-sm">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-4">
+          <div class="title"><span>Contact Info</span></div>
+          <ul class="list-group mb-4">
+            <li class="list-group-item pl-2 border-left-0 border-right-0 border-top-0">&raquo; 212 Lorem Ipsum. Dolor Sit, Amet</li>
+            <li class="list-group-item pl-2 border-left-0 border-right-0">&raquo; +123-456-789</li>
+            <li class="list-group-item pl-2 border-left-0 border-right-0">&raquo; cs@domain.tld</li>
+          </ul>
+          <div class="title"><span>Our Location</span></div>
+          <div class="embed-responsive embed-responsive-4by3 rounded">
+            <iframe class="embed-responsive-item" src="http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=central%2Bpark&ie=UTF8&z=12&t=m&iwloc=near&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{> _include/modal}}
+
+    {{> _include/footer}}
+
+    <!-- Required js -->
+    {{#required-js}}
+    <script src="{{{js}}}"></script>
+    {{/required-js}}
+
+    <!-- Plugins js -->
+    {{#contact-js}}
+    <script src="{{{js}}}"></script>
+    {{/contact-js}}
+
+    <!-- Template JS -->
+    <script src="{{{template-js}}}"></script>
+
+  </body>
+</html>

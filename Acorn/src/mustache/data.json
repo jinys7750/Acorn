@@ -1,0 +1,107 @@
+{
+	"name": "Mimity",
+	"img": "img",
+
+	"required-css": [
+		{ "css": "bootstrap/css/bootstrap.min.css" },
+		{ "css": "https://fonts.googleapis.com/icon?family=Material+Icons" }
+	],
+
+	"required-js": [
+		{ "js": "js/jquery.min.js" },
+		{ "js": "bootstrap/js/bootstrap.bundle.min.js" },
+		{ "js": "js/typeahead.bundle.min.js" }
+	],
+
+	"template-css": "css/style.min.css",
+	"template-js": "js/script.min.js",
+
+	"index-css": [
+		{ "css": "css/swiper.min.css" }
+	],
+	"index-js": [
+		{ "js": "js/swiper.min.js" },
+		{ "js": "js/jquery.countdown.min.js" }
+	],
+	"brands": [
+		{ "brand-img": "brand1.svg" },
+		{ "brand-img": "brand2.svg" },
+		{ "brand-img": "brand3.svg" },
+		{ "brand-img": "brand4.svg" },
+		{ "brand-img": "brand5.svg" },
+		{ "brand-img": "brand1.svg" },
+		{ "brand-img": "brand2.svg" },
+		{ "brand-img": "brand3.svg" },
+		{ "brand-img": "brand4.svg" },
+		{ "brand-img": "brand5.svg" },
+		{ "brand-img": "brand1.svg" },
+		{ "brand-img": "brand2.svg" }
+	],
+
+	"shop-css": [
+		{ "css": "css/swiper.min.css" },
+		{ "css": "css/nouislider.min.css" }
+	],
+	"shop-js": [
+		{ "js": "js/swiper.min.js" },
+		{ "js": "js/nouislider.min.js" }
+	],
+
+	"cart-css": [
+		{ "css": "css/swiper.min.css" }
+	],
+	"cart-js": [
+		{ "js": "js/swiper.min.js" }
+	],
+
+	"checkout-css": [],
+	"checkout-js": [],
+
+	"detail-css": [
+		{ "css": "css/swiper.min.css" },
+		{ "css": "css/photoswipe.min.css" },
+		{ "css": "css/photoswipe-default-skin/default-skin.min.css" }
+	],
+	"detail-js": [
+		{ "js": "js/swiper.min.js" },
+		{ "js": "js/photoswipe.min.js" },
+		{ "js": "js/photoswipe-ui-default.min.js" },
+		{ "js": "js/jquery.raty.min.js" }
+	],
+
+	"about-css": [],
+	"about-js": [],
+
+	"blog-css": [],
+	"blog-js": [],
+
+	"compare-css": [],
+	"compare-js": [],
+
+	"contact-css": [],
+	"contact-js": [],
+
+	"404-css": [],
+	"404-js": [],
+
+	"faq-css": [],
+	"faq-js": [],
+
+	"login-css": [],
+	"login-js": [],
+
+	"account-order-css": [],
+	"account-order-js": [],
+
+	"account-profile-css": [],
+	"account-profile-js": [],
+
+	"account-address-css": [],
+	"account-address-js": [],
+
+	"account-wishlist-css": [],
+	"account-wishlist-js": [],
+
+	"account-password-css": [],
+	"account-password-js": []
+}

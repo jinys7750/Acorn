@@ -1,0 +1,18 @@
+// Include required parts from Bootstrap
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+
+@import 'variables';
+@import 'animation';
+@import 'setup';
+@import 'modal';
+@import 'typeahead';
+@import 'header';
+@import 'slider';
+@import 'card';
+@import 'recent-review';
+@import 'breadcrumb';
+@import 'sidebar';
+@import 'wizard';
+@import 'footer';
