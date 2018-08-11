@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,7 +14,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
     <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
-    <title>Shopping Cart - Mimity</title>
+    <title>Reservation - ZZING</title>
 
     <!-- Required css -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
