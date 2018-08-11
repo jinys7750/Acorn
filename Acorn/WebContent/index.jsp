@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
     <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
-    <title>Home - YYJ</title>
+    <title>Home - zzing</title>
 
     <!-- Required css -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
