@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,11 +34,11 @@
           <div class="col">
             <div class="d-flex justify-content-between">
               <nav class="nav d-none d-lg-flex">
-                <a class="nav-link" href="shop.html"><i class="material-icons">notifications_none</i> Get Minimum 30-70% Off On Over 1,50,000 Styles!</a>
+                <a class="nav-link" href="shop.jsp"><i class="material-icons">notifications_none</i> Get Minimum 30-70% Off On Over 1,50,000 Styles!</a>
               </nav>
               <nav class="nav ml-auto">
-                <a class="nav-link d-none d-sm-block" href="faq.html"><i class="material-icons">help_outline</i> Help</a>
-                <a class="nav-link d-none d-sm-block" href="account-order.html"><i class="material-icons">list</i> Track Order</a>
+                <a class="nav-link d-none d-sm-block" href="faq.jsp"><i class="material-icons">help_outline</i> Help</a>
+                <a class="nav-link d-none d-sm-block" href="account-order.jsp"><i class="material-icons">list</i> Track Order</a>
                 <select name="lang" id="lang" hidden="hidden">
                   <option value="en">English</option>
                   <option value="fr">French</option>
@@ -97,20 +99,20 @@
               <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle no-caret" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SHOP</a>
                 <div class="dropdown-menu animate">
-                  <a class="dropdown-item" href="shop.html">Shop Grid</a>
-                  <a class="dropdown-item" href="shop-list.html">Shop List</a>
-                  <a class="dropdown-item" href="cart.html">Shopping Cart</a>
-                  <a class="dropdown-item" href="checkout.html">Checkout</a>
+                  <a class="dropdown-item" href="shop.jsp">Shop Grid</a>
+                  <a class="dropdown-item" href="shop-list.jsp">Shop List</a>
+                  <a class="dropdown-item" href="cart.jsp">Shopping Cart</a>
+                  <a class="dropdown-item" href="checkout.jsp">Checkout</a>
                   <div class="dropdown-submenu">
                     <a href="#" class="dropdown-item d-flex justify-content-between">Checkout Wizard <i class="material-icons md-1 mt-1">chevron_right</i></a>
                     <div class="dropdown-menu animate">
-                      <a href="checkout-wizard-address.html" class="dropdown-item">Addresses</a>
-                      <a href="checkout-wizard-shipping.html" class="dropdown-item">Shipping</a>
-                      <a href="checkout-wizard-payment.html" class="dropdown-item">Payment</a>
-                      <a href="checkout-wizard-review.html" class="dropdown-item">Review</a>
+                      <a href="checkout-wizard-address.jsp" class="dropdown-item">Addresses</a>
+                      <a href="checkout-wizard-shipping.jsp" class="dropdown-item">Shipping</a>
+                      <a href="checkout-wizard-payment.jsp" class="dropdown-item">Payment</a>
+                      <a href="checkout-wizard-review.jsp" class="dropdown-item">Review</a>
                     </div>
                   </div>
-                  <a class="dropdown-item" href="detail.html">Single Product</a>
+                  <a class="dropdown-item" href="detail.jsp">Single Product</a>
                 </div>
               </div>
               <div class="nav-item dropdown position-static">
@@ -121,47 +123,47 @@
                       <div class="col-4 col-lg-3">
                         <h6 class="p-2 font-weight-bold border border-top-0 border-right-0 border-left-0">Top Categories</h6>
                         <div class="list-group list-group-no-border list-group-sm">
-                          <a href="shop.html" class="list-group-item list-group-item-action">Polo T-Shirt</a>
-                          <a href="shop.html" class="list-group-item list-group-item-action">Round Neck T-Shirt</a>
-                          <a href="shop.html" class="list-group-item list-group-item-action">V Neck T-Shirt</a>
-                          <a href="shop.html" class="list-group-item list-group-item-action">Hooded T-Shirt</a>
-                          <a href="shop.html" class="list-group-item list-group-item-action">Polo T-Shirt</a>
-                          <a href="shop.html" class="list-group-item list-group-item-action">Round Neck T-Shirt</a>
-                          <a href="shop.html" class="list-group-item list-group-item-action">V Neck T-Shirt</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">Polo T-Shirt</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">Round Neck T-Shirt</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">V Neck T-Shirt</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">Hooded T-Shirt</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">Polo T-Shirt</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">Round Neck T-Shirt</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">V Neck T-Shirt</a>
                         </div>
                       </div>
                       <div class="col-4 col-lg-3">
                         <h6 class="p-2 font-weight-bold border border-top-0 border-right-0 border-left-0">Categories</h6>
                         <div class="list-group list-group-no-border list-group-sm" id="list-mega" data-children=".list-submega">
-                          <a href="shop.html" class="list-group-item list-group-item-action">Dresses</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">Dresses</a>
                           <div class="list-group-collapse list-submega">
                             <a href="#list-submega-1" class="list-group-item list-group-item-action" data-toggle="collapse" aria-expanded="false" aria-controls="list-submega-1">
                               Tops
                             </a>
                             <div class="collapse" id="list-submega-1" data-parent="#list-mega">
                               <div class="list-group">
-                                <a class="list-group-item list-group-item-action" href="shop.html">lorem ipsum</a>
-                                <a class="list-group-item list-group-item-action" href="shop.html">lorem ipsum</a>
-                                <a class="list-group-item list-group-item-action" href="shop.html">lorem ipsum</a>
+                                <a class="list-group-item list-group-item-action" href="shop.jsp">lorem ipsum</a>
+                                <a class="list-group-item list-group-item-action" href="shop.jsp">lorem ipsum</a>
+                                <a class="list-group-item list-group-item-action" href="shop.jsp">lorem ipsum</a>
                               </div>
                             </div>
                           </div>
-                          <a href="shop.html" class="list-group-item list-group-item-action">Bottoms</a>
-                          <a href="shop.html" class="list-group-item list-group-item-action">Jackets / Coats</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">Bottoms</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">Jackets / Coats</a>
                           <div class="list-group-collapse list-submega">
                             <a href="#list-submega-2" class="list-group-item list-group-item-action" data-toggle="collapse" aria-expanded="false" aria-controls="list-submega-2">
                               Sweaters
                             </a>
                             <div class="collapse" id="list-submega-2" data-parent="#list-mega">
                               <div class="list-group">
-                                <a class="list-group-item list-group-item-action" href="shop.html">lorem ipsum</a>
-                                <a class="list-group-item list-group-item-action" href="shop.html">lorem ipsum</a>
-                                <a class="list-group-item list-group-item-action" href="shop.html">lorem ipsum</a>
+                                <a class="list-group-item list-group-item-action" href="shop.jsp">lorem ipsum</a>
+                                <a class="list-group-item list-group-item-action" href="shop.jsp">lorem ipsum</a>
+                                <a class="list-group-item list-group-item-action" href="shop.jsp">lorem ipsum</a>
                               </div>
                             </div>
                           </div>
-                          <a href="shop.html" class="list-group-item list-group-item-action">Gym Wear</a>
-                          <a href="shop.html" class="list-group-item list-group-item-action">Others</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">Gym Wear</a>
+                          <a href="shop.jsp" class="list-group-item list-group-item-action">Others</a>
                         </div>
                       </div>
                       <div class="col-4 col-lg-3">
@@ -170,19 +172,19 @@
                           <div class="card-img-overlay text-center p-2 p-md-3">
                             <h4 class="card-title mb-0">Polo T-Shirts</h4>
                             <p class="card-text mb-xl-1">40% OFF</p>
-                            <a href="shop.html" class="btn btn-sm btn-theme" role="button">SHOP NOW</a>
+                            <a href="shop.jsp" class="btn btn-sm btn-theme" role="button">SHOP NOW</a>
                           </div>
                         </div>
                         <div class="card hover-style2 border-white text-white">
                           <img class="card-img" src="img/product/type-hooded.jpg" alt="Card image">
                           <div class="card-img-overlay text-center p-2 p-md-3">
                             <h4 class="card-title">New Collection</h4>
-                            <a href="shop.html" class="btn btn-sm btn-light" role="button">SHOP NOW</a>
+                            <a href="shop.jsp" class="btn btn-sm btn-light" role="button">SHOP NOW</a>
                           </div>
                         </div>
                       </div>
                       <div class="col-4 col-lg-3 d-none d-lg-block">
-                        <a href="shop.html"><img src="img/product/mega-menu.jpg" class="img-fluid rounded hover-style2" alt="Product"></a>
+                        <a href="shop.jsp"><img src="img/product/mega-menu.jpg" class="img-fluid rounded hover-style2" alt="Product"></a>
                       </div>
                     </div>
                   </form>
@@ -191,30 +193,30 @@
               <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle no-caret" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BLOG</a>
                 <div class="dropdown-menu animate">
-                  <a class="dropdown-item" href="blog.html">Blog Grid</a>
-                  <a class="dropdown-item" href="blog-list.html">Blog List</a>
-                  <a class="dropdown-item" href="blog-detail.html">Blog Detail</a>
+                  <a class="dropdown-item" href="blog.jsp">Blog Grid</a>
+                  <a class="dropdown-item" href="blog-list.jsp">Blog List</a>
+                  <a class="dropdown-item" href="blog-detail.jsp">Blog Detail</a>
                 </div>
               </div>
               <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle no-caret" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PAGES</a>
                 <div class="dropdown-menu animate">
-                  <a class="dropdown-item" href="about.html">About Us</a>
-                  <a class="dropdown-item" href="compare.html">Compare</a>
-                  <a class="dropdown-item" href="contact.html">Contact Us</a>
-                  <a class="dropdown-item" href="cart-empty.html">Empty Shopping Cart</a>
-                  <a class="dropdown-item" href="404.html">Error 404</a>
-                  <a class="dropdown-item" href="faq.html">FAQ</a>
-                  <a class="dropdown-item" href="login.html">Login</a>
-                  <a class="dropdown-item" href="register.html">Register</a>
+                  <a class="dropdown-item" href="about.jsp">About Us</a>
+                  <a class="dropdown-item" href="compare.jsp">Compare</a>
+                  <a class="dropdown-item" href="contact.jsp">Contact Us</a>
+                  <a class="dropdown-item" href="cart-empty.jsp">Empty Shopping Cart</a>
+                  <a class="dropdown-item" href="404.jsp">Error 404</a>
+                  <a class="dropdown-item" href="faq.jsp">FAQ</a>
+                  <a class="dropdown-item" href="login.jsp">Login</a>
+                  <a class="dropdown-item" href="register.jsp">Register</a>
                   <div class="dropdown-submenu">
                     <a href="#" class="dropdown-item d-flex justify-content-between">My Account <i class="material-icons md-1 mt-1">chevron_right</i></a>
                     <div class="dropdown-menu animate">
-                      <a href="account-profile.html" class="dropdown-item">Profile</a>
-                      <a href="account-order.html" class="dropdown-item">Orders</a>
-                      <a href="account-address.html" class="dropdown-item">Addresses</a>
-                      <a href="account-wishlist.html" class="dropdown-item">Wishlist</a>
-                      <a href="account-password.html" class="dropdown-item">Change Password</a>
+                      <a href="account-profile.jsp" class="dropdown-item">Profile</a>
+                      <a href="account-order.jsp" class="dropdown-item">Orders</a>
+                      <a href="account-address.jsp" class="dropdown-item">Addresses</a>
+                      <a href="account-wishlist.jsp" class="dropdown-item">Wishlist</a>
+                      <a href="account-password.jsp" class="dropdown-item">Change Password</a>
                       <div class="dropdown-submenu">
                         <a href="#" class="dropdown-item d-flex justify-content-between">Submenu <i class="material-icons md-1 mt-1">chevron_right</i></a>
                         <div class="dropdown-menu animate">
@@ -231,7 +233,7 @@
           <div class="col-4 col-md-auto d-flex align-items-center justify-content-end pl-0">
             <nav class="nav nav-counter">
               <a href="#" class="nav-link toggle-search"><img src="img/search.svg" alt="search"></a>
-              <a href="account-wishlist.html" class="nav-link counter d-none d-lg-block"><span>3</span><img src="img/wishlist.svg" alt="wishlist"></a>
+              <a href="account-wishlist.jsp" class="nav-link counter d-none d-lg-block"><span>3</span><img src="img/wishlist.svg" alt="wishlist"></a>
               <a href="#" class="nav-link counter" data-toggle="modal" data-target="#cartModal"><span>4</span><img src="img/bag.svg" alt="bag"></a>
             </nav>
           </div>
@@ -245,7 +247,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
-            <li class="breadcrumb-item"><a href="account-profile.html">My Account</a></li>
+            <li class="breadcrumb-item"><a href="account-profile.jsp">My Account</a></li>
             <li class="breadcrumb-item active" aria-current="page">My Address</li>
           </ol>
         </nav>
@@ -267,11 +269,11 @@
               </div>
             </div>
             <div class="list-group list-group-flush">
-              <a href="account-profile.html" class="list-group-item list-group-item-action"><i class="material-icons">person</i> Profile</a>
-              <a href="account-order.html" class="list-group-item list-group-item-action"><i class="material-icons">shopping_cart</i> Orders</a>
-              <a href="account-address.html" class="list-group-item list-group-item-action active"><i class="material-icons">location_on</i> Addresses</a>
-              <a href="account-wishlist.html" class="list-group-item list-group-item-action"><i class="material-icons">favorite</i> Wishlist<span class="badge badge-secondary badge-pill float-right mt-1">3</span></a>
-              <a href="account-password.html" class="list-group-item list-group-item-action"><i class="material-icons">vpn_key</i> Change Password</a>
+              <a href="account-profile.jsp" class="list-group-item list-group-item-action"><i class="material-icons">person</i> Profile</a>
+              <a href="account-order.jsp" class="list-group-item list-group-item-action"><i class="material-icons">shopping_cart</i> Orders</a>
+              <a href="account-address.jsp" class="list-group-item list-group-item-action active"><i class="material-icons">location_on</i> Addresses</a>
+              <a href="account-wishlist.jsp" class="list-group-item list-group-item-action"><i class="material-icons">favorite</i> Wishlist<span class="badge badge-secondary badge-pill float-right mt-1">3</span></a>
+              <a href="account-password.jsp" class="list-group-item list-group-item-action"><i class="material-icons">vpn_key</i> Change Password</a>
               <a href="ind" class="list-group-item list-group-item-action d-none d-md-block"><i class="material-icons">exit_to_app</i> Logout</a>
             </div>
           </div>
@@ -369,12 +371,12 @@
                 </a>
                 <div class="collapse" id="list-submenu-1" data-parent="#list-menu">
                   <div class="list-group">
-                    <a class="list-group-item list-group-item-action" href="shop.html">Shop Grid</a>
-                    <a class="list-group-item list-group-item-action" href="shop-list.html">Shop List</a>
-                    <a class="list-group-item list-group-item-action" href="cart.html">Shopping Cart</a>
-                    <a class="list-group-item list-group-item-action" href="checkout.html">Checkout</a>
-                    <a class="list-group-item list-group-item-action" href="checkout-wizard-address.html">Checkout Wizard</a>
-                    <a class="list-group-item list-group-item-action" href="detail.html">Single Product</a>
+                    <a class="list-group-item list-group-item-action" href="shop.jsp">Shop Grid</a>
+                    <a class="list-group-item list-group-item-action" href="shop-list.jsp">Shop List</a>
+                    <a class="list-group-item list-group-item-action" href="cart.jsp">Shopping Cart</a>
+                    <a class="list-group-item list-group-item-action" href="checkout.jsp">Checkout</a>
+                    <a class="list-group-item list-group-item-action" href="checkout-wizard-address.jsp">Checkout Wizard</a>
+                    <a class="list-group-item list-group-item-action" href="detail.jsp">Single Product</a>
                   </div>
                 </div>
               </div>
@@ -384,9 +386,9 @@
                 </a>
                 <div class="collapse" id="list-submenu-2" data-parent="#list-menu">
                   <div class="list-group">
-                    <a class="list-group-item list-group-item-action" href="blog.html">Blog Grid</a>
-                    <a class="list-group-item list-group-item-action" href="blog-list.html">Blog List</a>
-                    <a class="list-group-item list-group-item-action" href="blog-detail.html">Blog Detail</a>
+                    <a class="list-group-item list-group-item-action" href="blog.jsp">Blog Grid</a>
+                    <a class="list-group-item list-group-item-action" href="blog-list.jsp">Blog List</a>
+                    <a class="list-group-item list-group-item-action" href="blog-detail.jsp">Blog Detail</a>
                   </div>
                 </div>
               </div>
@@ -396,14 +398,14 @@
                 </a>
                 <div class="collapse" id="list-submenu-3" data-parent="#list-menu">
                   <div class="list-group">
-                    <a class="list-group-item list-group-item-action" href="about.html">About Us</a>
-                    <a class="list-group-item list-group-item-action" href="compare.html">Compare</a>
-                    <a class="list-group-item list-group-item-action" href="contact.html">Contact Us</a>
-                    <a class="list-group-item list-group-item-action" href="cart-empty.html">Empty Shopping Cart</a>
-                    <a class="list-group-item list-group-item-action" href="404.html">Error 404</a>
-                    <a class="list-group-item list-group-item-action" href="faq.html">FAQ</a>
-                    <a class="list-group-item list-group-item-action" href="login.html">Login</a>
-                    <a class="list-group-item list-group-item-action" href="register.html">Register</a>
+                    <a class="list-group-item list-group-item-action" href="about.jsp">About Us</a>
+                    <a class="list-group-item list-group-item-action" href="compare.jsp">Compare</a>
+                    <a class="list-group-item list-group-item-action" href="contact.jsp">Contact Us</a>
+                    <a class="list-group-item list-group-item-action" href="cart-empty.jsp">Empty Shopping Cart</a>
+                    <a class="list-group-item list-group-item-action" href="404.jsp">Error 404</a>
+                    <a class="list-group-item list-group-item-action" href="faq.jsp">FAQ</a>
+                    <a class="list-group-item list-group-item-action" href="login.jsp">Login</a>
+                    <a class="list-group-item list-group-item-action" href="register.jsp">Register</a>
                   </div>
                 </div>
               </div>
@@ -413,11 +415,11 @@
                 </a>
                 <div class="collapse" id="list-submenu-4" data-parent="#list-menu">
                   <div class="list-group">
-                    <a class="list-group-item list-group-item-action" href="account-profile.html">Profile</a>
-                    <a class="list-group-item list-group-item-action" href="account-order.html">Orders</a>
-                    <a class="list-group-item list-group-item-action" href="account-address.html">Addresses</a>
-                    <a class="list-group-item list-group-item-action" href="account-wishlist.html">Wishlist</a>
-                    <a class="list-group-item list-group-item-action" href="account-password.html">Change Password</a>
+                    <a class="list-group-item list-group-item-action" href="account-profile.jsp">Profile</a>
+                    <a class="list-group-item list-group-item-action" href="account-order.jsp">Orders</a>
+                    <a class="list-group-item list-group-item-action" href="account-address.jsp">Addresses</a>
+                    <a class="list-group-item list-group-item-action" href="account-wishlist.jsp">Wishlist</a>
+                    <a class="list-group-item list-group-item-action" href="account-password.jsp">Change Password</a>
                   </div>
                 </div>
               </div>
@@ -439,33 +441,33 @@
           </div>
           <div class="modal-body">
             <div class="media">
-              <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo1-small.jpg" width="70" alt="Generic placeholder image"></a>
+              <a href="detail.jsp" class="mr-2"><img class="img-fluid rounded" src="img/product/polo1-small.jpg" width="70" alt="Generic placeholder image"></a>
               <div class="media-body">
-                <div><a href="detail.html" class="text-dark">Burberry The Plymouth Duffle Coat</a></div>
+                <div><a href="detail.jsp" class="text-dark">Burberry The Plymouth Duffle Coat</a></div>
                 <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
                 <button class="close text-danger"><i class="material-icons">close</i></button>
               </div>
             </div>
             <div class="media">
-              <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo2-small.jpg" width="70" alt="Generic placeholder image"></a>
+              <a href="detail.jsp" class="mr-2"><img class="img-fluid rounded" src="img/product/polo2-small.jpg" width="70" alt="Generic placeholder image"></a>
               <div class="media-body">
-                <div><a href="detail.html" class="text-dark">Fendi Bugs Sweater</a></div>
+                <div><a href="detail.jsp" class="text-dark">Fendi Bugs Sweater</a></div>
                 <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
                 <button class="close text-danger"><i class="material-icons">close</i></button>
               </div>
             </div>
             <div class="media">
-              <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo3-small.jpg" width="70" alt="Generic placeholder image"></a>
+              <a href="detail.jsp" class="mr-2"><img class="img-fluid rounded" src="img/product/polo3-small.jpg" width="70" alt="Generic placeholder image"></a>
               <div class="media-body">
-                <div><a href="detail.html" class="text-dark">Alexander McQueen Classic Piqué Polo Shirt</a></div>
+                <div><a href="detail.jsp" class="text-dark">Alexander McQueen Classic Piqué Polo Shirt</a></div>
                 <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
                 <button class="close text-danger"><i class="material-icons">close</i></button>
               </div>
             </div>
             <div class="media">
-              <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo4-small.jpg" width="70" alt="Generic placeholder image"></a>
+              <a href="detail.jsp" class="mr-2"><img class="img-fluid rounded" src="img/product/polo4-small.jpg" width="70" alt="Generic placeholder image"></a>
               <div class="media-body">
-                <div><a href="detail.html" class="text-dark">MCQ Alexander McQueen Swallow Badge Polo Shirt</a></div>
+                <div><a href="detail.jsp" class="text-dark">MCQ Alexander McQueen Swallow Badge Polo Shirt</a></div>
                 <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
                 <button class="close text-danger"><i class="material-icons">close</i></button>
               </div>
@@ -473,8 +475,8 @@
           </div>
           <div class="modal-footer justify-content-center border-top-0">
             <div class="btn-group" role="group" aria-label="Cart Action">
-              <a href="cart.html" class="btn btn-outline-theme" role="button">VIEW CART</a>
-              <a href="checkout.html" class="btn btn-theme" role="button">CHECKOUT</a>
+              <a href="cart.jsp" class="btn btn-outline-theme" role="button">VIEW CART</a>
+              <a href="checkout.jsp" class="btn btn-theme" role="button">CHECKOUT</a>
             </div>
           </div>
         </div>
@@ -510,7 +512,7 @@
           </div>
           <div class="modal-footer justify-content-center">
             <div class="btn-group" role="group" aria-label="Login Action">
-              <a href="register.html" class="btn btn-outline-theme" role="button">I want to Sign Up</a>
+              <a href="register.jsp" class="btn btn-outline-theme" role="button">I want to Sign Up</a>
               <button type="submit" class="btn btn-theme">SIGN IN</button>
             </div>
           </div>
@@ -524,9 +526,9 @@
           <div class="col-6 col-lg-3">
             <h6>Shop</h6>
             <div class="list-group list-group-flush">
-              <a href="contact.html" class="list-group-item list-group-item-action">Help / Support</a>
-              <a href="about.html" class="list-group-item list-group-item-action">About Us</a>
-              <a href="faq.html" class="list-group-item list-group-item-action">FAQ</a>
+              <a href="contact.jsp" class="list-group-item list-group-item-action">Help / Support</a>
+              <a href="about.jsp" class="list-group-item list-group-item-action">About Us</a>
+              <a href="faq.jsp" class="list-group-item list-group-item-action">FAQ</a>
               <a href="#" class="list-group-item list-group-item-action">Coupons</a>
             </div>
           </div>

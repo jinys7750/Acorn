@@ -27,14 +27,14 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-	<jsp:include page="importHTML/topHeader.jsp" flush="true"></jsp:include>
-	<jsp:include page="importHTML/middleHeader.jsp" flush="true"></jsp:include>
-	<jsp:include page="importHTML/homeSlider.jsp" flush="true"></jsp:include>
+	<jsp:include page="importJSP/topHeader.jsp" flush="true"></jsp:include>
+	<jsp:include page="importJSP/middleHeader.jsp" flush="true"></jsp:include>
+	<jsp:include page="importJSP/homeSlider.jsp" flush="true"></jsp:include>
     <div class="container-fluid limited mt-5">
-		<jsp:include page="importHTML/serviceBlock.jsp" flush="true"></jsp:include>
+		<jsp:include page="importJSP/serviceBlock.jsp" flush="true"></jsp:include>
       </div>
-    <jsp:include page="importHTML/modalPage.jsp" flush="true"></jsp:include>
-   <jsp:include page="importHTML/footer.jsp" flush="true"></jsp:include>
+    <jsp:include page="importJSP/modalPage.jsp" flush="true"></jsp:include>
+   <jsp:include page="importJSP/footer.jsp" flush="true"></jsp:include>
 
     <!-- Copyright -->
     <div class="copyright">
