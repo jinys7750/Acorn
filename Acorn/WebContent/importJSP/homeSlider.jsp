@@ -6,9 +6,9 @@
             <div class="swiper-slide" data-cover="img/slider/1.jpg" data-xs-height="220px" data-sm-height="350px" data-md-height="400px" data-lg-height="430px" data-xl-height="460px">
               <div class="swiper-overlay">
                 <div class="text-center ml-3 ml-sm-5">
-                  <div class="d-inline-block h1 bg-theme text-white px-2 animate" data-animate="fadeRight">TOP BRANDS</div>
-                  <div class="display-4 text-white font-weight-bold text-shadow animate duration-2" data-animate="fadeUp">MINIMUM<br/>30% - 70% OFF</div>
-                  <a href="shop.jsp" class="btn btn-theme btn-sm mt-3 animate delay-1" data-animate="fadeDown">SHOP NOW</a>
+                  <div class="d-inline-block h1 bg-theme text-white px-2 animate" data-animate="fadeRight">RESERVATION</div>
+                  <div class="display-4 text-white font-weight-bold text-shadow animate duration-2" data-animate="fadeUp">YELF GOLF<br/>Reservation now!!</div>
+                  <a href="shop.jsp" class="btn btn-theme btn-sm mt-3 animate delay-1" data-animate="fadeDown">RESERVATION NOW</a>
                 </div>
               </div>
             </div>

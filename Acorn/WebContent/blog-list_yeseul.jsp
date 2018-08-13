@@ -42,7 +42,7 @@
     <div class="container-fluid limited mb-5">
       <div class="row">
         <div class="col-md-8 mb-3">
-          <div class="title"><span>Latest Blog</span></div>
+          <div class="title"><span>Reservation</span></div>
           <div class="row">
             <div class="col-12">
               <div class="media hover-style media-list">
