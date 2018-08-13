@@ -8,7 +8,7 @@
                 <div class="text-center ml-3 ml-sm-5">
                   <div class="d-inline-block h1 bg-theme text-white px-2 animate" data-animate="fadeRight">TOP BRANDS</div>
                   <div class="display-4 text-white font-weight-bold text-shadow animate duration-2" data-animate="fadeUp">MINIMUM<br/>30% - 70% OFF</div>
-                  <a href="shop.html" class="btn btn-theme btn-sm mt-3 animate delay-1" data-animate="fadeDown">SHOP NOW</a>
+                  <a href="shop.jsp" class="btn btn-theme btn-sm mt-3 animate delay-1" data-animate="fadeDown">SHOP NOW</a>
                 </div>
               </div>
             </div>
@@ -17,7 +17,7 @@
                 <div class="text-center mr-3 mr-sm-5">
                   <div class="d-inline-block display-4 bg-dark text-white px-2 animate mb-3" data-animate="fadeLeft">T-LOVE</div>
                   <div class="h3 text-white font-weight-bold text-shadow animate duration-2" data-animate="fadeUp">A COMPLETE SHOPPING GUIDE ON WHAT AND<br/>HOW TO WEAR THE BEST T-SHIRTS</div>
-                  <a href="shop.html" class="btn btn-warning btn-sm mt-3 animate delay-1" data-animate="fadeDown">SHOP NOW</a>
+                  <a href="shop.jsp" class="btn btn-warning btn-sm mt-3 animate delay-1" data-animate="fadeDown">SHOP NOW</a>
                 </div>
               </div>
             </div>
@@ -27,7 +27,7 @@
                   <div class="d-inline-block h1 bg-warning font-weight-normal text-secondary px-2 animate duration-2" data-animate="fadeDown">YOUR PRAYERS ANSWERED!</div>
                   <div class="display-4 text-white font-weight-bold text-shadow animate duration-2" data-animate="fadeLeft">UPTO 70% OFF</div>
                   <div class="d-inline-block h1 bg-dark text-white px-2 animate mb-3 duration-2" data-animate="fadeRight">+ EXTRA 10% OFF</div>
-                  <div><a href="shop.html" class="btn btn-theme btn-sm mt-3 animate delay-1" data-animate="fadeDown">SHOP NOW</a></div>
+                  <div><a href="shop.jsp" class="btn btn-theme btn-sm mt-3 animate delay-1" data-animate="fadeDown">SHOP NOW</a></div>
                 </div>
               </div>
             </div>

@@ -21,11 +21,11 @@
                   <div class="list-group">
                     <a class="list-group-item list-group-item-action" href="reservation.jsp">Reservation</a>
                     <!-- 쇼핑리스트 안씀 -->
-                    <!-- <a class="list-group-item list-group-item-action" href="shop-list.html">Shop List</a>
-                    <a class="list-group-item list-group-item-action" href="cart.html">Shopping Cart</a>
-                    <a class="list-group-item list-group-item-action" href="checkout.html">Checkout</a>
-                    <a class="list-group-item list-group-item-action" href="checkout-wizard-address.html">Checkout Wizard</a>
-                    <a class="list-group-item list-group-item-action" href="detail.html">Single Product</a> -->
+                    <!-- <a class="list-group-item list-group-item-action" href="shop-list.jsp">Shop List</a>
+                    <a class="list-group-item list-group-item-action" href="cart.jsp">Shopping Cart</a>
+                    <a class="list-group-item list-group-item-action" href="checkout.jsp">Checkout</a>
+                    <a class="list-group-item list-group-item-action" href="checkout-wizard-address.jsp">Checkout Wizard</a>
+                    <a class="list-group-item list-group-item-action" href="detail.jsp">Single Product</a> -->
                   </div>
                 </div>
               </div>
@@ -35,9 +35,9 @@
                 </a>
                 <div class="collapse" id="list-submenu-2" data-parent="#list-menu">
                   <div class="list-group">
-                    <a class="list-group-item list-group-item-action" href="blog.html">Blog Grid</a>
-                    <a class="list-group-item list-group-item-action" href="blog-list.html">Blog List</a>
-                    <a class="list-group-item list-group-item-action" href="blog-detail.html">Blog Detail</a>
+                    <a class="list-group-item list-group-item-action" href="blog.jsp">Blog Grid</a>
+                    <a class="list-group-item list-group-item-action" href="blog-list.jsp">Blog List</a>
+                    <a class="list-group-item list-group-item-action" href="blog-detail.jsp">Blog Detail</a>
                   </div>
                 </div>
               </div>
@@ -48,13 +48,13 @@
                 <div class="collapse" id="list-submenu-3" data-parent="#list-menu">
                   <div class="list-group">
                     <a class="list-group-item list-group-item-action" href="about.jsp">About Us</a>
-                    <a class="list-group-item list-group-item-action" href="compare.html">Compare</a>
-                    <a class="list-group-item list-group-item-action" href="contact.html">Contact Us</a>
-                    <a class="list-group-item list-group-item-action" href="cart-empty.html">Empty Shopping Cart</a>
-                    <a class="list-group-item list-group-item-action" href="404.html">Error 404</a>
-                    <a class="list-group-item list-group-item-action" href="faq.html">FAQ</a>
-                    <a class="list-group-item list-group-item-action" href="login.html">Login</a>
-                    <a class="list-group-item list-group-item-action" href="register.html">Register</a>
+                    <a class="list-group-item list-group-item-action" href="compare.jsp">Compare</a>
+                    <a class="list-group-item list-group-item-action" href="contact.jsp">Contact Us</a>
+                    <a class="list-group-item list-group-item-action" href="cart-empty.jsp">Empty Shopping Cart</a>
+                    <a class="list-group-item list-group-item-action" href="404.jsp">Error 404</a>
+                    <a class="list-group-item list-group-item-action" href="faq.jsp">FAQ</a>
+                    <a class="list-group-item list-group-item-action" href="login.jsp">Login</a>
+                    <a class="list-group-item list-group-item-action" href="register.jsp">Register</a>
                   </div>
                 </div>
               </div>
@@ -64,11 +64,11 @@
                 </a>
                 <div class="collapse" id="list-submenu-4" data-parent="#list-menu">
                   <div class="list-group">
-                    <a class="list-group-item list-group-item-action" href="account-profile.html">Profile</a>
-                    <a class="list-group-item list-group-item-action" href="account-order.html">Orders</a>
-                    <a class="list-group-item list-group-item-action" href="account-address.html">Addresses</a>
-                    <a class="list-group-item list-group-item-action" href="account-wishlist.html">Wishlist</a>
-                    <a class="list-group-item list-group-item-action" href="account-password.html">Change Password</a>
+                    <a class="list-group-item list-group-item-action" href="account-profile.jsp">Profile</a>
+                    <a class="list-group-item list-group-item-action" href="account-order.jsp">Orders</a>
+                    <a class="list-group-item list-group-item-action" href="account-address.jsp">Addresses</a>
+                    <a class="list-group-item list-group-item-action" href="account-wishlist.jsp">Wishlist</a>
+                    <a class="list-group-item list-group-item-action" href="account-password.jsp">Change Password</a>
                   </div>
                 </div>
               </div>
@@ -90,33 +90,33 @@
           </div>
           <div class="modal-body">
             <div class="media">
-              <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo1-small.jpg" width="70" alt="Generic placeholder image"></a>
+              <a href="detail.jsp" class="mr-2"><img class="img-fluid rounded" src="img/product/polo1-small.jpg" width="70" alt="Generic placeholder image"></a>
               <div class="media-body">
-                <div><a href="detail.html" class="text-dark">Burberry The Plymouth Duffle Coat</a></div>
+                <div><a href="detail.jsp" class="text-dark">Burberry The Plymouth Duffle Coat</a></div>
                 <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
                 <button class="close text-danger"><i class="material-icons">close</i></button>
               </div>
             </div>
             <div class="media">
-              <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo2-small.jpg" width="70" alt="Generic placeholder image"></a>
+              <a href="detail.jsp" class="mr-2"><img class="img-fluid rounded" src="img/product/polo2-small.jpg" width="70" alt="Generic placeholder image"></a>
               <div class="media-body">
-                <div><a href="detail.html" class="text-dark">Fendi Bugs Sweater</a></div>
+                <div><a href="detail.jsp" class="text-dark">Fendi Bugs Sweater</a></div>
                 <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
                 <button class="close text-danger"><i class="material-icons">close</i></button>
               </div>
             </div>
             <div class="media">
-              <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo3-small.jpg" width="70" alt="Generic placeholder image"></a>
+              <a href="detail.jsp" class="mr-2"><img class="img-fluid rounded" src="img/product/polo3-small.jpg" width="70" alt="Generic placeholder image"></a>
               <div class="media-body">
-                <div><a href="detail.html" class="text-dark">Alexander McQueen Classic Piqué Polo Shirt</a></div>
+                <div><a href="detail.jsp" class="text-dark">Alexander McQueen Classic Piqué Polo Shirt</a></div>
                 <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
                 <button class="close text-danger"><i class="material-icons">close</i></button>
               </div>
             </div>
             <div class="media">
-              <a href="detail.html" class="mr-2"><img class="img-fluid rounded" src="img/product/polo4-small.jpg" width="70" alt="Generic placeholder image"></a>
+              <a href="detail.jsp" class="mr-2"><img class="img-fluid rounded" src="img/product/polo4-small.jpg" width="70" alt="Generic placeholder image"></a>
               <div class="media-body">
-                <div><a href="detail.html" class="text-dark">MCQ Alexander McQueen Swallow Badge Polo Shirt</a></div>
+                <div><a href="detail.jsp" class="text-dark">MCQ Alexander McQueen Swallow Badge Polo Shirt</a></div>
                 <span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
                 <button class="close text-danger"><i class="material-icons">close</i></button>
               </div>
@@ -124,8 +124,8 @@
           </div>
           <div class="modal-footer justify-content-center border-top-0">
             <div class="btn-group" role="group" aria-label="Cart Action">
-              <a href="cart.html" class="btn btn-outline-theme" role="button">VIEW CART</a>
-              <a href="checkout.html" class="btn btn-theme" role="button">CHECKOUT</a>
+              <a href="cart.jsp" class="btn btn-outline-theme" role="button">VIEW CART</a>
+              <a href="checkout.jsp" class="btn btn-theme" role="button">CHECKOUT</a>
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@
           </div>
           <div class="modal-footer justify-content-center">
             <div class="btn-group" role="group" aria-label="Login Action">
-              <a href="register.html" class="btn btn-outline-theme" role="button">I want to Sign Up</a>
+              <a href="register.jsp" class="btn btn-outline-theme" role="button">I want to Sign Up</a>
               <button type="submit" class="btn btn-theme">SIGN IN</button>
             </div>
           </div>
@@ -172,7 +172,7 @@
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title font-weight-normal" id="quickviewModalLabel"><a href="detail.html" class="text-dark">U.S. Polo Assn. Green Solid Slim Fit</a></h5>
+            <h5 class="modal-title font-weight-normal" id="quickviewModalLabel"><a href="detail.jsp" class="text-dark">U.S. Polo Assn. Green Solid Slim Fit</a></h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>

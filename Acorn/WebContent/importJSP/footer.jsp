@@ -5,9 +5,9 @@
           <div class="col-6 col-lg-3">
             <h6>Reservation</h6>
             <div class="list-group list-group-flush">
-              <a href="contact.html" class="list-group-item list-group-item-action">Help / Support</a>
+              <a href="contact.jsp" class="list-group-item list-group-item-action">Help / Support</a>
               <a href="about.jsp" class="list-group-item list-group-item-action">About Us</a>
-              <a href="faq.html" class="list-group-item list-group-item-action">FAQ</a>
+              <a href="faq.jsp" class="list-group-item list-group-item-action">FAQ</a>
               <a href="#" class="list-group-item list-group-item-action">Coupons</a>
             </div>
           </div>

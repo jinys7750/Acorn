@@ -5,13 +5,13 @@
 			<div class="col">
 				<div class="d-flex justify-content-between">
 					<nav class="nav d-none d-lg-flex">
-						<a class="nav-link" href="shop.html"><i class="material-icons">notifications_none</i>
+						<a class="nav-link" href="shop.jsp"><i class="material-icons">notifications_none</i>
 							Get Minimum 30-70% Off On Over 1,50,000 Styles!</a>
 					</nav>
 					<nav class="nav ml-auto">
-						<a class="nav-link d-none d-sm-block" href="faq.html"><i
+						<a class="nav-link d-none d-sm-block" href="faq.jsp"><i
 							class="material-icons">help_outline</i> Help</a> <a
-							class="nav-link d-none d-sm-block" href="account-order.html"><i
+							class="nav-link d-none d-sm-block" href="account-order.jsp"><i
 							class="material-icons">list</i> Track Order</a> <select name="lang"
 							id="lang" hidden="hidden">
 							<option value="en">English</option>
