@@ -17,7 +17,7 @@
 	href="touch-icon-iphone-retina.png">
 <link rel="apple-touch-icon" sizes="167x167"
 	href="touch-icon-ipad-retina.png">
-<title>About Us - Mimity</title>
+<title>About Us - x</title>
 
 <!-- Required css -->
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
