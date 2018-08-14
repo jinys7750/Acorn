@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!-- Top Header -->
 <div class="top-header">
 	<div class="container-fluid limited">
@@ -44,9 +46,15 @@
 								<button class="dropdown-item" type="button" data-value="eur">EUR</button>
 							</div>
 						</div>
-						<a class="nav-link" href="#" data-toggle="modal"
-							data-target="#loginModal"><i class="material-icons">person_outline</i>
-							Sign In</a>
+						<c:if test="${!empty login }">
+							<a class="nav-link" href="LogoutServlet"><i
+								class="material-icons">person_outline</i> Sign Out</a>
+						</c:if>
+						<c:if test="${empty login }">
+							<a class="nav-link" href="#" data-toggle="modal"
+								data-target="#loginModal"><i class="material-icons">person_outline</i>
+								Sign In</a>
+						</c:if>
 					</nav>
 				</div>
 			</div>

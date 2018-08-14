@@ -39,14 +39,14 @@
                 </div>
               </div>
               <h5 class="card-title text-center">Please Enter Your Information</h5>
-              <form>
+              <form action="LoginServlet">
                 <div class="form-group">
                   <label for="InputUsername">Username</label>
-                  <input type="text" class="form-control" id="InputUsername" placeholder="Enter Username">
+                  <input type="text" class="form-control" id="InputUsername" placeholder="Enter Username" name="userid">
                 </div>
                 <div class="form-group">
                   <label for="InputPassword">Password</label>
-                  <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                  <input type="password" class="form-control" id="InputPassword" placeholder="Password" name="passwd">
                 </div>
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="rememberMe">
