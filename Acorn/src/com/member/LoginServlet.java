@@ -15,18 +15,17 @@ import com.service.MemberService;
 public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String nextPage = "";
+		String nextPage = "index.jsp";
 		MemberService service = new MemberService();
 		String userid = request.getParameter("userid");
 		String passwd = request.getParameter("passwd");
 		MemberDTO dto = service.login(userid, passwd);
 		HttpSession session = request.getSession();
 		if (dto != null) {
-			System.out.println(dto);
-			nextPage = "index.jsp";
+			session.setAttribute("login", dto);
 		} else {
 			System.out.println("일치 아이디 x");
-			nextPage = "login.jsp";
+
 		}
 		response.sendRedirect(nextPage);
 	}

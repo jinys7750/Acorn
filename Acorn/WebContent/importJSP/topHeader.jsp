@@ -7,8 +7,10 @@
 			<div class="col">
 				<div class="d-flex justify-content-between">
 					<nav class="nav d-none d-lg-flex">
-						<a class="nav-link" href="shop.jsp"><i class="material-icons">notifications_none</i>
-							Get Minimum 30-70% Off On Over 1,50,000 Styles!</a>
+						<c:if test="${!empty login }">
+							<a class="nav-link" href=""><i class="material-icons">notifications_none</i>
+								WELCOME [${login.username }]</a>
+						</c:if>
 					</nav>
 					<nav class="nav ml-auto">
 						<a class="nav-link d-none d-sm-block" href="faq.jsp"><i
