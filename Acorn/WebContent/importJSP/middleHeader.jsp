@@ -159,12 +159,12 @@
             </nav>
           </div>
           <div class="col-4 col-md-auto d-flex align-items-center justify-content-end pl-0">
-            <nav class="nav nav-counter">
+				<!--       <nav class="nav nav-counter">
               <a href="#" class="nav-link toggle-search"><img src="img/search.svg" alt="search"></a>
               <a href="account-wishlist.jsp" class="nav-link counter d-none d-lg-block"><span>3</span><img src="img/wishlist.svg" alt="wishlist"></a>
               <a href="#" class="nav-link counter" data-toggle="modal" data-target="#cartModal"><span>4</span><img src="img/bag.svg" alt="bag"></a>
-            </nav>
-          </div>
+            </nav> -->
+			</div>
 
         </div>
       </div>

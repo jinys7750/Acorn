@@ -14,7 +14,7 @@ import com.service.MemberService;
 public class ReservationUIServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		response.sendRedirect("resevation.jsp");
+		response.sendRedirect("reservation.jsp");
 		
 	}
 

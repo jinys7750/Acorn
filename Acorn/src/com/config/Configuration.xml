@@ -5,6 +5,7 @@
 <configuration>
 	<properties resource="com/config/jdbc.properties"></properties>
 	<typeAliases>
+		<typeAlias type="com.dto.ReservationDTO" alias="ReservationDTO" />
 		<typeAlias type="com.dto.MemberDTO" alias="MemberDTO" />
 	</typeAliases>
 	<environments default="development">
@@ -19,6 +20,7 @@
 		</environment>
 	</environments>
 	<mappers>
+		<mapper resource="com/config/ReservationMapper.xml" />
 		<mapper resource="com/config/MemberMapper.xml" />
 	</mappers>
 </configuration>

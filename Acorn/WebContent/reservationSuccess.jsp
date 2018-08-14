@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" href="favicon.png">
@@ -17,7 +17,7 @@
 	href="touch-icon-iphone-retina.png">
 <link rel="apple-touch-icon" sizes="167x167"
 	href="touch-icon-ipad-retina.png">
-<title>Reservation</title>
+<title>Reservation - ZZING</title>
 
 <!-- Required css -->
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -29,7 +29,6 @@
 
 <!-- Template css -->
 <link rel="stylesheet" href="css/style.min.css">
-
 </head>
 <body>
 	<jsp:include page="importJSP/topHeader.jsp"></jsp:include>
@@ -39,7 +38,8 @@
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Reservation</li>
+					<li class="breadcrumb-item active" aria-current="page">Shopping
+						Cart</li>
 				</ol>
 			</nav>
 		</div>
@@ -49,52 +49,35 @@
 		<div class="row">
 			<div class="col text-center">
 				<div>
-					<i class="material-icons md-5">RESERVATION</i>
+					<i class="material-icons md-5">RESERVATION SUCCESS</i>
 				</div>
-				<br> <Br>
-				<p>
-					<!-- 캘린더 불러오기 위한 코드!!! body 밑에 jquery있음 -->
-					<input id="datetimepicker" type="text" />
-				</p>
+				<h1 class="font-weight-normal">Reservation Success!!!!</h1>
 				<a href="index.jsp" role="button" class="btn btn-outline-theme">HOME</a>
+				<!-- 나의 예약현황 페이지 만든 후 작성 -->
+				<a href="" role="button" class="btn btn-outline-theme">My
+					Reservation</a>
 			</div>
 		</div>
-	</div>
+		<jsp:include page="importJSP/modalPage.jsp"></jsp:include>
+		<jsp:include page="importJSP/footer.jsp"></jsp:include>
 
-	<jsp:include page="importJSP/modalPage.jsp"></jsp:include>
-	<jsp:include page="importJSP/footer.jsp"></jsp:include>
+		<!-- Copyright -->
+		<div class="copyright">Copyright © 2018 Mimity All right
+			reserved</div>
+		<!-- /Copyright -->
 
-	<!-- Copyright -->
-	<div class="copyright">Copyright © 2018 Mimity All right reserved
-	</div>
-	<!-- /Copyright -->
+		<a href="#top" class="back-top text-center" id="back-top"> <i
+			class="material-icons">expand_less</i>
+		</a>
+		<!-- Required js -->
+		<script src="js/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="js/typeahead.bundle.min.js"></script>
 
-	<a href="#top" class="back-top text-center" id="back-top"> <i
-		class="material-icons">expand_less</i>
-	</a>
-	<!-- Required js -->
-	<script src="js/jquery.min.js"></script>
-	<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="js/typeahead.bundle.min.js"></script>
+		<!-- Plugins js -->
+		<script src="js/swiper.min.js"></script>
 
-	<!-- Plugins js -->
-	<script src="js/swiper.min.js"></script>
-
-	<!-- Template JS -->
-	<script src="js/script.min.js"></script>
-
+		<!-- Template JS -->
+		<script src="js/script.min.js"></script>
 </body>
-<link rel="stylesheet" type="text/css"
-	href="css/jquery.datetimepicker.css"/ >
-<script type="text/javascript" src="js/jquery-3.3.1.js">
-	
-</script>
-<script src="js/jquery.datetimepicker.full.js"></script>
-<script>
-	jQuery('#datetimepicker').datetimepicker({
-		format : 'd.m.Y H:i',
-		inline : true,
-		lang : 'ru'
-	});
-</script>
 </html>
