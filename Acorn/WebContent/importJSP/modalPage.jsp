@@ -200,9 +200,9 @@
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-						<label for="inputUsername">Username</label> <input type="text"
+						<label for="inputUsername">UserID</label> <input type="text"
 							class="form-control" id="inputUsername"
-							placeholder="Enter Username" name="userid">
+							placeholder="Enter UserID" name="userid">
 					</div>
 					<div class="form-group">
 						<label for="inputPassword">Password</label> <input type="password"

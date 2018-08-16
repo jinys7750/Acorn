@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,16 +48,46 @@
 
 	<div class="container-fluid limited">
 		<div class="row">
-			<div class="col text-center">
-				<div>
+			<div class="col">
+				<div class="text-center">
 					<i class="material-icons md-5">RESERVATION</i>
 				</div>
 				<br> <Br>
 				<p>
-					<!-- 캘린더 불러오기 위한 코드!!! body 밑에 jquery있음 -->
-					<input id="datetimepicker" type="text" />
-				</p>
-				<a href="index.jsp" role="button" class="btn btn-outline-theme">HOME</a>
+				<div>
+					<form action="ReservationServlet" method="get">
+						<!-- 캘린더 불러오기 위한 코드!!! body 밑에 jquery있음 -->
+						<!-- 					<label for="pick Date">Select Floor</label> <input type="text"
+						class="form-control" id="datepicker"
+						placeholder="Enter Reservation Date" name="datetimepicker"> -->
+						<label for="pick Date">Select Floor</label> <select name="floor"
+							class="form-control">
+							<option value="A1">A1</option>
+							<option value="A2">A2</option>
+							<option value="A3">A3</option>
+							<option value="B1">B1</option>
+							<option value="B2">B2</option>
+							<option value="B3">B3</option>
+							<option value="C1">C1</option>
+							<option value="C2">C2</option>
+							<option value="C3">C3</option>
+						</select><br> <label for="pick Date">Select Date</label> <input
+							type="text" id="datepicker"> <Br> <br> <label
+							for="pick Date">Select Time</label> <input type="text"
+							id="timepicker"> <br>
+							<label for="pick Date">Reservation Password</label>
+							 <input type="password" class="form-control" name="reserve_passwd">
+							<Br> <br>
+						<!-- hidden -->
+						<input type="hidden" name="userid" value="${login.userid }">
+						<input type="hidden" name="username" value="${login.username }">
+						<input type="hidden" id="reserve_date" name="reserve_date">
+						<input type="hidden" name="reserve_time" id="reserve_time">
+						<!-- /hidden -->
+						<input type="submit" value="SUBMIT" class="btn btn-outline-theme">
+						<a href="index.jsp" role="button" class="btn btn-outline-theme">HOME</a>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -91,10 +122,39 @@
 </script>
 <script src="js/jquery.datetimepicker.full.js"></script>
 <script>
-	jQuery('#datetimepicker').datetimepicker({
-		format : 'd.m.Y H:i',
-		inline : true,
-		lang : 'ru'
-	});
+	$(document).ready(
+			function() {
+				jQuery.datetimepicker.setLocale('de');
+				jQuery('#datepicker').datetimepicker(
+						{
+							i18n : {
+								de : {
+									months : [ 'Januar', 'Februar', 'März',
+											'April', 'Mai', 'Juni', 'Juli',
+											'August', 'September', 'Oktober',
+											'November', 'Dezember', ],
+									dayOfWeek : [ "So.", "Mo", "Di", "Mi",
+											"Do", "Fr", "Sa.", ]
+								}
+							},
+							timepicker : false,
+							format : 'Y.m.d',
+							minDate : '-7D',
+							onChangeDateTime : function(dp, $input) {
+								$("#reserve_date").val($input.val());
+							}
+						});
+				jQuery('#timepicker').datetimepicker(
+						{
+							datepicker : false,
+							allowTimes : [ '9:00', '10:00', '11:00', '12:00',
+									'13:00', '14:20', '15:00', '16:00',
+									'17:00', '18:00', '19:00', '20:00' ],
+							format : 'H:i',
+							onChangeDateTime : function(dp, $input) {
+								$("#reserve_time").val($input.val());
+							}
+						});
+			});
 </script>
 </html>

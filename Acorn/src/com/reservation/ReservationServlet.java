@@ -1,6 +1,8 @@
 package com.reservation;
 
 import java.io.IOException;
+import java.util.StringTokenizer;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,18 +16,20 @@ import com.service.ReservationService;
 public class ReservationServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		String date = request.getParameter("reserve_date");
+		StringTokenizer sttz = new StringTokenizer(date, ".");
 		ReservationService service = new ReservationService();
 		String userid = request.getParameter("userid");
 		String username = request.getParameter("username");
 		String floor = request.getParameter("floor");
-		String fieldNum = request.getParameter("fieldNum");
-		String playYear = request.getParameter("playYear");
-		String playMonth = request.getParameter("playMonth");
-		String playDay = request.getParameter("playDay");
-		String playTime = request.getParameter("playTime");
-		String passwd = request.getParameter("passwd");
+		String fieldNum = "a"; // юс╫ц
+		String playYear = sttz.nextToken();
+		String playMonth = sttz.nextToken();
+		String playDay = sttz.nextToken();
+		String playTime = request.getParameter("reserve_time");
+		String reserve_passwd = request.getParameter("reserve_passwd");
 		ReservationDTO rdto = new ReservationDTO(userid, username, floor, fieldNum, playYear, playMonth, playDay,
-				playTime, passwd);
+				playTime, reserve_passwd);
 		int result = service.addReservation(rdto);
 		if (result != 0) {
 			response.sendRedirect("reservationSuccess.jsp");

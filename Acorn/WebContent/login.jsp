@@ -41,8 +41,8 @@
               <h5 class="card-title text-center">Please Enter Your Information</h5>
               <form action="LoginServlet">
                 <div class="form-group">
-                  <label for="InputUsername">Username</label>
-                  <input type="text" class="form-control" id="InputUsername" placeholder="Enter Username" name="userid">
+                  <label for="InputUsername">UserID</label>
+                  <input type="text" class="form-control" id="InputUsername" placeholder="Enter UserID" name="userid">
                 </div>
                 <div class="form-group">
                   <label for="InputPassword">Password</label>

@@ -35,7 +35,7 @@ public class ReservationService {
 			if (n != 0)
 				session.commit();
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();// TODO: handle exception
 		} finally {
 			session.close();
 		}

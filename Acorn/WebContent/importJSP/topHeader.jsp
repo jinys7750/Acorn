@@ -16,12 +16,16 @@
 						<a class="nav-link d-none d-sm-block" href="faq.jsp"><i
 							class="material-icons">help_outline</i> Help</a> <a
 							class="nav-link d-none d-sm-block" href="account-order.jsp"><i
-							class="material-icons">list</i> Track Order</a> <select name="lang"
+							class="material-icons">list</i> Track Order</a>
+						<!-- 언어선택기능 현재는 안씀 -->
+						<!-- <select name="lang"
 							id="lang" hidden="hidden">
 							<option value="en">English</option>
 							<option value="fr">French</option>
-						</select>
-						<div class="nav-item dropdown dropdown-lang">
+						</select> -->
+
+						<!-- 국가선택 안씀 -->
+						<!-- 	<div class="nav-item dropdown dropdown-lang">
 							<a class="nav-link dropdown-toggle" data-toggle="dropdown"
 								href="#" role="button" aria-haspopup="true"
 								aria-expanded="false"></a>
@@ -33,11 +37,13 @@
 									<img src="img/lang_fr.svg" alt="French"> French
 								</button>
 							</div>
-						</div>
-						<select name="currency" id="currency" hidden="hidden">
+						</div> -->
+
+						<!-- <select name="currency" id="currency" hidden="hidden">
 							<option value="usd">USD</option>
 							<option value="eur">EUR</option>
-						</select>
+						</select> -->
+
 						<div class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" data-toggle="dropdown"
 								href="#" role="button" aria-haspopup="true"
@@ -54,8 +60,11 @@
 						</c:if>
 						<c:if test="${empty login }">
 							<a class="nav-link" href="#" data-toggle="modal"
-								data-target="#loginModal"><i class="material-icons">person_outline</i>
+								data-target="#loginModal" ><i class="material-icons">person_outline</i>
 								Sign In</a>
+						</c:if>
+						<c:if test="${login.userid eq 'admin'}">
+							<a class="nav-link" href="admin page" data-toggle="modal"><i class="material-icons">person_outline</i>admin page</a>
 						</c:if>
 					</nav>
 				</div>

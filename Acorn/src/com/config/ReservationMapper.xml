@@ -9,4 +9,8 @@
 		playYear=#{playYear} and playMonth=#{playMonth} and
 		playDay=#{playDay} and playTime = #{playTime}
 	</select>
+	<insert id="addReservation" parameterType="ReservationDTO">
+		insert into reservation values
+		(#{userid},#{username},#{floor},#{fieldNum},#{playYear},#{playMonth},#{playDay},#{playTime},#{reserve_passwd})
+	</insert>
 </mapper>

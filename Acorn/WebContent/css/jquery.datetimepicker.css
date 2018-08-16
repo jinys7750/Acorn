@@ -122,6 +122,9 @@
 	height: 20px;
 	vertical-align: middle;
 }
+.xdsoft_datetimepicker{
+	text-align : left;
+}
 
 .xdsoft_datetimepicker .xdsoft_prev {
 	float: left;

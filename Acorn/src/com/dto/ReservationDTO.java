@@ -9,7 +9,7 @@ public class ReservationDTO {
 	private String playMonth;
 	private String playDay;
 	private String playTime;
-	private String passwd;
+	private String reserve_passwd;
 
 	public ReservationDTO() {
 		super();
@@ -20,11 +20,11 @@ public class ReservationDTO {
 	public String toString() {
 		return "ReservationDTO [userid=" + userid + ", username=" + username + ", floor=" + floor + ", fieldNum="
 				+ fieldNum + ", playYear=" + playYear + ", playMonth=" + playMonth + ", playDay=" + playDay
-				+ ", playTime=" + playTime + ", passwd=" + passwd + "]";
+				+ ", playTime=" + playTime + ", reserve_passwd=" + reserve_passwd + "]";
 	}
 
 	public ReservationDTO(String userid, String username, String floor, String fieldNum, String playYear,
-			String playMonth, String playDay, String playTime, String passwd) {
+			String playMonth, String playDay, String playTime, String reserve_passwd) {
 		super();
 		this.userid = userid;
 		this.username = username;
@@ -34,7 +34,7 @@ public class ReservationDTO {
 		this.playMonth = playMonth;
 		this.playDay = playDay;
 		this.playTime = playTime;
-		this.passwd = passwd;
+		this.reserve_passwd = reserve_passwd;
 	}
 
 	public String getPlayTime() {
@@ -101,12 +101,12 @@ public class ReservationDTO {
 		this.playDay = playDay;
 	}
 
-	public String getPasswd() {
-		return passwd;
+	public String getreserve_passwd() {
+		return reserve_passwd;
 	}
 
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
+	public void setreserve_passwd(String reserve_passwd) {
+		this.reserve_passwd = reserve_passwd;
 	}
 
 }

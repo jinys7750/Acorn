@@ -18,6 +18,7 @@ public class ReservationDAO {
 
 	public int addReservation(SqlSession session, ReservationDTO rdto) {
 		int n = session.insert("com.reserv.addReservation", rdto);
+		System.out.println("n : " + n);
 		return n;
 	}
 }
