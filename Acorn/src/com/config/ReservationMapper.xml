@@ -6,11 +6,16 @@
 	<select id="reservationList" resultType="ReservationDTO">
 		select * from
 		reservation where
-		playYear=#{playYear} and playMonth=#{playMonth} and
-		playDay=#{playDay} and playTime = #{playTime}
+		userid=#{userid}
 	</select>
 	<insert id="addReservation" parameterType="ReservationDTO">
-		insert into reservation values
+		insert into
+		reservation values
 		(#{userid},#{username},#{floor},#{fieldNum},#{playYear},#{playMonth},#{playDay},#{playTime},#{reserve_passwd})
 	</insert>
+	<delete id="removeReservation" parameterType="hashmap">
+		delete from reservation where playYear=#{playYear} and
+		playMonth=#{playMonth} and playDay=#{playDay} and playTime=#{playTime}
+		and reserve_passwd = #{reserve_passwd}
+	</delete>
 </mapper>

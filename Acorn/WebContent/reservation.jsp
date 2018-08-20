@@ -54,7 +54,7 @@
 				</div>
 				<br> <Br>
 				<p>
-				<div>
+				<div style="width: 40%;margin:0 auto">
 					<form action="ReservationServlet" method="get">
 						<!-- 캘린더 불러오기 위한 코드!!! body 밑에 jquery있음 -->
 						<!-- 					<label for="pick Date">Select Floor</label> <input type="text"
@@ -72,11 +72,11 @@
 							<option value="C2">C2</option>
 							<option value="C3">C3</option>
 						</select><br> <label for="pick Date">Select Date</label> <input
-							type="text" id="datepicker"> <Br> <br> <label
-							for="pick Date">Select Time</label> <input type="text"
-							id="timepicker"> <br>
+							type="text" id="datepicker" class="form-control" autocomplete="off"> <Br> <br> <label
+							for="pick Date" >Select Time</label> <input type="text"
+							id="timepicker" autocomplete="off" class="form-control"> <br>
 							<label for="pick Date">Reservation Password</label>
-							 <input type="password" class="form-control" name="reserve_passwd">
+							 <input type="password" class="form-control" name="reserve_passwd" autocomplete="off">
 							<Br> <br>
 						<!-- hidden -->
 						<input type="hidden" name="userid" value="${login.userid }">
@@ -148,7 +148,7 @@
 						{
 							datepicker : false,
 							allowTimes : [ '9:00', '10:00', '11:00', '12:00',
-									'13:00', '14:20', '15:00', '16:00',
+									'13:00', '14:00', '15:00', '16:00',
 									'17:00', '18:00', '19:00', '20:00' ],
 							format : 'H:i',
 							onChangeDateTime : function(dp, $input) {

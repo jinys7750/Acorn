@@ -17,7 +17,7 @@
 	href="touch-icon-iphone-retina.png">
 <link rel="apple-touch-icon" sizes="167x167"
 	href="touch-icon-ipad-retina.png">
-<title>Reservation - ZZING</title>
+<title>ReservationSuccess</title>
 
 <!-- Required css -->
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -54,7 +54,7 @@
 				<h1 class="font-weight-normal">Reservation Success!!!!</h1>
 				<a href="index.jsp" role="button" class="btn btn-outline-theme">HOME</a>
 				<!-- 나의 예약현황 페이지 만든 후 작성 -->
-				<a href="" role="button" class="btn btn-outline-theme">My
+				<a href="ReservationListServlet" role="button" class="btn btn-outline-theme">My
 					Reservation</a>
 			</div>
 		</div>

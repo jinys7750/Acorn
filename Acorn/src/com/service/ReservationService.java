@@ -14,11 +14,11 @@ import com.dto.ReservationDTO;
 public class ReservationService {
 	ReservationDAO dao = new ReservationDAO();
 
-	public List<ReservationDTO> reservationList(HashMap<String, String> map) {
+	public List<ReservationDTO> reservationList(String userid) {
 		SqlSession session = MySqlSessionFactory.getSession();
 		List<ReservationDTO> list = null;
 		try {
-			list = dao.reservationList(session, map);
+			list = dao.reservationList(session, userid);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -32,6 +32,21 @@ public class ReservationService {
 		int n = 0;
 		try {
 			n = dao.addReservation(session, rdto);
+			if (n != 0)
+				session.commit();
+		} catch (Exception e) {
+			e.printStackTrace();// TODO: handle exception
+		} finally {
+			session.close();
+		}
+		return n;
+	}
+
+	public int removeReservation(HashMap<String, String> map) {
+		SqlSession session = MySqlSessionFactory.getSession();
+		int n = 0;
+		try {
+			n = dao.removeReservation(session, map);
 			if (n != 0)
 				session.commit();
 		} catch (Exception e) {

@@ -48,7 +48,7 @@
                       <a href="checkout-wizard-review.jsp" class="dropdown-item">Review</a>
                     </div>
                   </div> -->
-							<a class="dropdown-item" href="myreservation.jsp">My Reservation</a>
+							<a class="dropdown-item" href="ReservationListServlet">My Reservation</a>
 						</div>
 					</div>
 					<div class="nav-item dropdown position-static">
