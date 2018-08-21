@@ -51,13 +51,13 @@
 							<a class="dropdown-item" href="ReservationListServlet">My Reservation</a>
 						</div>
 					</div>
-					<div class="nav-item dropdown position-static">
+<!-- 					<div class="nav-item dropdown position-static">
 						<a href="#" class="nav-link dropdown-toggle no-caret"
 							data-toggle="dropdown" role="button" aria-haspopup="true"
 							aria-expanded="false">MEGA MENU</a>
 						<div class="dropdown-menu dropdown-menu-mega animate">
 							<form>
-								<!-- added <form> tags to prevent dropdown closed when clicked inside dropdown-menu -->
+								added <form> tags to prevent dropdown closed when clicked inside dropdown-menu
 								<div class="row">
 									<div class="col-4 col-lg-3">
 										<h6
@@ -161,65 +161,37 @@
 								</div>
 							</form>
 						</div>
-					</div>
+					</div> -->
 					<div class="nav-item dropdown">
 						<a href="#" class="nav-link dropdown-toggle no-caret"
 							data-toggle="dropdown" role="button" aria-haspopup="true"
-							aria-expanded="false">BLOG</a>
+							aria-expanded="false">RECORD</a>
 						<div class="dropdown-menu animate">
-							<a class="dropdown-item" href="blog.jsp">Blog Grid</a> <a
-								class="dropdown-item" href="blog-list.jsp">Blog List</a> <a
-								class="dropdown-item" href="blog-detail.jsp">Blog Detail</a>
+							<a class="dropdown-item" href="blog.jsp">My Record</a> 
+							<!-- 내 레코드 확인하는 페이지 경로 href에 삽입하기 유효성 검사 할것-->
+							<a class="dropdown-item" href="">My Record</a>
 						</div>
 					</div>
 					<div class="nav-item dropdown">
 						<a href="#" class="nav-link dropdown-toggle no-caret"
 							data-toggle="dropdown" role="button" aria-haspopup="true"
-							aria-expanded="false">PAGES</a>
-						<div class="dropdown-menu animate">
-							<a class="dropdown-item" href="about.jsp">About Us</a> <a
-								class="dropdown-item" href="compare.jsp">Compare</a> <a
-								class="dropdown-item" href="contact.jsp">Contact Us</a> <a
-								class="dropdown-item" href="cart-empty.jsp">Empty Shopping
-								Cart</a> <a class="dropdown-item" href="404.jsp">Error 404</a> <a
-								class="dropdown-item" href="faq.jsp">FAQ</a> <a
-								class="dropdown-item" href="login.jsp">Login</a> <a
-								class="dropdown-item" href="register.jsp">Register</a>
-							<div class="dropdown-submenu">
-								<a href="#" class="dropdown-item d-flex justify-content-between">My
-									Account <i class="material-icons md-1 mt-1">chevron_right</i>
-								</a>
-								<div class="dropdown-menu animate">
-									<a href="account-profile.jsp" class="dropdown-item">Profile</a>
-									<a href="account-order.jsp" class="dropdown-item">Orders</a> <a
-										href="account-address.jsp" class="dropdown-item">Addresses</a>
-									<a href="account-wishlist.jsp" class="dropdown-item">Wishlist</a>
-									<a href="account-password.jsp" class="dropdown-item">Change
-										Password</a>
-									<div class="dropdown-submenu">
-										<a href="#"
-											class="dropdown-item d-flex justify-content-between">Submenu
-											<i class="material-icons md-1 mt-1">chevron_right</i>
-										</a>
-										<div class="dropdown-menu animate">
-											<a href="#" class="dropdown-item">Submenu1</a> <a href="#"
-												class="dropdown-item">Submenu2</a>
-										</div>
-									</div>
-								</div>
-							</div>
+							aria-expanded="false">BOARD</a>
+							<div class="dropdown-menu animate">
+							<a class="dropdown-item" href="board.jsp">Board</a> 
+							<!-- 내 레코드 확인하는 페이지 경로 href에 삽입하기 유효성 검사 할것-->
+							<a class="dropdown-item" href="faq.jsp">FAQ</a>
 						</div>
 					</div>
 				</nav>
 			</div>
-			<div
+	<!-- 		<div
 				class="col-4 col-md-auto d-flex align-items-center justify-content-end pl-0">
-				<!--       <nav class="nav nav-counter">
+			      <nav class="nav nav-counter">
               <a href="#" class="nav-link toggle-search"><img src="img/search.svg" alt="search"></a>
               <a href="account-wishlist.jsp" class="nav-link counter d-none d-lg-block"><span>3</span><img src="img/wishlist.svg" alt="wishlist"></a>
               <a href="#" class="nav-link counter" data-toggle="modal" data-target="#cartModal"><span>4</span><img src="img/bag.svg" alt="bag"></a>
-            </nav> -->
-			</div>
+            </nav>
+			</div> -->
 
 		</div>
 	</div>

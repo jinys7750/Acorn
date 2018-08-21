@@ -15,4 +15,14 @@ public class MemberDAO {
 		MemberDTO dto = session.selectOne("com.member.login", map);
 		return dto;
 	}
+
+	public int idCheck(SqlSession session, String userid) {
+		int result = session.selectOne("com.member.idCheck", userid);
+		return result;
+	}
+
+	public int register(SqlSession session, MemberDTO mdto) {
+		int result = session.insert("com.member.register", mdto);
+		return result;
+	}
 }
