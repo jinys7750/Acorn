@@ -6,7 +6,7 @@
 	<select id="reservationList" resultType="ReservationDTO">
 		select * from
 		reservation where
-		userid=#{userid}
+		userid=#{userid} order by playMonth desc, playDay desc, playTime desc
 	</select>
 	<insert id="addReservation" parameterType="ReservationDTO">
 		insert into
@@ -18,4 +18,7 @@
 		playMonth=#{playMonth} and playDay=#{playDay} and playTime=#{playTime}
 		and reserve_passwd = #{reserve_passwd}
 	</delete>
+	<select id="checkReservation" parameterType="hashmap" resultType="int">
+	select count(*) from reservation where floor=#{floor} and playYear=#{playYear} and playMonth=#{playMonth} and playDay=#{playDay} and playTime=#{playTime}
+	</select>
 </mapper>

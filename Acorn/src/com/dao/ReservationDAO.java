@@ -22,4 +22,9 @@ public class ReservationDAO {
 		System.out.println("removeReservation : " + n);
 		return n;
 	}
+
+	public int checkReservation(SqlSession session, HashMap<String, String> map) {
+		int result = session.selectOne("com.reserv.checkReservation", map);
+		return result;
+	}
 }

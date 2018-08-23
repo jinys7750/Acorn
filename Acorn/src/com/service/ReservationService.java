@@ -57,4 +57,17 @@ public class ReservationService {
 		return n;
 	}
 
+	public int checkReservation(HashMap<String, String> map) {
+		SqlSession session = MySqlSessionFactory.getSession();
+		int result = 0;
+		try {
+			result = dao.checkReservation(session, map);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return result;
+	}
+
 }

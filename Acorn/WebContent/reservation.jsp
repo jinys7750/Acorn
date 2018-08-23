@@ -54,14 +54,14 @@
 				</div>
 				<br> <Br>
 				<p>
-				<div style="width: 40%;margin:0 auto">
+				<div style="width: 40%; margin: 0 auto">
 					<form action="ReservationServlet" method="get">
 						<!-- 캘린더 불러오기 위한 코드!!! body 밑에 jquery있음 -->
 						<!-- 					<label for="pick Date">Select Floor</label> <input type="text"
 						class="form-control" id="datepicker"
 						placeholder="Enter Reservation Date" name="datetimepicker"> -->
-						<label for="pick Date">Select Floor</label> <select name="floor"
-							class="form-control">
+						<label for="pick Date">Select Floor</label> <select id="floor"
+							name="floor" class="form-control">
 							<option value="A1">A1</option>
 							<option value="A2">A2</option>
 							<option value="A3">A3</option>
@@ -72,12 +72,15 @@
 							<option value="C2">C2</option>
 							<option value="C3">C3</option>
 						</select><br> <label for="pick Date">Select Date</label> <input
-							type="text" id="datepicker" class="form-control" autocomplete="off"> <Br> <br> <label
-							for="pick Date" >Select Time</label> <input type="text"
-							id="timepicker" autocomplete="off" class="form-control"> <br>
-							<label for="pick Date">Reservation Password</label>
-							 <input type="password" class="form-control" name="reserve_passwd" autocomplete="off">
-							<Br> <br>
+							type="text" id="datepicker" class="form-control"
+							autocomplete="off"> <Br> <br> <label
+							for="pick Date">Select Time</label> <input type="text"
+							id="timepicker" autocomplete="off" class="form-control">
+						<br>
+							<label id="result" style=></label>
+						<br> <label for="pick Date">Reservation Password</label> <input
+							type="password" class="form-control" name="reserve_passwd"
+							autocomplete="off"> <Br> <br>
 						<!-- hidden -->
 						<input type="hidden" name="userid" value="${login.userid }">
 						<input type="hidden" name="username" value="${login.username }">
@@ -124,6 +127,15 @@
 <script>
 	$(document).ready(
 			function() {
+				var str="이미 예약된 필드입니다.";
+				//예약 불가능한 상태면 submit 막게끔 처리
+				$("form").on("submit", function(event){
+					var result = $("#result").text();
+					if(result==str){
+						alert(str);
+						event.preventDefault();
+					}
+				});
 				jQuery.datetimepicker.setLocale('de');
 				jQuery('#datepicker').datetimepicker(
 						{
@@ -153,6 +165,30 @@
 							format : 'H:i',
 							onChangeDateTime : function(dp, $input) {
 								$("#reserve_time").val($input.val());
+								$.ajax({
+									url : 'ReservationCheckServlet',
+									type : 'get',
+									dataType : 'text',
+									data : {
+										floor : $("#floor").val(),
+										playDate : $("#reserve_date").val(),
+										playTime : $("#reserve_time").val(),
+
+									},
+									success : function(data, textStatus, xhr) {
+										if(data==str){
+											$("#result").text(data);
+											$("#result").attr("style", "font-size: 12px;color: red");
+										}
+										else{
+											$("#result").text(data);
+											$("#result").attr("style", "font-size: 12px;color: blue");
+										}
+									},
+									error : function(xhr, status, error) {
+										console.log(error);
+									}
+								});
 							}
 						});
 			});

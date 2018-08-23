@@ -27,12 +27,6 @@
 							<div class="list-group">
 								<a class="list-group-item list-group-item-action"
 									href="reservation.jsp">Reservation</a>
-								<!-- 쇼핑리스트 안씀 -->
-								<!-- <a class="list-group-item list-group-item-action" href="shop-list.jsp">Shop List</a>
-                    <a class="list-group-item list-group-item-action" href="cart.jsp">Shopping Cart</a>
-                    <a class="list-group-item list-group-item-action" href="checkout.jsp">Checkout</a>
-                    <a class="list-group-item list-group-item-action" href="checkout-wizard-address.jsp">Checkout Wizard</a>
-                    <a class="list-group-item list-group-item-action" href="detail.jsp">Single Product</a> -->
 							</div>
 						</div>
 					</div>

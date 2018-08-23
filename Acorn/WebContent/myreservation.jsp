@@ -85,6 +85,7 @@
                   <ul class="list-inline mb-1">
                     <li class="list-inline-item"><small><i class="material-icons md-1 align-text-bottom">DATE   </i> ${i.playYear }. ${i.playMonth }. ${i.playDay } </small></li>
                     <li class="list-inline-item"><small><i class="material-icons md-1 align-text-bottom">TIME   </i> ${i.playTime } </small></li>
+                    <li class="list-inline-item"><small><i class="material-icons md-1 align-text-bottom">FLOOR   </i> ${i.floor } </small></li>
                     <li class="list-inline-item"><small><i class="material-icons md-1 align-text-bottom">NAME   </i> ${i.username }</small></li>
                   </ul>
                   <button class="btn btn-sm btn-theme delBtn" data-pYear=${i.playYear } data-pMonth=${i.playMonth } data-pDay=${i.playDay } data-rpw="${i.reserve_passwd } " data-pTime="${i.playTime }">예약 취소</button>
@@ -93,7 +94,7 @@
               </c:forEach>
             </div>
           </div>
-        </div>
+        </div></div></div>
      <jsp:include page="importJSP/modalPage.jsp"></jsp:include>
 	<jsp:include page="importJSP/footer.jsp"></jsp:include>
 
