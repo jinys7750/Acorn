@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.record">
+ 
+	<insert id="recordin" parameterType="RecordDTO">
+		insert into record(
+		userid,playYear,playMonth,playDay,maxDistance,hitBall )
+		values(
+		#{userid},#{playYear},#{playMonth},#{playDay},#{maxDistance},#{hitBall}
+		)
+	</insert>
+
+	<select id="recordout" parameterType="string"
+		resultType="RecordDTO">
+		select userid, MAX( to_number(maxDistance)) maxDistance,
+		MAX( to_number(hitBall)) hitball
+		from record
+		where userid =#{userid}
+		group by userid
+	</select>
+
+	<select id="dranking" resultType="RecordDTO">
+		select userid, maxDistance,
+		RANK() OVER(ORDER BY maxDistance desc) ROWNUMS
+		from (
+		select distinct
+		dense_rank()over(partition by userid order by maxDistance
+		desc) rn,
+		userid, maxDistance
+		from record
+		)
+		where rn = 1 
+	</select>
+
+	<select id="hranking"  resultType="RecordDTO">
+	select userid, hitball,
+		RANK() OVER(ORDER BY hitball desc) ROWNUMS
+		from (
+		select distinct
+		dense_rank()over(partition by userid order by hitball
+		desc) rn,
+		userid, hitball
+		from record
+		)
+		where rn = 1 
+	</select>
+
+</mapper>
