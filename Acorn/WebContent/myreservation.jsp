@@ -77,8 +77,8 @@
             <c:forEach var="i" items="${reservelist}" varStatus="status">
             <input type="hidden" name="${i.reserve_passwd }">
               <div class="media hover-style media-list">
-                <a href="blog-detail.jsp">
-                  <div data-cover="img/blog/blog1.jpg" data-xs-height="100px" data-sm-height="200px" data-md-height="100" data-lg-height="200px" data-xl-height="200px">
+                <a href="">
+                  <div data-cover="img/field/${i.floor }.jpg" data-xs-height="100px" data-sm-height="200px" data-md-height="100" data-lg-height="200px" data-xl-height="200px">
                   </div>
                 </a>
                 <div class="media-body">
