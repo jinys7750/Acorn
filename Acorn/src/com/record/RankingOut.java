@@ -15,39 +15,39 @@ import com.dto.MemberDTO;
 import com.dto.RecordDTO;
 import com.service.RecordService;
 
-
 @WebServlet("/RankingOut")
 public class RankingOut extends HttpServlet {
 
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		MemberDTO dto = (MemberDTO) session.getAttribute("login");
 		String nextPage = null;
 		if (dto == null) {
 			nextPage = "login.jsp";
-		
+
 		} else {
 			nextPage = "myrecord.jsp";
 			String userid = dto.getUserid();
 			RecordService service = new RecordService();
 			List<RecordDTO> list = service.dranking();
-			request.setAttribute("drList", list);
-			
-			//hitball
+			session.setAttribute("drList", list);
+
+			// hitball
 			RecordService hservice = new RecordService();
 			List<RecordDTO> hlist = hservice.hranking();
 			session.setAttribute("hdto", hlist);
-	
+
 		}
-		RequestDispatcher dis = request.getRequestDispatcher(nextPage);
-		dis.forward(request, response);
+		response.sendRedirect(nextPage);
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

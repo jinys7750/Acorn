@@ -1,6 +1,8 @@
 package com.dto;
 
-public class RecordDTO {
+import java.io.Serializable;
+
+public class RecordDTO implements Serializable{
 	 /*
     USERID VARCHAR2(10) PRIMARY KEY,
     PLAYYEAR VARCHAR2(4) NOT NULL,
@@ -70,7 +72,5 @@ public class RecordDTO {
 		return "RecordDTO [userid=" + userid + ", playYear=" + playYear + ", playMonth=" + playMonth + ", playDay="
 				+ playDay + ", maxDistance=" + maxDistance + ", hitBall=" + hitBall + "]";
 	}
-    
-	
     
 }

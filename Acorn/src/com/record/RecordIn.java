@@ -29,8 +29,6 @@ public class RecordIn extends HttpServlet {
 			
 		} else {
 			nextPage = "Recordout";
-			
-	
 			String playYear = request.getParameter("playYear");
 			String playMonth = request.getParameter("playMonth");
 			String playDay = request.getParameter("playDay");
@@ -50,9 +48,7 @@ public class RecordIn extends HttpServlet {
 			int n = service.recordin(rdto);
 			session.setAttribute("mRecord", rdto);
 		}
-
-		RequestDispatcher dis = request.getRequestDispatcher(nextPage);
-		dis.forward(request, response);
+		response.sendRedirect(nextPage);
 
 		/*
 		 * HttpSession session = request.getSession();

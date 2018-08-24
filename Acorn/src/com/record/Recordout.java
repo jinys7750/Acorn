@@ -28,7 +28,7 @@ public class Recordout extends HttpServlet {
 			nextPage = "login.jsp";
 			
 		} else {
-			nextPage = "account-order.jsp";
+			nextPage = "RankingOut";
 			String userid = dto.getUserid();
 			RecordService service = new RecordService();
 			//List<RecordDTO> list = service.myRecord(userid);
@@ -36,8 +36,7 @@ public class Recordout extends HttpServlet {
 			session.setAttribute("mRecord", rdto);
 		}
 		
-		RequestDispatcher dis = request.getRequestDispatcher(nextPage);
-		dis.forward(request, response);
+		response.sendRedirect(nextPage);
 
 	}
 
