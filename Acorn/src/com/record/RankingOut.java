@@ -29,6 +29,15 @@ public class RankingOut extends HttpServlet {
 		} else {
 			nextPage = "myrecord.jsp";
 			String userid = dto.getUserid();
+			
+			//recordout
+			RecordService rservice = new RecordService();
+			//List<RecordDTO> list = service.myRecord(userid);
+			RecordDTO rdto = rservice.recordout(userid);
+			session.setAttribute("mRecord", rdto);
+			
+			
+			
 			RecordService service = new RecordService();
 			List<RecordDTO> list = service.dranking();
 			session.setAttribute("drList", list);

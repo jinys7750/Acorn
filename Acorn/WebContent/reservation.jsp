@@ -119,7 +119,7 @@
 
 </body>
 <link rel="stylesheet" type="text/css"
-	href="css/jquery.datetimepicker.css"/ >
+	href="css/jquery.datetimepicker.css"/>
 <script type="text/javascript" src="js/jquery-3.3.1.js">
 	
 </script>

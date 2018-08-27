@@ -2,6 +2,7 @@ package com.record;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.StringTokenizer;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -28,12 +29,17 @@ public class RecordIn extends HttpServlet {
 			nextPage = "login.jsp";
 			
 		} else {
-			nextPage = "Recordout";
-			String playYear = request.getParameter("playYear");
-			String playMonth = request.getParameter("playMonth");
-			String playDay = request.getParameter("playDay");
+			nextPage = "RankingOut";
+			
+			String date = request.getParameter("reserve_date");
+			StringTokenizer sttz = new StringTokenizer(date, ".");
+			String playYear =  sttz.nextToken();
+			String playMonth = sttz.nextToken();
+			String playDay = sttz.nextToken();
 			String maxDistance = request.getParameter("maxDistance");
 			String hitBall = request.getParameter("hitBall");
+			
+			
 
 			RecordDTO rdto = new RecordDTO();
 			rdto.setUserid(dto.getUserid()); // dto.setUserid("aaa");

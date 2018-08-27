@@ -1,107 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
-	//입력안하면 alert
-	$("#form").on("submit", function(event) {
-			var playYear = $("#playYear").val();
-			var playMonth = $("#playMonth").val();
-			var playDay = $("#playDay").val();
+	$(document).ready(function() {
+		//입력안하면 alert
+		$("#form").on("submit", function(event) {
 			var maxDistance = $("#maxDistance").val();
 			var hitBall = $("#hitBall").val();
-		
-			if (playYear.length == 0) {
-				alert("칸이 비어있다")
-				$("#playYear").focus();
-				event.preventDefault();
-			} else if (playMonth.length == 0) {
-				alert("칸이 비어있다")
-				$("#playMonth").focus();
-				event.preventDefault();
-			} else if (playDay.length == 0) {
-				alert("칸이 비어있다")
-				$("#playDay").focus();
-				event.preventDefault();
-			}else if (maxDistance.length ==0) {
+			if (maxDistance.length == 0) {
 				alert("칸이 비어있다")
 				$("#maxDistance").focus();
 				event.preventDefault();
-			}else if (hitBall.length == 0) {
+			} else if (hitBall.length == 0) {
 				alert("칸이 비어있다")
 				$("#hitBall").focus();
 				event.preventDefault();
 			}
-		});	//입력안하면 alert
-    	
-	 
-	//숫자만 입력가능
-	$(function(){
-		  $('#playYear').keyup(function() {
-		   if (event.which && (event.which > 36 && event.which < 58 || 
-		    event.which > 95 && event.which <106 ||
-		    event.which == 8 || event.which == 9)){
-		   }else{ 
-		    alert("숫자만 입력해주세요");
-		    $('#playYear').val("");
-		    $('#playYear').focus();
-		  	 }
-		 }); //playYear
-		 $('#playMonth').keyup(function() {
-			   if (event.which && (event.which > 36 && event.which < 58 || 
-			    event.which > 95 && event.which <106 ||
-			    event.which == 8 || event.which == 9)){
-			   }else{ 
-			    alert("숫자만 입력해주세요");
-			    $('#playMonth').val("");
-			    $('#playMonth').focus();
-			  	 }
-			 }); //playMonth
-			 $('#playDay').keyup(function() {
-				   if (event.which && (event.which > 36 && event.which < 58 || 
-				    event.which > 95 && event.which <106 ||
-				    event.which == 8 || event.which == 9)){
-				   }else{ 
-				    alert("숫자만 입력해주세요");
-				    $('#playDay').val("");
-				    $('#playDay').focus();
-				  	 }
-				 }); //playDay
-				 $('#maxDistance').keyup(function() {
-					   if (event.which && (event.which > 36 && event.which < 58 || 
-					    event.which > 95 && event.which <106 ||
-					    event.which == 8 || event.which == 9)){
-					   }else{ 
-					    alert("숫자만 입력해주세요");
-					    $('#maxDistance').val("");
-					    $('#maxDistance').focus();
-					  	 }
-					 }); //maxDistance
-				 $('#hitBall').keyup(function() {
-					   if (event.which && (event.which > 36 && event.which < 58 || 
-					    event.which > 95 && event.which <106 ||
-					    event.which == 8 || event.which == 9)){
-					   }else{ 
-					    alert("숫자만 입력해주세요");
-					    $('#hitBall').val("");
-					    $('#hitBall').focus();
-					  	 }
-					 });
-	 });//숫자만 입력가능
+		}); //입력안하면 alert
 
-		
-    	//토글버튼
-    	
-    	
-    	
-    	
-    	
-
-});//end script
+	});//end script
 </script>
 
 <!DOCTYPE html>
@@ -182,28 +102,19 @@ $(document).ready(function(){
 				<h2>Insert record</h2>
 				<!--  내용 -->
 
+				
 
 				<form action="RecordIn" method="get" id="form" name="form">
-
+			<div style="width: 120px" align="left">
+			<input type="text" id="datepicker" class="form-control" autocomplete="off"></div>
 
 					<table>
-
-						<tr>
-							<td>YEAR</td>
-							<td><input type="text" id="playYear" name="playYear"
-								maxlength="4"></td>
-							<td>MONTH</td>
-							<td><input type="text" id="playMonth" name="playMonth"
-								maxlength="2"></td>
-							<td>DAY
-							</th>
-							<td><input type="text" id="playDay" name="playDay"
-								maxlength="2"></td>
-						</tr>
 						<tr>
 							<td>TODAY DISTANCE</td>
 							<td><input type="text" id="maxDistance" name="maxDistance"
 								maxlength="2"></td>
+								</tr>
+								<tr>
 							<td>TODAY HITBALL</td>
 							<td><input type="text" id=hitBall name="hitBall"
 								maxlength="2"></td>
@@ -214,7 +125,7 @@ $(document).ready(function(){
 							<td><input type="reset" value="cancel "
 								class="btn btn-theme btn-sm btn-block my-3"></td>
 						</tr>
-						<!-- btn btn-theme btn-sm btn-block my-3 -->
+							<input type="hidden" id="reserve_date" name="reserve_date">
 
 					</table>
 				</form>
@@ -237,26 +148,27 @@ $(document).ready(function(){
 				<h2>RANKING</h2>
 				<br>
 				<!-- 토글버튼영역 -->
-				<div class="card mb-1">
+				<c:if test="${mRecord.userid != null }">
+					<div class="card mb-1">
 
-					<div class="card-header p-2" role="tab" id="heading6-1">
-						<a class="collapsed text-secondary font-weight-bold"
-							data-toggle="collapse" href="#collapse6-1" aria-expanded="false"
-							aria-controls="collapse6-1"> Distance Ranking </a>
-					</div>
-					<div id="collapse6-1" class="collapse" role="tabpanel"
-						aria-labelledby="heading6-1" data-parent="#accordion6">
-						<div class="card-body">
+						<div class="card-header p-2" role="tab" id="heading6-1">
+							<a class="collapsed text-secondary font-weight-bold"
+								data-toggle="collapse" href="#collapse6-1" aria-expanded="false"
+								aria-controls="collapse6-1"> Distance Ranking </a>
+						</div>
+						<div id="collapse6-1" class="collapse" role="tabpanel"
+							aria-labelledby="heading6-1" data-parent="#accordion6">
+							<div class="card-body">
 
-							<table width="800px" align="center" class="table table-hover">
-								<thead class="thead-light">
-									<tr align="center">
-										<td>RANK</td>
-										<td>USERID</td>
-										<td>DISTANCE</td>
-									</tr>
-								</thead>
-								<c:if test="${mRecord.userid != null }">
+								<table width="800px" align="center" class="table table-hover">
+									<thead class="thead-light">
+										<tr align="center">
+											<td>RANK</td>
+											<td>USERID</td>
+											<td>DISTANCE</td>
+										</tr>
+									</thead>
+
 									<c:forEach var="dr" items="${drList}" varStatus="status">
 										<tr align="center">
 											<td><%=i%></td>
@@ -267,54 +179,54 @@ $(document).ready(function(){
 											<td>${dr.maxDistance}</td>
 										</tr>
 									</c:forEach>
-							</table>
+								</table>
+							</div>
 						</div>
-					</div>
-					<div class="card-header p-2" role="tab" id="heading6-2">
-						<a class="collapsed text-secondary font-weight-bold"
-							data-toggle="collapse" href="#collapse6-2" aria-expanded="false"
-							aria-controls="collapse6-2"> Hitball Ranking </a>
-					</div>
-					<div id="collapse6-2" class="collapse" role="tabpanel"
-						aria-labelledby="heading6-2" data-parent="#accordion6">
-						<div class="card-body">
-
-							<%
-								int i2 = 1;
-							%>
-
-							<table width="800px" align="center" class="table table-hover">
-								<thead class="thead-light">
-									<tr align="center">
-										<td>RANK</td>
-										<td>USERID</td>
-										<td>HITBALL</td>
-									</tr>
-								</thead>
-
-								<c:forEach var="hr" items="${hdto}" varStatus="status">
-									<tr align="center">
-										<td><%=i2%></td>
-										<%
-											i2++;
-										%>
-										<td>${hr.userid }</td>
-										<td>${hr.hitBall }</td>
-									</tr>
-								</c:forEach>
-								</c:if>
-							</table>
-
+						<div class="card-header p-2" role="tab" id="heading6-2">
+							<a class="collapsed text-secondary font-weight-bold"
+								data-toggle="collapse" href="#collapse6-2" aria-expanded="false"
+								aria-controls="collapse6-2"> Hitball Ranking </a>
 						</div>
+						<div id="collapse6-2" class="collapse" role="tabpanel"
+							aria-labelledby="heading6-2" data-parent="#accordion6">
+							<div class="card-body">
+
+								<%
+									int i2 = 1;
+								%>
+
+								<table width="800px" align="center" class="table table-hover">
+									<thead class="thead-light">
+										<tr align="center">
+											<td>RANK</td>
+											<td>USERID</td>
+											<td>HITBALL</td>
+										</tr>
+									</thead>
+
+									<c:forEach var="hr" items="${hdto}" varStatus="status">
+										<tr align="center">
+											<td><%=i2%></td>
+											<%
+												i2++;
+											%>
+											<td>${hr.userid }</td>
+											<td>${hr.hitBall }</td>
+										</tr>
+									</c:forEach>
+
+								</table>
+
+							</div>
+						</div>
+
+
 					</div>
-
-
-				</div>
+				</c:if>
 			</div>
+		</div>
 	</div>
-	</div>
-	</div>
-	</div>
+	
 
 	<jsp:include page="importJSP/modalPage.jsp"></jsp:include>
 	<jsp:include page="importJSP/footer.jsp"></jsp:include>
@@ -337,4 +249,74 @@ $(document).ready(function(){
 	<script src="js/script.min.js"></script>
 
 </body>
+<link rel="stylesheet" type="text/css"
+	href="css/jquery.datetimepicker.css" />
+<script src="js/jquery.datetimepicker.full.js"></script>
+<script>
+	$(document).ready(
+			function() {
+				jQuery.datetimepicker.setLocale('de');
+				jQuery('#datepicker').datetimepicker(
+						{
+							i18n : {
+								de : {
+									months : [ 'Januar', 'Februar', 'März',
+											'April', 'Mai', 'Juni', 'Juli',
+											'August', 'September', 'Oktober',
+											'November', 'Dezember', ],
+									dayOfWeek : [ "So.", "Mo", "Di", "Mi",
+											"Do", "Fr", "Sa.", ]
+								}
+							},
+							timepicker : false,
+							format : 'Y.m.d',
+							minDate : '-7D',
+							onChangeDateTime : function(dp, $input) {
+								$("#reserve_date").val($input.val());
+								
+								$.ajax({
+									url : 'ReservationCheckServlet',
+									type : 'get',
+									dataType : 'text',
+									data : {	
+										playDate : $("#reserve_date").val(),
+										playTime : $("#reserve_time").val(),
+
+									},
+									success : function(data, textStatus, xhr) {
+										if(data==str){
+											$("#result").text(data);
+											$("#result").attr("style", "font-size: 12px;color: red");
+										}
+										else{
+											$("#result").text(data);
+											$("#result").attr("style", "font-size: 12px;color: blue");
+										}
+									},
+									error : function(xhr, status, error) {
+										console.log(error);
+									}
+								});
+								
+								
+								
+								
+								
+							}
+						});
+			/* 	jQuery('#timepicker').datetimepicker(
+						{
+							datepicker : false,
+							allowTimes : [ '9:00', '10:00', '11:00', '12:00',
+									'13:00', '14:00', '15:00', '16:00',
+									'17:00', '18:00', '19:00', '20:00' ],
+							format : 'H:i',
+							onChangeDateTime : function(dp, $input) {
+								$("#reserve_time").val($input.val());
+							}
+						}); */
+
+			});
+</script>
+
 </html>
