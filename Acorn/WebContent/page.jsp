@@ -106,14 +106,7 @@
         ( endPage + 1 ) + "&searchName=" + searchName + 
         "&searchValue=" + searchValue + "'>&gt;&gt;</a>" );
 
-    // 1. 마지막 페이지로 바로 이동
-    out.print( "&nbsp;" );
 
-    if ( curPage == totalNum )
-        out.print( "마지막" );
-    else
-        out.print( "<a  href='BoardListServlet?curPage=" + totalNum + 
-        "&searchName=" + searchName + "&searchValue=" + searchValue + "'>이전</a>" );
 
     
 %>

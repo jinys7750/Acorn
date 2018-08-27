@@ -43,6 +43,8 @@
 
 <!-- Plugins css -->
 
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
 <!-- Template css -->
 <link rel="stylesheet" href="css/style.min.css">
 <title>Write</title>
@@ -134,23 +136,24 @@
 							<tr>
 								<td colspan="1">글 제목:&nbsp;</td>
 								<td colspan="5" style="width: 150px">
-								<input type="text" placeholder="글 제목을 입력해주세요." class="wrap" name="title"
+								<input type="text" placeholder="글 제목을 입력해주세요." class="wrap" name="title" style="width: 600px"
 									maxlength="30" value="${dto.title}"></td>
 							</tr>
 						<tr>
 								<td colspan="1">파일 업로드 :&nbsp;</td>
 								<td colspan="5" align="center" style="width: 150px">
- 								<input type="file" name="fileName"  value="파일 선택" >
+ 								<input type="file" name="fileName"  value="파일 선택" class="wrap">
 								<input type="submit" value="업로드">
 					
 							</td>
 						</tr>
 							<tr>
-								<td colspan="1"></td>
+								<td colspan="1">글 내용 :&nbsp;</td>
 								<td colspan="5" style="width: 150px">
-								<textarea class="wrap" placeholder="글 내용을 입력해주세요." name="content" rows="20"
+								<textarea class="form-control" placeholder="글 내용을 입력해주세요." name="content" rows="20" value= "${dto.content}"
 										maxlength="4000" style="height: 400%;"></textarea></td>
 							</tr>
+						
 								<!--  버튼 태그 구현 내용 비로그인 상태에서 login.jsp로 보내주는 코드 필요 -->
 							<tr>
 								<td colspan="5" style="width: 150px"><input type="submit"
