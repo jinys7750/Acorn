@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.config.BoardMapper">
+<mapper namespace="com.board">
 
 	<select id="selectAll" resultType="BoardDTO" parameterType="hashmap">
 		select num, title, userid, content, writeday, readCnt
@@ -45,10 +45,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
 	
 
-	<insert id="boardreply" parameterType="BoardDTO">
-	    insert into board (num , title, userid, content, writeday, readcnt, boardgroup, boardseq, boardlevel )
-	    values (Board_seq.nextval, #{title},#{userid},#{content}, SYSDATE, #{readcnt}, #{boardgroup}, #{boardseq + 1}, #{boardlevel + 1})
-	</insert>
 	
 
 	

@@ -39,15 +39,12 @@ public class BoardListServlet extends HttpServlet {
 		 
 		 BoardService service = new BoardService();
 		 String target = "board.jsp";
-		 try {
+		
 			PageDTO list = service.page(Integer.parseInt(curPage), map);
-			System.out.println(list.getList().size());
+		
 			request.setAttribute("page", list);
 	
-		} catch (MyException e) {
-			target = "error.jsp";
-		}
-		
+	
 		 RequestDispatcher dis = request.getRequestDispatcher(target);
 		 dis.forward(request, response);
 	}//end 

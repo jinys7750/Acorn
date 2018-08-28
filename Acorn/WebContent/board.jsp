@@ -94,7 +94,7 @@
 			
    
    
-   <thead>
+   <thead class ="thead-inverse">
 <tr> 
 <th colspan="5"><h3>Board</h3>
 				<!--  내용 -->
@@ -113,24 +113,24 @@
       <input type="submit" value="검색"> 
      </form> </td></tr>
    <tr>
-     <td align="center"style="background-color: #f2fff9; color: #000000; width: 10%"><h5>글번호</h5></td>
-     <td align="center"style="background-color: #f2fff9; color: #000000; width: 50%;"><h5>제목</h5></td>
-     <td align="center"style="background-color: #f2fff9; color: #000000;"><h5>작성자</h5></td>
-     <td align="center"style="background-color: #f2fff9; color: #000000;"><h5>작성일</h5></td>
-     <td align="center"style="background-color: #f2fff9; color: #000000; width: 10%;"><h5>조회수</h5></td>
+     <td align="center"style="background-color: #f2fff9; color: #000000; width: 10%"><h6>글번호</h6></td>
+     <td align="center"style="background-color: #f2fff9; color: #000000; width: 39%;"><h6>제목</h6></td>
+     <td align="center"style="background-color: #f2fff9; color: #000000; width: 16%;"><h6>작성자</h6></td>
+     <td align="center"style="background-color: #f2fff9; color: #000000; width: 25%;"><h6>작성일</h6></td>
+     <td align="center"style="background-color: #f2fff9; color: #000000; width: 10%;"><h6>조회수</h6></td>
    </tr>
    </thead>
 
- <c:set var ="xxx" value="${page}"/>
+ <c:set var="xxx" value="${page}"/>
 
- <c:forEach var="dto" items="${xxx.getList()}">	
+ <c:forEach items="${xxx.getList()}" var="dto">	
   
    <tr>
-     <td><h5>${dto.num}</h5></td>
-     <td><h5><a href="BoardRetrieveServlet?num=${dto.num}">${dto.title}</a></h5></td>
-     <td><h5>${dto.userid}</h5></td>
-     <td><h5>${dto.writeday}</h5></td>
-     <td><h5>${dto.readCnt}</h5></td>
+     <td align="center"><h5>${dto.num}</h5></td>
+     <td align="center"><h6><a href="BoardRetrieveServlet?num=${dto.num}">${dto.title}</a></h6></td>
+     <td align="center"><h6>${dto.userid}</h6></td>
+     <td align="center"><h6>${dto.writeday}</h6></td>
+     <td align="center"><h5>${dto.readCnt}</h5></td>
    </tr>
  </c:forEach>
 
@@ -174,3 +174,4 @@
 	<!-- Template JS -->
 
 </body>
+</html>

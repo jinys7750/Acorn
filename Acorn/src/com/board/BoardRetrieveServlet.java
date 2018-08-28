@@ -24,15 +24,10 @@ public class BoardRetrieveServlet extends HttpServlet {
 		String num = request.getParameter("num");
 		BoardService service = new BoardService();
 		String target="retrieve.jsp";
-		try {
+	
 			BoardDTO dto = service.selectByNum(Integer.parseInt(num));
 			request.setAttribute("dto", dto);
-		} catch (MyException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			target = "error.jsp";
-		}
-		
+	
 		 RequestDispatcher dis = request.getRequestDispatcher(target);
 		 dis.forward(request, response);
 		

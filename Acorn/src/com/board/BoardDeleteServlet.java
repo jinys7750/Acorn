@@ -21,12 +21,10 @@ public class BoardDeleteServlet extends HttpServlet {
 		String num = request.getParameter("num");
 		BoardService service = new BoardService();
 		String target ="BoardListServlet";
-		try {
+	
 			service.deleteByNum(Integer.parseInt(num));
 
-		} catch (MyException e) {
-			target ="error.jsp";
-		}
+	
 		
 		response.sendRedirect(target);	
 	}
