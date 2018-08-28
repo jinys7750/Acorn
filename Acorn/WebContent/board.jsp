@@ -134,7 +134,7 @@
    </tr>
  </c:forEach>
 
-  <tr>
+  <tr>   
      <td colspan="5">
        <jsp:include page="page.jsp" flush="true" />
      </td>
