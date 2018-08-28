@@ -53,7 +53,7 @@
 							data-toggle="dropdown" role="button" aria-haspopup="true"
 							aria-expanded="false">BOARD</a>
 							<div class="dropdown-menu animate">
-							<a class="dropdown-item" href="board.jsp">Board</a> 
+							<a class="dropdown-item" href="BoardListServlet">Board</a> 
 							<a class="dropdown-item" href="faq.jsp">FAQ</a>
 						</div>
 					</div>
