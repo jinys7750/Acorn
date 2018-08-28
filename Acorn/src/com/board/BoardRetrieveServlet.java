@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.dto.BoardDTO;
 import com.exception.MyException;
@@ -19,27 +20,23 @@ import com.service.BoardService;
 @WebServlet("/BoardRetrieveServlet")
 public class BoardRetrieveServlet extends HttpServlet {
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-	    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		HttpSession session = request.getSession();
 		String num = request.getParameter("num");
 		BoardService service = new BoardService();
-		String target="retrieve.jsp";
-	
+		String nextPage = "retrieve.jsp";
 		BoardDTO dto = service.selectByNum(Integer.parseInt(num));
-		request.setAttribute("dto", dto);
-	
-		 RequestDispatcher dis = request.getRequestDispatcher(target);
-		 dis.forward(request, response);
-		
-	}//end 
-	
-	
+		session.setAttribute("dto", dto);
+		response.sendRedirect(nextPage);
+	}// end
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

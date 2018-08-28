@@ -34,7 +34,7 @@ public class BoardUpdateServlet extends HttpServlet {
 		dto.setNum(num);
 		dto.setTitle(title);
 		dto.setWriteday(writeday);
-		dto.setuserid(userid);
+		dto.setUserid(userid);
 		dto.setContent(content);
 	
 		BoardService service = new BoardService();

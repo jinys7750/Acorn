@@ -160,11 +160,9 @@ return;
 				
 
 					<tr>
-						<td colspan="5" align="right">
-							<input type="button" class="btn btn-primary pull-right" onClick = "changeView(myForm)"
-							value="등록"> &nbsp;&nbsp;
-							
-							<input type="reset" class="btn btn-primary pull-right" value="다시 쓰기"> &nbsp;&nbsp;
+						<td colspan="5" align="right"><input type="button"
+									class="btn btn-primary pull-right" onClick="changeView(myForm)"
+									value="등록"> &nbsp;&nbsp; <input type="reset" class="btn btn-primary pull-right" value="다시 쓰기"> &nbsp;&nbsp;
 							<input type="button" class="btn btn-primary pull-right" 
 							onclick="location.href='BoardListServlet'"value="목록"> &nbsp;&nbsp;
 							<input type="button" class="btn btn-primary pull-right" 

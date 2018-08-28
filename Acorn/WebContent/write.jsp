@@ -23,7 +23,7 @@
 
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
+
 
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -70,16 +70,16 @@
 </script>
 </head>
 <body>
-<jsp:include page="importJSP/topHeader.jsp"></jsp:include>
+	<jsp:include page="importJSP/topHeader.jsp"></jsp:include>
 	<jsp:include page="importJSP/middleHeader.jsp"></jsp:include>
 	<div class="breadcrumb-container">
 		<div class="container-fluid limited">
 			<nav aria-label="breadcrumb">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
-					<li class="breadcrumb-item"><a href="RankingOut">MyRecord</a></li>
-					<li class="breadcrumb-item active" aria-current="page">MyRecord</li>
-				</ol>
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
+				<li class="breadcrumb-item"><a href="RankingOut">MyRecord</a></li>
+				<li class="breadcrumb-item active" aria-current="page">MyRecord</li>
+			</ol>
 			</nav>
 		</div>
 	</div>
@@ -111,77 +111,59 @@
 				<div class="title">
 					<span>My Orders</span>
 				</div>
-
-
-
 				<!-- 내용 -->
-
-				<form method="post" action="BoardWriteServlet" enctype="multipart/form-data" >
-					<table class= "table table-bordered table-hover" style="text-align:center; border: 2px solid #dddddd; margin:1em auto;" width=
-"50%" align="center" height="auto">
+				<form method="get" action="BoardWriteServlet"
+					enctype="multipart/form-data">
+					<table class="table table-bordered table-hover"
+						style="text-align: center; border: 2px solid #dddddd; margin: 1em auto;"
+						width="50%" align="center" height="auto">
 						<thead>
 							<tr>
-								<th colspan="5" style="background-color: #eeeeee; text-align: center;">
-									<h4>게시판 글 쓰기</h4></th>
+								<th colspan="5"
+									style="background-color: #eeeeee; text-align: center;">
+									<h4>게시판 글 쓰기</h4>
+								</th>
 							</tr>
 						</thead>
-						
 						<tbody>
-
 							<tr>
-								<td colspan="1"> 아이디:&nbsp;</td>
+								<td colspan="1">아이디:&nbsp;</td>
 								<td colspan="5" style="width: 150px"><input type="text"
-									class="form-control name="userid" value="${dto.userid}"></td>
+									class="form-control" name="userid" value="${login.userid}"
+									readonly="readonly"></td>
 							</tr>
 							<tr>
 								<td colspan="1">글 제목:&nbsp;</td>
-								<td colspan="5" style="width: 150px">
-								<input type="text" placeholder="글 제목을 입력해주세요." class="form-control" name="title" style="width: 850px"
-									maxlength="30" value="${dto.title}"></td>
+								<td colspan="5" style="width: 150px"><input type="text"
+									placeholder="글 제목을 입력해주세요." class="form-control" name="title"
+									style="width: 850px" maxlength="30" value="${dto.title}"></td>
 							</tr>
-						<tr>
+							<tr>
 								<td colspan="1">파일 업로드 :&nbsp;</td>
-								<td colspan="5" align="center" style="width: 150px">
- 								<input type="file" name="fileName"  value="파일 선택" class="form-control">
-								<input type="submit" value="업로드">
-					
-							</td>
-						</tr>
+								<td colspan="5" align="center" style="width: 150px"><input
+									type="file" name="fileName" value="파일 선택" class="form-control">
+									<input type="submit" value="업로드"></td>
+							</tr>
 							<tr>
 								<td colspan="1">글 내용 :&nbsp;</td>
-								<td colspan="5" style="width: 150px">
-								<textarea class="form-control" placeholder="글 내용을 입력해주세요." name="content" rows="20" value= "${dto.content}"
+								<td colspan="5" style="width: 150px"><textarea
+										class="form-control" placeholder="글 내용을 입력해주세요."
+										name="content" rows="20" value="${dto.content}"
 										maxlength="4000" style="height: 400%;"></textarea></td>
 							</tr>
-						
-								<!--  버튼 태그 구현 내용 비로그인 상태에서 login.jsp로 보내주는 코드 필요 -->
+
+							<!--  버튼 태그 구현 내용 비로그인 상태에서 login.jsp로 보내주는 코드 필요 -->
 							<tr>
 								<td colspan="5" style="width: 150px"><input type="submit"
-									value="글쓰기 완료"> &nbsp;&nbsp; <input type="reset"
-									value="다시 쓰기"> &nbsp;&nbsp;
-									<input type="button" class="btn btn-primary pull-right" value="목록" 
-									onclick="location.href='BoardListServlet'"> &nbsp;</td>
+									value="글쓰기 완료" class="btn btn-outline-theme"> &nbsp;&nbsp; <input type="reset"
+									value="다시 쓰기" class="btn btn-outline-theme"> &nbsp;&nbsp; <input type="button"
+									class="btn btn-primary pull-right" value="목록"
+									onclick="location.href='BoardListServlet'" class="btn btn-outline-theme"> &nbsp;</td>
 							</tr>
-							
-							
-
-							
-							
-							
 						</tbody>
-
-
-
-
-
 					</table>
 				</form>
 			</div>
 		</div>
-
-	
-
-
 </body>
 </html>
-						

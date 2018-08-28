@@ -28,35 +28,31 @@ import com.service.BoardService;
 @WebServlet("/BoardWriteServlet")
 public class BoardWriteServlet extends HttpServlet {
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		
-			String userid = request.getParameter("userid");
-			String title = request.getParameter("title");
-			String content = request.getParameter("content");
-			
-			BoardDTO dto = new BoardDTO();
-			dto.setuserid(userid);
-			dto.setTitle(title);
-			dto.setContent(content);
-		
-		
+
+		String userid = request.getParameter("userid");
+		String title = request.getParameter("title");
+		String content = request.getParameter("content");
+		System.out.println(userid);
+		System.out.println(title);
+		System.out.println(content);
+		BoardDTO dto = new BoardDTO();
+		dto.setUserid(userid);
+		dto.setTitle(title);
+		dto.setContent(content);
 		BoardService service = new BoardService();
-		String target="BoardListServlet";
-	
-			service.boardWrite(dto);
+		service.boardWrite(dto);
 		
+		String target = "BoardListServlet";
 		response.sendRedirect(target);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 
 }
-
-
-
-
-

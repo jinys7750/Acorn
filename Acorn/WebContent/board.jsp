@@ -3,10 +3,10 @@
 <%@page import="java.util.List"%>
 <%@page import="com.dto.BoardDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -21,7 +21,7 @@
 
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
+
 
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -51,11 +51,11 @@
 	<div class="breadcrumb-container">
 		<div class="container-fluid limited">
 			<nav aria-label="breadcrumb">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
-					<li class="breadcrumb-item"><a href="RankingOut">MyRecord</a></li>
-					<li class="breadcrumb-item active" aria-current="page">MyRecord</li>
-				</ol>
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
+				<li class="breadcrumb-item"><a href="RankingOut">MyRecord</a></li>
+				<li class="breadcrumb-item active" aria-current="page">MyRecord</li>
+			</ol>
 			</nav>
 		</div>
 	</div>
@@ -77,8 +77,9 @@
 					<div class="list-group list-group-flush">
 
 						<a href="RankingOut"
-							class="list-group-item list-group-item-action active">회원 정보</a>
-						<a href="#" class="list-group-item list-group-item-action">게시물 조회</a>
+							class="list-group-item list-group-item-action active">회원 정보</a> <a
+							href="#" class="list-group-item list-group-item-action">게시물
+							조회</a>
 
 					</div>
 				</div>
@@ -91,72 +92,77 @@
 
 
 				<!-- 내용 -->
+				<table class="table table-bordered table-hover"
+					style="text-align: center; border: 1px solid #dddddd; margin: 1em auto;"
+					width="50%" align="center" height="auto">
+					<thead class="thead-inverse">
+						<tr>
+							<th colspan="5"><h3>Board</h3></th>
+							<!--  내용 -->
+						</tr>
+					</thead>
+					<tr>
+						<td colspan="5" align="right">
+							<form action="BoardPerPageServlet">
+								<div style='width: 20%'>
+								<select name="perPage" class="form-control" style= 'margin-bottom: 0.5em;'>
+									<option value="3">3개씩 </option>
+									<option value="5">5개씩 </option>
+									<option value="10">10개씩 </option>
+								</select> <input type="submit" value="조회" class="btn btn-outline-theme">
+								</div>
+							</form>
+						</td>
+					</tr>
+					<tr>
+						<td align="center"
+							style="background-color: #f2fff9; color: #000000; width: 10%"><h6>글번호</h6></td>
+						<td align="center"
+							style="background-color: #f2fff9; color: #000000; width: 39%;"><h6>제목</h6></td>
+						<td align="center"
+							style="background-color: #f2fff9; color: #000000; width: 16%;"><h6>아이디</h6></td>
+						<td align="center"
+							style="background-color: #f2fff9; color: #000000; width: 25%;"><h6>작성일</h6></td>
+						<td align="center"
+							style="background-color: #f2fff9; color: #000000; width: 10%;"><h6>조회수</h6></td>
+					</tr>
+					<c:set var="xxx" value="${page}" />
 
-			
-   
-   
-   <thead class ="thead-inverse">
-<tr> 
-<th colspan="5"><h3>Board</h3>
-				<!--  내용 -->
-				
-<table class= "table table-bordered table-hover" style="text-align:center; border: 1px solid #dddddd; margin:1em auto;" width=
-"50%" align="center" height="auto">
+					<c:forEach items="${xxx.getList()}" var="dto">
 
-   <tr>
-    <td colspan="5" align="right">
-      <form action="BoardPerPageServlet">
-      <select name="perPage">
-        <option value="3" >3개씩 보기</option>
-        <option value="5">5개씩 보기</option>
-        <option value="10">10개씩 보기</option>
-      </select>
-      <input type="submit" value="검색"> 
-     </form> </td></tr>
-   <tr>
-     <td align="center"style="background-color: #f2fff9; color: #000000; width: 10%"><h6>글번호</h6></td>
-     <td align="center"style="background-color: #f2fff9; color: #000000; width: 39%;"><h6>제목</h6></td>
-     <td align="center"style="background-color: #f2fff9; color: #000000; width: 16%;"><h6>작성자</h6></td>
-     <td align="center"style="background-color: #f2fff9; color: #000000; width: 25%;"><h6>작성일</h6></td>
-     <td align="center"style="background-color: #f2fff9; color: #000000; width: 10%;"><h6>조회수</h6></td>
-   </tr>
-   </thead>
+						<tr>
+							<td align="center"><h5>${dto.num}</h5></td>
+							<td align="center"><h6>
+									<a href="BoardRetrieveServlet?num=${dto.num}">${dto.title}</a>
+								</h6></td>
+							<td align="center"><h6>${dto.userid}</h6></td>
+							<td align="center"><h6>${dto.writeday}</h6></td>
+							<td align="center"><h5>${dto.readCnt}</h5></td>
+						</tr>
+					</c:forEach>
 
- <c:set var="xxx" value="${page}"/>
-
- <c:forEach items="${xxx.getList()}" var="dto">	
-  
-   <tr>
-     <td align="center"><h5>${dto.num}</h5></td>
-     <td align="center"><h6><a href="BoardRetrieveServlet?num=${dto.num}">${dto.title}</a></h6></td>
-     <td align="center"><h6>${dto.userid}</h6></td>
-     <td align="center"><h6>${dto.writeday}</h6></td>
-     <td align="center"><h5>${dto.readCnt}</h5></td>
-   </tr>
- </c:forEach>
-
-  <tr>   
-     <td colspan="5">
-       <jsp:include page="page.jsp" flush="true" />
-     </td>
-     <tr>
-    <td colspan="5" align= "right">
-     <form action="BoardListServlet">
-      <select name="searchName">
-        <option value="title" >제목</option>
-        <option value="userid" >작성자</option>
-      </select>
-      <input type="text" name="searchValue">
-      <input type="submit" value="검색"> 
-     </form> 
-    </td>
-   </tr>
-
- </tbody>
-</table>
-</div>
-</div>
-</div>
+					<tr>
+						<td colspan="5"><jsp:include page="page.jsp" flush="true" />
+						</td>
+					</tr>
+					<tr>
+						<td colspan="5" align="right">
+							<form action="BoardListServlet">
+								<div style='width: 20% '>
+									<select name="searchName" class="form-control" style='margin-bottom: 0.5em;'>
+										<option value="title">제목</option>
+										<option value="userid">작성자</option>
+									</select> <input type="text" name="searchValue" class="form-control">
+								</div>
+								<input type="submit" value="검색" class="btn btn-outline-theme" style='margin-top: 0.5em;'>
+							</form>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 	<jsp:include page="importJSP/modalPage.jsp"></jsp:include>
 	<jsp:include page="importJSP/footer.jsp"></jsp:include>
 	<!-- Copyright -->

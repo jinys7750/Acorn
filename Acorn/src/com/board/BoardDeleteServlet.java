@@ -15,22 +15,18 @@ import com.service.BoardService;
  */
 @WebServlet("/BoardDeleteServlet")
 public class BoardDeleteServlet extends HttpServlet {
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String num = request.getParameter("num");
 		BoardService service = new BoardService();
-		String target ="BoardListServlet";
-	
-			service.deleteByNum(Integer.parseInt(num));
-
-	
-		
-		response.sendRedirect(target);	
+		String nextPage = "BoardListServlet";
+		service.deleteByNum(Integer.parseInt(num));
+		response.sendRedirect(nextPage);
 	}
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

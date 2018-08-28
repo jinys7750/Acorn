@@ -18,18 +18,11 @@ public class BoardDAO {
       List<BoardDTO> list =session.selectList("selectAll");
 	  return list;
 	}//end list()
-
-	    
-	
-
-	
    //2. 글쓰기
 	public int boardWrite(SqlSession session , BoardDTO dto) {
 		int n = session.insert("boardWrite", dto);
 		return n;
 	}
-
-
 	//3글 자세히 보기
 	public BoardDTO selectByNum(SqlSession session , int num) {
 		BoardDTO dto = session.selectOne("selectByNum", num);

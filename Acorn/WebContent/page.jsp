@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-    PageDTO xxx = (PageDTO)request.getAttribute("page");
+    PageDTO xxx = (PageDTO)session.getAttribute("page");
     int curPage = xxx.getCurPage();
     int perPage = PageDTO.getPerPage();
     int totalCount = xxx.getTotalCount();
@@ -111,4 +111,4 @@
     
 %>
 
-<button onclick="location.href='BoardWriteUIServlet'">글쓰기</button>
+<button onclick="location.href='BoardWriteUIServlet'" class="btn btn-outline-theme">글쓰기</button>

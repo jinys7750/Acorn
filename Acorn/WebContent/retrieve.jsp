@@ -6,28 +6,14 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<%-- <%
-
-
-
-
-%>--%>
-
 <head>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
 <link rel="stylesheet" href="css/bootstrap.css">
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
-
 <!-- Required meta tags -->
-
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" href="favicon.png">
@@ -57,11 +43,11 @@
 	<div class="breadcrumb-container">
 		<div class="container-fluid limited">
 			<nav aria-label="breadcrumb">
-				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
-					<li class="breadcrumb-item"><a href="RankingOut">내 글만 조회</a></li>
-					<li class="breadcrumb-item active" aria-current="page">MyRecord</li>
-				</ol>
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.jsp">Home</a></li>
+				<li class="breadcrumb-item"><a href="RankingOut">내 글만 조회</a></li>
+				<li class="breadcrumb-item active" aria-current="page">MyRecord</li>
+			</ol>
 			</nav>
 		</div>
 	</div>
@@ -74,17 +60,16 @@
 						<div class="media">
 							<img class="rounded-circle" src="img/user.png" alt="John Thor">
 							<div class="media-body">
-								<h5 class="user-name">USER ID</h5>
+								<h5 class="user-name">{login.userid}</h5>
 								<small class="card-text text-muted">Joined Dec 31, 2017</small>
 								<div class="card-text small text-muted"></div>
 							</div>
 						</div>
 					</div>
 					<div class="list-group list-group-flush">
-
-						<a href="RankingOut"
-							class="list-group-item list-group-item-action active">MyRecord</a>
-						<a href="#" class="list-group-item list-group-item-action">MyPlayTime</a>
+						<a href="BoardListServlet"
+							class="list-group-item list-group-item-action active">Board</a>
+						<a href="#" class="list-group-item list-group-item-action">Board</a>
 
 					</div>
 				</div>
@@ -93,26 +78,27 @@
 				<div class="title">
 					<span>My Orders</span>
 				</div>
-
-
-	<%
-	    BoardDTO dto = (BoardDTO) request.getAttribute("dto");
-				int num = dto.getNum();
-				String title = dto.getTitle();
-				String userid = dto.getuserid();
-				String content = dto.getContent();
-				String writeday = dto.getWriteday();
-				int readCnt = dto.getReadCnt();
-	%>
-	<h1>글 자세히 화면</h1>
+				<%
+					BoardDTO dto = (BoardDTO) session.getAttribute("dto");
+					int num = dto.getNum();
+					String title = dto.getTitle();
+					String userid = dto.getUserid();
+					String content = dto.getContent();
+					String writeday = dto.getWriteday();
+					int readCnt = dto.getReadCnt();
+				%>
+				<h1>글 자세히 화면</h1>
 
 				<form method="post" id="myForm">
-				<table class= "table table-bordered table-hover" style="text-align:center; border: 2px solid #dddddd; margin:1em auto;" 
-				width= "50%" align="center" height="auto">
-				
+					<table class="table table-bordered table-hover"
+						style="text-align: center; border: 2px solid #dddddd; margin: 1em auto;"
+						width="50%" align="center" height="auto">
+
 						<thead>
 							<tr>
-								<th colspan="5" style="background-color: #eeeeee; text-align: center;"><h3>게시판 글보기</h3></th>
+								<th colspan="5"
+									style="background-color: #eeeeee; text-align: center;"><h3>게시판
+										글보기</h3></th>
 							</tr>
 
 							<input type="hidden" name="num" value="<%=num%>">
@@ -125,14 +111,15 @@
 
 							<tr>
 								<td colspan="1">글 제목:&nbsp;</td>
-								<td colspan="5" style="width: 150px;"><input type="text" style="width: 850px"
-									class="form-control" name="title" maxlength="30" value="${dto.title}"></td>
+								<td colspan="5" style="width: 150px;"><input type="text"
+									style="width: 850px" class="form-control" name="title"
+									maxlength="30" value="${dto.title}"></td>
 							</tr>
 							<tr>
 								<td colspan="1">작성일:&nbsp;</td>
 								<td colspan="5" style="width: 150px"><input type="text"
-									readonly="readonly" class="form-control" name="writeday" maxlength="30"
-									value="${dto.writeday}"></td>
+									readonly="readonly" class="form-control" name="writeday"
+									maxlength="30" value="${dto.writeday}"></td>
 							</tr>
 							<tr>
 								<td colspan="1">작성자:&nbsp;</td>
@@ -140,19 +127,19 @@
 									readonly="readonly" class="form-control" name="userid"
 									value="${dto.userid}"></td>
 							</tr>
-							
-							
+
+
 							<tr>
-								<td colspan="1"> 글 내용:&nbsp; </td>
-								<td colspan="5" style="width: 150px">
-								<textarea class="form-control" name="content" rows="20" readonly ="readonly"
-										 style="height: 400%;">${dto.content}</textarea></td>
+								<td colspan="1">글 내용:&nbsp;</td>
+								<td colspan="5" style="width: 150px"><textarea
+										class="form-control" name="content" rows="20"
+										readonly="readonly" style="height: 400%;">${dto.content}</textarea></td>
 							</tr>
-							
-								<!-- 게시글 내용(작성자, 작성일, 조회수, 번호, 제목, 내용) -->
+
+							<!-- 게시글 내용(작성자, 작성일, 조회수, 번호, 제목, 내용) -->
 
 
-<%-- 글 자세히 보는 상태에서 유저의 아이디가 작성글 아이디와 일치하면 수정, 삭제 버튼 
+							<%-- 글 자세히 보는 상태에서 유저의 아이디가 작성글 아이디와 일치하면 수정, 삭제 버튼 
 
 
 
@@ -194,20 +181,18 @@ s.setAttribute('data-timestamp', +new Date());
 
 }
 
---%> 
-
-
-
-
-
+--%>
 							<tr>
-								<td colspan="5" align="right">
-									<input type="button" class="btn btn-primary pull-right" value="목록" onclick="location.href='BoardListServlet'"> &nbsp;
-									<input type="button" class="btn btn-primary pull-right" onClick = "changeView(myForm)"
-							value="등록"> &nbsp;&nbsp;
-									<input type="button" class="btn btn-primary pull-right" onclick="update()" value="수정"> &nbsp; 
-									<input type="button" class="btn btn-primary pull-right" onclick="del()" value="삭제"> &nbsp; 
-									<input type="button" class="btn btn-primary pull-right" onclick="comment()"value="댓글"> &nbsp;&nbsp;</td>
+								<td colspan="5" align="right"><input type="button"
+									class="btn btn-outline-theme" value="목록"
+									onclick="location.href='BoardListServlet'"> <c:if
+										test="${login.userid eq dto.userid}">
+										<input type="button" class="btn btn-outline-theme"
+											onclick="update()" value="수정"> &nbsp; 
+									<input type="button" class="btn btn-outline-theme"
+											onclick="del()" value="삭제"> &nbsp; </c:if> <input
+									type="button" class="btn btn-outline-theme" onclick="comment()"
+									value="댓글"> &nbsp;&nbsp;</td>
 							</tr>
 						</tbody>
 					</table>
@@ -215,50 +200,48 @@ s.setAttribute('data-timestamp', +new Date());
 				</form>
 
 			</div>
-</div>
+		</div>
 
 
-	<script type="text/javascript">
-		function del() {
-			location.href = 'BoardDeleteServlet?num=${dto.num}';
-		}
-		function update() {
-			location.href = 'BoardUpdateServlet?num=${dto.num}';
-		}
-		function comment() {
-			
-            location.href='BoardReplyServlet?num=${dto.num}';
-		}
-	    function changeView(f) {
-            //location.href='BoardUpdateDoneServlet?num=${dto.num}';
-            f.action="BoardListServlet";
-            f.submit();
-            
-        }
-	</script>
-	
+		<script type="text/javascript">
+			function del() {
+				location.href = 'BoardDeleteServlet?num=${dto.num}';
+			}
+			function update() {
+				location.href = 'BoardUpdateServlet?num=${dto.num}';
+			}
+			function comment() {
 
-	
+				location.href = 'BoardReplyServlet?num=${dto.num}';
+			}
+			function changeView(f) {
+				//location.href='BoardUpdateDoneServlet?num=${dto.num}';
+				f.action = "BoardListServlet";
+				f.submit();
 
-  
-  	<jsp:include page="importJSP/modalPage.jsp"></jsp:include>
-	<jsp:include page="importJSP/footer.jsp"></jsp:include>
-	<!-- Copyright -->
-	<div class="copyright">Copyright © 2018 Mimity All right reserved
-	</div>
-	<!-- /Copyright -->
-
-	<a href="#top" class="back-top text-center" id="back-top"> <i
-		class="material-icons">expand_less</i>
-	</a>
-	<!-- Required js -->
+			}
+		</script>
 
 
-	<!-- Plugins js -->
 
-	<!-- Template JS -->
-	
 
+
+		<jsp:include page="importJSP/modalPage.jsp"></jsp:include>
+		<jsp:include page="importJSP/footer.jsp"></jsp:include>
+		<!-- Copyright -->
+		<div class="copyright">Copyright © 2018 Mimity All right
+			reserved</div>
+		<!-- /Copyright -->
+
+		<a href="#top" class="back-top text-center" id="back-top"> <i
+			class="material-icons">expand_less</i>
+		</a>
+		<!-- Required js -->
+
+
+		<!-- Plugins js -->
+
+		<!-- Template JS -->
 </body>
 </html>
 

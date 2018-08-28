@@ -22,44 +22,37 @@ import com.service.BoardService;
 @WebServlet("/BoardListServlet")
 public class BoardListServlet extends HttpServlet {
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	    throws ServletException, IOException {
-	HttpSession session = request.getSession();
-	MemberDTO dto = (MemberDTO) session.getAttribute("login");
-	String nextPage = null;
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		MemberDTO dto = (MemberDTO) session.getAttribute("login");
+		String nextPage = null;
 
-	if (dto == null) {
-	    nextPage = "login.jsp";
-	} else {
-	    // list.jsp에서 1 2 3 4
-	    String curPage = request.getParameter("curPage");
-	    if (curPage == null) {
-		curPage = "1";
-	    }
+		if (dto == null) {
+			nextPage = "login.jsp";
+		} else {
+			// list.jsp에서 1 2 3 4
+			String curPage = request.getParameter("curPage");
+			if (curPage == null) {
+				curPage = "1";
+			}
+			String searchName = request.getParameter("searchName");
+			String searchValue = request.getParameter("searchValue");
+			HashMap<String, String> map = new HashMap<>();
+			map.put("searchName", searchName);
+			map.put("searchValue", searchValue);
+			BoardService service = new BoardService();
+			nextPage = "board.jsp";
+			PageDTO list = service.page(Integer.parseInt(curPage), map);
+			session.setAttribute("page", list);
+		}
+		response.sendRedirect(nextPage);
+	}// end
 
-	    String searchName = request.getParameter("searchName");
-	    String searchValue = request.getParameter("searchValue");
-
-	    HashMap<String, String> map = new HashMap<>();
-	    map.put("searchName", searchName);
-	    map.put("searchValue", searchValue);
-
-	    BoardService service = new BoardService();
-	    nextPage = "board.jsp";
-
-	    PageDTO list = service.page(Integer.parseInt(curPage), map);
-
-	    session.setAttribute("page", list);
-
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
-
-	response.sendRedirect(nextPage);
-    }// end
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-	    throws ServletException, IOException {
-	// TODO Auto-generated method stub
-	doGet(request, response);
-    }
 
 }
