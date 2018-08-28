@@ -39,15 +39,10 @@ public class BoardUpdateDoneServlet extends HttpServlet {
 	
 		BoardService service = new BoardService();
 		String target= "BoardRetrieveServlet";
-		try {
-			service.updateByNum(dto);
+	service.updateByNum(dto);
 			request.setAttribute("dto", dto);
 			
-		} catch (MyException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			target = "error.jsp";
-		}
+	
 		
 		RequestDispatcher dis = request.getRequestDispatcher(target);
 		 dis.forward(request, response);
