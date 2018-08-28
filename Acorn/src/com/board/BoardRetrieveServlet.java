@@ -20,13 +20,14 @@ import com.service.BoardService;
 public class BoardRetrieveServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("1111>>>>BoardRetrieveServlet");
+	
+	    
 		String num = request.getParameter("num");
 		BoardService service = new BoardService();
 		String target="retrieve.jsp";
 	
-			BoardDTO dto = service.selectByNum(Integer.parseInt(num));
-			request.setAttribute("dto", dto);
+		BoardDTO dto = service.selectByNum(Integer.parseInt(num));
+		request.setAttribute("dto", dto);
 	
 		 RequestDispatcher dis = request.getRequestDispatcher(target);
 		 dis.forward(request, response);
