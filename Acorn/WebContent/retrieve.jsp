@@ -125,19 +125,19 @@
 
 							<tr>
 								<td colspan="1">글 제목:&nbsp;</td>
-								<td colspan="5" style="width: 150px;"><input type="text"
-									class="wrap" name="title" maxlength="30" value="${dto.title}"></td>
+								<td colspan="5" style="width: 150px;"><input type="text" style="width: 850px"
+									class="form-control" name="title" maxlength="30" value="${dto.title}"></td>
 							</tr>
 							<tr>
 								<td colspan="1">작성일:&nbsp;</td>
 								<td colspan="5" style="width: 150px"><input type="text"
-									readonly="readonly" class="wrap" name="writeday" maxlength="30"
+									readonly="readonly" class="form-control" name="writeday" maxlength="30"
 									value="${dto.writeday}"></td>
 							</tr>
 							<tr>
 								<td colspan="1">작성자:&nbsp;</td>
 								<td colspan="5" style="width: 150px"><input type="text"
-									readonly="readonly" class="wrap" name="userid"
+									readonly="readonly" class="form-control" name="userid"
 									value="${dto.userid}"></td>
 							</tr>
 							
@@ -145,7 +145,7 @@
 							<tr>
 								<td colspan="1"> 글 내용:&nbsp; </td>
 								<td colspan="5" style="width: 150px">
-								<textarea class="wrap" name="content" rows="20" readonly ="readonly"
+								<textarea class="form-control" name="content" rows="20" readonly ="readonly"
 										 style="height: 400%;">${dto.content}</textarea></td>
 							</tr>
 							

@@ -73,21 +73,9 @@ body {
   outline: 0 !important;
 }
 
-hr {
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
+<!-- custom -->
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
 
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
 
 abbr[title],
 abbr[data-original-title] {
@@ -214,9 +202,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-table {
-  border-collapse: collapse;
-}
+
 
 caption {
   padding-top: 0.75rem;
@@ -1522,18 +1508,17 @@ pre code {
 
 .table th,
 .table td {
-  padding: 0.75rem;
-  vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  vertical-align: middle;
+ 
 }
 
 .table thead th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
+  vertical-align: middle;
+ 
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #dee2e6;
+ 
 }
 
 .table .table {
@@ -1542,21 +1527,26 @@ pre code {
 
 .table-sm th,
 .table-sm td {
-  padding: 0.3rem;
+
+  vertical-align: middle;
 }
 
 .table-bordered {
-  border: 1px solid #dee2e6;
+  border: solid #dee2e6;
+  vertical-align: middle;
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #dee2e6;
+  border: solid #dee2e6;
+  vertical-align: middle;
+  text-align:center;
 }
 
 .table-bordered thead th,
 .table-bordered thead td {
-  border-bottom-width: 2px;
+ 
+  text-align:center;
 }
 
 .table-borderless th,
@@ -1682,7 +1672,7 @@ pre code {
 .table-dark,
 .table-dark > th,
 .table-dark > td {
-  background-color: #c6c8ca;
+  background-color: #2b2736;
 }
 
 .table-hover .table-dark:hover {

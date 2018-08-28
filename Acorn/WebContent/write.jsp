@@ -131,18 +131,18 @@
 							<tr>
 								<td colspan="1"> 아이디:&nbsp;</td>
 								<td colspan="5" style="width: 150px"><input type="text"
-									class="wrap" name="userid" value="${dto.userid}"></td>
+									class="form-control name="userid" value="${dto.userid}"></td>
 							</tr>
 							<tr>
 								<td colspan="1">글 제목:&nbsp;</td>
 								<td colspan="5" style="width: 150px">
-								<input type="text" placeholder="글 제목을 입력해주세요." class="wrap" name="title" style="width: 600px"
+								<input type="text" placeholder="글 제목을 입력해주세요." class="form-control" name="title" style="width: 850px"
 									maxlength="30" value="${dto.title}"></td>
 							</tr>
 						<tr>
 								<td colspan="1">파일 업로드 :&nbsp;</td>
 								<td colspan="5" align="center" style="width: 150px">
- 								<input type="file" name="fileName"  value="파일 선택" class="wrap">
+ 								<input type="file" name="fileName"  value="파일 선택" class="form-control">
 								<input type="submit" value="업로드">
 					
 							</td>

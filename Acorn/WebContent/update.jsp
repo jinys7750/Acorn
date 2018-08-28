@@ -136,24 +136,24 @@ return;
 					
 					<tr>
 						<td colspan="1"> 글 제목:&nbsp; </td>
-						 <td colspan="5" style="width: 150px;" ><input type="text" class="wrap" 
+						 <td colspan="5" style="width: 150px;" ><input type="text" class="form-control" style="width: 850px"
 						name="title" maxlength="30" value="${dto.title}"></td>
 					</tr>
 					<tr>
 						<td colspan="1"> 작성일:&nbsp;</td>
-						 <td colspan="5" style="width: 150px"><input type="text" readonly="readonly" class="wrap" 
+						 <td colspan="5" style="width: 150px"><input type="text" readonly="readonly" class="form-control" 
 						name="writeday" maxlength="30" value="${dto.writeday}"></td>
 					</tr>
 					<tr>
 						<td colspan="1"> 작성자:&nbsp;</td>
-						<td colspan="5" style="width: 150px"><input type="text" readonly="readonly" class="wrap" 
+						<td colspan="5" style="width: 150px"><input type="text" readonly="readonly" class="form-control" 
 						name="userid" value="${dto.userid}"></td>
 					</tr>
 				
 							<tr>
 								<td colspan="1">글 내용:&nbsp;</td>
 								<td colspan="5" style="width: 150px">
-								<textarea class="wrap" placeholder="글 내용을 수정해주세요." name="content" rows="20"
+								<textarea class="form-control" placeholder="글 내용을 수정해주세요." name="content" rows="20"
 								style="height: 400%;">${dto.content }</textarea></td>
 							</tr>
 				
