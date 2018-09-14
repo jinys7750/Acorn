@@ -19,8 +19,9 @@ import com.service.BoardService;
 @WebServlet("/BoardUpdateServlet")
 public class BoardUpdateServlet extends HttpServlet {
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		request.setCharacterEncoding("UTF-8");
 
 		int num = Integer.parseInt(request.getParameter("num"));
@@ -29,30 +30,25 @@ public class BoardUpdateServlet extends HttpServlet {
 		String writeday = request.getParameter("writeday");
 		String userid = request.getParameter("userid");
 		String content = request.getParameter("content");
-		
+
 		BoardDTO dto = new BoardDTO();
 		dto.setNum(num);
 		dto.setTitle(title);
 		dto.setWriteday(writeday);
 		dto.setUserid(userid);
 		dto.setContent(content);
-	
-		BoardService service = new BoardService();
-		String target="update.jsp";
-	
-			
-			BoardDTO bdto = service.selectByNum(num);
-			request.setAttribute("dto", bdto);
-			
-	
-		
-		RequestDispatcher dis = request.getRequestDispatcher(target);
-		 dis.forward(request, response);
-		
-		
-	}//end 
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		BoardService service = new BoardService();
+		BoardDTO bdto = service.selectByNum(num);
+		String target = "update.jsp";
+		request.setAttribute("dto", bdto);
+
+		response.sendRedirect(target);
+
+	}// end
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

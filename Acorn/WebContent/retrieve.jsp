@@ -68,8 +68,8 @@
 					</div>
 					<div class="list-group list-group-flush">
 						<a href="BoardListServlet"
-							class="list-group-item list-group-item-action active">Board</a>
-						<a href="#" class="list-group-item list-group-item-action">Board</a>
+							class="list-group-item list-group-item-action active">Board</a> <a
+							href="#" class="list-group-item list-group-item-action">Board</a>
 
 					</div>
 				</div>

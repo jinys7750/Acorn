@@ -26,7 +26,6 @@ public class BoardUpdateDoneServlet extends HttpServlet {
 		System.out.println(">>>>BoardUpdateDoneServlet");
 		request.setCharacterEncoding("UTF-8");
 		int num = Integer.parseInt(request.getParameter("num"));
-
 		String title = request.getParameter("title");
 		String writeday = request.getParameter("writeday");
 		String userid = request.getParameter("userid");
@@ -40,7 +39,7 @@ public class BoardUpdateDoneServlet extends HttpServlet {
 		dto.setContent(content);
 
 		BoardService service = new BoardService();
-		String nextPage = "BoardRetrieveServlet";
+		String nextPage = "BoardRetrieveServlet?num=" + dto.getNum();
 		service.updateByNum(dto);
 		session.setAttribute("dto", dto);
 		response.sendRedirect(nextPage);
