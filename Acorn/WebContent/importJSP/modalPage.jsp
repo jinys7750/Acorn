@@ -62,7 +62,7 @@
 									class="list-group-item list-group-item-action" href="404.jsp">Error
 									404</a> <a class="list-group-item list-group-item-action"
 									href="faq.jsp">FAQ</a>
-									<!-- 로그인 페이지 이동하는거 그냥 없앴습니다. modal로만 처리할 것 -->
+									<!-- ë¡ê·¸ì¸ íì´ì§ ì´ëíëê±° ê·¸ë¥ ìì´ìµëë¤. modalë¡ë§ ì²ë¦¬í  ê² -->
 									<!-- <a	class="list-group-item list-group-item-action" href="login.jsp">Login</a> -->
 								<a class="list-group-item list-group-item-action"
 									href="register.jsp">Register</a>
@@ -145,7 +145,7 @@
 					<div class="media-body">
 						<div>
 							<a href="detail.jsp" class="text-dark">Alexander McQueen
-								Classic Piqué Polo Shirt</a>
+								Classic PiquÃ© Polo Shirt</a>
 						</div>
 						<span class="text-secondary"><span class="mr-3">x1</span>$50.00</span>
 						<button class="close text-danger">
@@ -225,7 +225,7 @@
 	</div>
 </form>
 <!-- logout -->
-<
+
 <!-- Modal Quikview -->
 <div class="modal fade modal-quickview" id="quickviewModal"
 	tabindex="-1" role="dialog" aria-labelledby="quickviewModalLabel"

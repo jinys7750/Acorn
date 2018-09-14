@@ -3,6 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<!-- <style>
+.btn_search_submit{width:130px !important;display:inline-block !important;}
+</style> -->
 <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -86,7 +89,7 @@
 
 						<a href="RankingOut"
 							class="list-group-item list-group-item-action active">MyRecord</a>
-						<a href="#" class="list-group-item list-group-item-action">MyPlayTime</a>
+						<a href="myplaytime.jsp" class="list-group-item list-group-item-action">MyPlayTime</a>
 
 					</div>
 				</div>
@@ -149,6 +152,20 @@
 				<br>
 				<!-- 토글버튼영역 -->
 				<c:if test="${mRecord.userid != null }">
+				
+				<!-- 
+				<form action="#">
+				<table>
+				<tr>
+				<td>
+				USERID : <input type="search" >
+				<input type="submit" value="search" class="btn_search_submit  btn btn-theme btn-sm btn-block my-3">
+				</td>
+				</tr>
+				</table>
+				</form> -->
+				
+				
 					<div class="card mb-1">
 
 						<div class="card-header p-2" role="tab" id="heading6-1">

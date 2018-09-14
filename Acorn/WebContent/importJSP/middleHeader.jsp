@@ -45,7 +45,7 @@
 							aria-expanded="false">RECORD</a>
 						<div class="dropdown-menu animate">
 							<a class="dropdown-item" href="RankingOut">My Record</a> 
-							<a class="dropdown-item" href="">My Record</a>
+							<a class="dropdown-item" href="myplaytime.jsp">My PlayTime</a>
 						</div>
 					</div>
 					<div class="nav-item dropdown">

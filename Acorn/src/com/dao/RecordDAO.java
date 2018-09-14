@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.dto.RecordDTO;
+import com.dto.ReservationDTO;
 
 public class RecordDAO {
 
@@ -35,6 +36,17 @@ public class RecordDAO {
 		return list;
 	
 	}
+
+
+
+	public ReservationDTO playOut(SqlSession session, String userid) {
+		ReservationDTO pdto = session.selectOne("com.record.playOut", userid);
+		return pdto;
+	}
+
+
+
+
 
 
 

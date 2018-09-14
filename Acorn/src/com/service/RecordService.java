@@ -8,6 +8,7 @@ import com.config.MySqlSessionFactory;
 import com.dao.RecordDAO;
 import com.dto.MemberDTO;
 import com.dto.RecordDTO;
+import com.dto.ReservationDTO;
 
 public class RecordService {
 
@@ -68,5 +69,18 @@ public class RecordService {
 		}
 		return list;
 	}
+	public ReservationDTO playOut(String userid) {
+		SqlSession session = MySqlSessionFactory.getSession();
+		ReservationDTO pdto = null;
+		try {
+			pdto = dao.playOut(session, userid);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		return pdto;
+	}
+	
 
 }

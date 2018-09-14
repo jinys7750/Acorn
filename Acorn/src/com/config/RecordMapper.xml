@@ -23,7 +23,7 @@
 
 	<select id="dranking" resultType="RecordDTO">
 		select userid, maxDistance,
-		RANK() OVER(ORDER BY maxDistance desc) ROWNUMS
+		RANK() OVER(ORDER BY to_number(maxDistance) desc) ROWNUMS
 		from (
 		select distinct
 		dense_rank()over(partition by userid order by maxDistance
@@ -36,7 +36,7 @@
 
 	<select id="hranking"  resultType="RecordDTO">
 	select userid, hitball,
-		RANK() OVER(ORDER BY hitball desc) ROWNUMS
+		RANK() OVER(ORDER BY to_number(hitball) desc) ROWNUMS
 		from (
 		select distinct
 		dense_rank()over(partition by userid order by hitball
@@ -45,6 +45,12 @@
 		from record
 		)
 		where rn = 1 
+	</select>
+	
+	<select id="playOut" parameterType="string" resultType="ReservationDTO">
+	select count(*)
+	from reservation
+	where userid =# {userid}
 	</select>
 
 </mapper>
